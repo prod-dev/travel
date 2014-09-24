@@ -1,0 +1,258 @@
+
+.mapBox {
+    box-sizing: border-box;
+    color: rgb(51, 51, 51);
+    display: block;
+    font-family: 'Segoe UI Semilight', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    height: 162px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    width: 262px;
+}
+
+.mapIcon {
+    height: 86px;
+    width: 246px;
+}
+
+.searchNear {
+    font-family: 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+    font-size: 15px;
+    height: 36px;
+    width: 533px;
+}
+
+.startDate {
+    font-family: 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+    font-size: 15px;
+    height: 36px;
+    width: 180px;
+}
+
+.endDate {
+    font-family: 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+    font-size: 15px;
+    height: 36px;
+    width: 180px;
+}
+
+
+.sortBar {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    background-origin: padding-box;
+    background-size: auto;
+    border-bottom-color: rgb(153, 153, 153);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(107, 107, 107);
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-color: rgb(107, 107, 107);
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-color: rgb(255, 203, 0);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-style: solid;
+    border-top-width: 3px;
+    box-sizing: border-box;
+    color: rgb(107, 107, 107);
+    display: block;
+    font-family: 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+    font-size: 17px;
+    height: 49px;
+    line-height: 25px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    position: relative;
+    vertical-align: top;
+    width: 786px;
+    zoom: 1;
+}
+
+.sort-bar-label {
+    box-sizing: border-box;
+    color: rgb(107, 107, 107);
+    display: list-item;
+    float: left;
+    font-family: 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+    font-size: 13px;
+    height: 47px;
+    line-height: 26px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    padding-bottom: 9px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 12px;
+    text-align: left;
+    width: 83px;
+    zoom: 1;
+}
+
+.sortOption {
+    box-sizing: border-box;
+    color: rgb(107, 107, 107);
+    display: list-item;
+    float: left;
+    font-family: 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+    font-size: 17px;
+    height: 47px;
+    line-height: 25px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    text-align: left;
+    width: 87px;
+    zoom: 1;
+}
+
+.hotelWrapper {
+    box-sizing: border-box;
+    color: rgb(31, 31, 31);
+    display: block;
+    font-family: 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+    font-size: 17px;
+    height: 157px;
+    line-height: 25px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    position: relative;
+    width: 787px;
+    zoom: 1;
+}
+
+.hotelCard {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgb(255, 250, 226);
+    background-image: none;
+    background-origin: padding-box;
+    background-size: auto;
+    border-bottom-color: rgb(199, 199, 199);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(199, 199, 199);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: rgb(199, 199, 199);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: rgb(199, 199, 199);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-sizing: border-box;
+    clear: both;
+    color: rgb(31, 31, 31);
+    display: block;
+    font-family: 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+    font-size: 17px;
+    height: 157px;
+    line-height: 25px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 6px;
+    margin-top: 24px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    position: relative;
+    width: 787px;
+    zoom: 1;
+}
+
+.thumbnailContainer {
+    box-sizing: border-box;
+    color: rgb(31, 31, 31);
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+    font-size: 17px;
+    height: 144px;
+    line-height: 25px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    max-width: 255px;
+    min-width: 108px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    text-align: left;
+    width: 255px;
+    zoom: 1;
+}
+
+.thumbnail {
+    background-color: rgb(229, 229, 229);
+    background-image: url(http://media.expedia.com/hotels/4000000/3090000/3084900/3084802/3084802_5_l.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    color: rgb(31, 31, 31);
+    cursor: pointer;
+    display: block;
+    font-family: 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+    font-size: 17px;
+    height: 144px;
+    left: 0px;
+    line-height: 25px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    position: relative;
+    text-align: left;
+    width: 255px;
+    zoom: 1;
+}

@@ -13,6 +13,7 @@ import com.travel.model.Ticket;
 public class TicketDao implements ITicketDao {
 
 	private String getT() {
+		// Http.requestGet("", null); // get from service
 		return "[{seatNo:'1',price:'12'},{seatNo:'2',price:'12'}]";
 	}
 

@@ -1,4 +1,4 @@
 travel
 ======
 
-This is the travel web site 
+This is the travel web site.

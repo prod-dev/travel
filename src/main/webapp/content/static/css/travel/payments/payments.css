@@ -1,0 +1,609 @@
+/* reset */
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,em,button{margin:0;padding:0;}
+body{font:12px/1.5 Arial,Simsun,sans-serif;color:#333;background-color: #FFF;}
+img,fieldset{border:0 none;}
+input,textarea{font-size:12px;font-family:Arial,Simsun;}
+select{font-family:Arial,Simsun;}
+table{width:100%;border-collapse:collapse;}
+a{font-size:12px;color:#06C;text-decoration:none;outline:0 none;}
+a:hover{text-decoration:underline;}
+h1,h2,h3,h4,h5{font-family:"Times New Roman",Simsun;}
+ul,ol{list-style:none;}
+dfn{font-style:normal;font-family:Arial}
+del{text-decoration:line-through;}
+
+/* mics */
+.wrapper{width:980px;margin:0 auto;}
+.txt_red{color:#F00;}
+.txt_gray{color:#999;}
+.txt_orange{color:#F60;}
+.mt10{margin-top:10px;}
+.mt20{margin-top:20px;}
+.ml15{margin-left:15px;}
+.pl15{padding-left:15px;}
+.fs14{font-size:14px;}
+
+/* input */
+.paylabel{cursor:pointer;font-size:12px;}
+.paylabel input{width:13px;height:13px;margin:-2px 5px 0 0;vertical-align:middle;cursor:pointer;}
+.input_text,.input_text_error{width:177px;height:22px;padding:3px;vertical-align:middle;font:14px/22px Arial,Simsun,sans-serif;border-width:1px;border-style:solid;border-color:#BBB #DDD #DDD #BBB;color:#333;outline:none;box-shadow:1px 1px 1px #ddd inset;}
+.input_text_error{border-color:#D80000;background-color:#FFFCD8;}
+input[type="text"]:focus,input[type="password"]:focus{border-color:#5D9DE5 #67A1E2 #67A1E2 #5D9DE5;background-color:#F1F9FF;box-shadow:1px 1px 3px #d0dee6 inset;outline:transparent none 0;}
+.input_text_small{height:18px;line-height:18px;}
+.input_text_cardnum{font-size:16px;}
+.inputSel{color:#666;}
+
+/* ico */
+.ico_tip1,.ico_tip2,.ico_alert1,.ico_alert2,.ico_alert3,.ico_success3,.ico_hui,.ico_selected,.ico_close,.ico_more,.ico_tri_up,.ico_error,.ico_security,.ico_dot,.ico_add,.ico_delete,.ico_phone,.ico_write{display:inline-block;background:url(../images/un_soa.png) no-repeat;}
+.ico_tip1{width:12px;height:12px;margin-right:5px;vertical-align:-2px;*vertical-align:1px;background-position:-88px -96px;}
+.ico_tip2{width:24px;height:24px;margin-right:5px;background-position:-64px -96px;}
+.ico_alert1{width:12px;height:12px;margin-right:5px;vertical-align:-2px;*vertical-align:1px;background-position:-104px -120px;}
+.ico_alert2{width:16px;height:16px;margin-right:5px;vertical-align:-3px;*vertical-align:baseline;background-position:-88px -120px;}
+.ico_alert3{width:24px;height:24px;vertical-align:-3px;*vertical-align:baseline;background-position:-64px -120px;}
+.ico_success3{width:24px;height:24px;vertical-align:-3px;*vertical-align:baseline;background-position:0 -70px;}
+.ico_hui{position:absolute;top:11px;top:10px\9;width:15px;height:15px;margin-left:2px;cursor:pointer;background-position:-64px -144px;}
+.ico_selected{position:absolute;right:1px;bottom:1px;width:15px;height:15px;background-position:-90px -140px;_bottom:0;_right:0;}
+.ico_close{float:right;width:16px;height:16px;margin-top:10px;background-position:0 -160px;}
+.ico_close:hover{background-position:-16px -160px;}
+.ico_more{padding-right:10px;font-size:14px;background-position:100% 7px;}
+.ico_tri_up{padding-right:10px;font-size:14px;background-position:100% -13px;}
+.ico_error{width:64px;height:64px;background-position:0 -96px;}
+.ico_loading{position:absolute;width:18px;height:18px;margin:8px 0 0 15px;background:url(../images/loading.gif) no-repeat;}
+.ico_add{width:12px;height:12px;vertical-align:middle;*vertical-align:1px;_vertical-align:0;background-position:0 -200px;}
+.ico_delete{width:12px;height:12px;vertical-align:middle;*vertical-align:1px;_vertical-align:0;background-position:-15px -200px;}
+.ico_phone{width:12px;height:18px;vertical-align:middle;background-position:0 -220px;}
+.ico_protect{display:inline-block;width:24px;height:24px;margin-right:5px;vertical-align:-7px;*vertical-align:-2px;background:url(../images/ico_protect.png) no-repeat;}
+.ico_union_pay{display:inline-block;width:28px;height:16px;margin-right:5px;vertical-align:-6px;*vertical-align:-2px;background:url(../images/icon-union-pay.jpg) no-repeat;}
+.ico_write{width: 14px;height: 12px;display: inline-block;margin-left: 10px;background-position: -32px -220px;vertical-align: middle;}
+/* btn */
+.btn,.btn2,.btn2_disabled,.btn_light,.btn_disabled,.btn3,.btn3_disabled{display:inline-block;height:26px;padding:0 10px;line-height:26px;text-align:center;vertical-align:middle;font-family:Tahoma;color:#333;border:1px solid #D1D1D1;border-radius:3px;background-color:#FFF;box-shadow:0 1px 0 rgba(0,0,0,0.1);}
+.btn:hover,.btn3:hover,.btn_light:hover{text-decoration:none;cursor:pointer;color:#FFF;border-color:#05A;background-color:#06C;}
+.btn2,.btn2_disabled{min-width:55px;color:#FFF;font-weight:bold;border-color:#05A;background-color:#27C;box-shadow:0 1px 0 rgba(55,120,190,0.7);}
+.btn2:hover{text-decoration:none;cursor:pointer;border-color:#07D;background-color:#29F;}
+.btn_light{color:#06C;}
+.btn_disabled{color:#B3B3B3;border-color:#D1D1D1;}
+.btn_disabled:hover{text-decoration:none;cursor:default;}
+.btn3{height:20px;line-height:20px;color:#06C;border-color:#AAC6E2;background-color:#DCEEFF;}
+.btn3_disabled{height:20px;line-height:20px;color:#B3B3B3;border-color:#D1D1D1;}
+.btn3_disabled:hover{text-decoration:none;cursor:default;}
+.btn_submit,.btn_submit_disabled{display:inline-block;width:148px;height:34px;text-align:center;vertical-align:middle;cursor:pointer;font:bold 16px/34px "Microsoft YaHei",SimSun;color:#FFF;border:1px solid #F88500;background-color:#FFB000;border-radius:3px;box-shadow:0 1px 0 rgba(95,50,0,0.7);text-shadow:1px 1px 0 #CF7000;-webkit-appearance:none;appearance:none;}
+.btn_submit:hover{text-decoration:none;border-color:#F76300;background-color:#FF8400;}
+.btn_submit_disabled,.btn_submit_disabled:hover,.btn2_disabled,.btn2_disabled:hover{cursor:default;color:#FFF;border-color:#DDD;background-color:#E6E6E6;box-shadow:0 1px 0 rgba(170,170,170,0.7);text-shadow:none;}
+
+/* tip */
+.sale_info{position:absolute;display:block;zoom:1;padding:5px;font-size:12px;border:1px solid #67A1E2;background-color:#FFF; z-index:10}
+.sale_info b{position:absolute;top:9px;left:-5px;width:5px;height:9px;background:url(../images/un_soa.png?20131128.png) no-repeat -59px -160px;}
+.tip_check{position:absolute;z-index:100;padding:5px 5px 5px 23px;text-indent:-17px;font-size:12px;border:1px solid #D6C197;background-color:#FFFCD8;}
+.tip_check b{background:url(../images/un_soa.png?20131128.png) no-repeat;}
+.tip_check .tri_left{position:absolute;top:9px;left:-5px;width:5px;height:9px;background-position:-59px -176px;}
+.tip_check .tri_bottom{position:absolute;bottom:-5px;_bottom:-15px;left:10px;width:9px;height:5px;background-position:-48px -176px;}
+.tip_check .tri_top{position:absolute;top:-5px;left:10px;width:9px;height:5px;background-position:-48px -185px;}
+.tip_check1{ margin-left:10px; position:absolute;padding:5px 5px 5px 23px;text-indent:-17px;font-size:12px;border:1px solid #D6C197;background-color:#FFFCD8;}
+.tip_check1 b{background:url(../images/un_soa.png?20131128.png) no-repeat;}
+.tip_check1 .tri_left{position:absolute;top:9px;left:-5px;width:5px;height:9px;background-position:-59px -176px;}
+.tip_check1 .tri_bottom{position:absolute;bottom:-5px;_bottom:-15px;left:10px;width:9px;height:5px;background-position:-48px -176px;}
+.tip_check1 .tri_top{position:absolute;top:-5px;left:10px;width:9px;height:5px;background-position:-48px -185px;}
+.tip_valid{width:225px;padding:7px;text-indent:0;}
+.valid_pic,.valid_pic2{display:block;width:225px;height:105px;}
+.valid_pic{background:url(../images/valid.png?20131128.png) no-repeat;}
+.valid_pic2{background:url(../images/valid2.png?20131128.png) no-repeat;}
+.tip_sale{position:absolute;height:16px;margin:-15px 0px 0px -160px;padding:0 5px;line-height:16px;font-size:12px;color:#FFF;background-color:#FFA200;border-radius:1px;}
+.tag_help{padding:2px 5px;font-size:14px;font-weight:bold;color:#FFF;background-color:#90BB16;}
+.tag_sale{padding:2px 3px;vertical-align:middle;font-weight:normal;font-size:12px;color:#FFF;background-color:#FB9F0C;}
+.tag_sale_wrap{white-space:nowrap;font-size:12px;font-family:Simsun;background-color:#FFF8E6;}
+.tag_sale_wrap .tag_sale{vertical-align:0;}
+.tag_sale_wrap .tag_info{padding:1px 2px;color:#FB9F0C;border-top:1px solid #FB9F0C;border-bottom:1px solid #FB9F0C;border-right:1px solid #FB9F0C;}
+.tip_alert{background-color:#EFF6FC;border:0 none;}
+.tag_alert{margin-left:5px;padding:2px 15px;color:#A26835;border:1px solid #FFCD9A;border-radius:3px;background-color:#FFF0CE;}
+.event_alert{display:inline-block;padding:5px 10px;vertical-align:middle;*vertical-align:-5px;_vertical-align:-7px;cursor:pointer;}
+.tips-warning{background: #fffcd8;border:1px solid #d6c197;line-height: 23px;padding:0 7px;}
+.tips-info{margin:4px 0 25px;padding:3px 10px;border:1px solid #BEDDF9;background-color:#EDF7FF;}
+/* price */
+.price{font:20px/1.5 Arial;color:#F60;}
+.price dfn{margin-right:2px;vertical-align:6px;font:normal 12px/1.5 Arial;color:#333;}
+
+/* hd&ft */
+.cui_hd{height:59px;margin:0 auto;padding:0 10px;border-bottom:2px solid #5E9FFB;background-color:#FFF;}
+.ctriplogo{float:left;width:126px;padding:8px 0;overflow:hidden;}
+.ctriplogo a{display:block;width:126px;height:43px;text-indent:-999px;overflow:hidden;background:url(../images/c_logo2013.png) 0 0 no-repeat;}
+:root .ctriplogo a{background-image:url(../images/c_logo2013_2x.png);background-size:100% 100%;}
+.hhlogo{float:left;width:90px;height:43px;margin:8px 0;padding-left:10px;text-indent:-999px;overflow:hidden;border-left:1px solid #B4B4B4;background:url(../images/hh_logo.jpg?20140507.jpg) no-repeat 10px 100%;}
+.cui_toolkit{float:right;width:422px;margin-top:5px;padding-top:20px;text-align:right;color:#BBB;}
+.cui_kefu{color:#4C4C4C;margin-left:8px;}
+.cui_username{color:#4C4C4C;margin-right:8px;}
+.payft{margin:50px 0 20px;padding-top:10px;text-align:center;border-top:1px dashed #9ECCF5;}
+
+/* paytitle */
+.paytitle{margin:25px 0 8px;font-size:14px;}
+.paytitle .price{font-size:18px;vertical-align:-2px;}
+.paytitle .price dfn{vertical-align:3px;}
+.paytitle .txt_gray{font-weight:normal;}
+
+/* payinfo */
+.payinfo{padding:14px 15px 10px;border-top:1px solid #FFFCDE;background-color:#FFFCD8;*zoom:1;}
+.payinfo:after{clear:both;content:'.';display:block;height:0;line-height:0;font-size:0;overflow:hidden;}
+.payinfo_price{float:left;margin-right:-17px;padding-right:20px;border-right:2px solid #E6DFC2;}
+.payinfo_price .price{font-weight:bold;font-size:26px;line-height:1.2}
+.payinfo_price .price dfn{vertical-align:9px;}
+.payinfo_price .order_money{color: #8d8b76;margin:-4px 0 0 -5px}
+.payinfo_price .order_money dfn{color:#4d4d4d;margin-right:2px}
+.payinfo_detail{display:inline;float:left;width:750px;margin-left:15px;padding-left:15px;font-size:14px;border-left:2px solid #E6DFC2;}
+.payinfo_detail dl{overflow:hidden;}
+.payinfo_detail dl+dl{margin-top:5px;}
+.payinfo_detail dl dt{margin:0 0 5px;font-weight:bold;}
+.payinfo_detail dl dt:only-child{margin:18px 0;}
+.payinfo_detail dl dd{margin:5px 0;}
+.payinfo_detail dl dd:only-child{margin:18px 0;}
+.payinfo_detail dl dd .btn_light{font-size:14px;}
+.payinfo_em{vertical-align:text-bottom;font-size:14px;}
+.payinfo_detail .payinfo_sale{margin-top:10px;}
+.payinfo_detail .tag_sale_wrap{margin-right:5px;vertical-align:2px;}
+
+.payinfo_wx{margin-top:15px;text-align:center;}
+.payinfo_wx p{margin-bottom:50px;font-size:24px;font-family:"Microsoft Yahei";}
+.payinfo_wx p .price{margin-left:8px;font-size:28px;}
+.payinfo_wx p .price dfn{vertical-align:8px;}
+
+/* payprompt */
+.payprompt{margin:15px 0;padding-left:25px;font-size:14px;}
+.payprompt a{font-size:14px;}
+.payprompt .ico_alert2,.payprompt .ico_alert3,.payprompt .ico_protect{float:left;}
+.payprompt .ico_alert2{margin:4px 0 0 -24px;}
+.payprompt .ico_alert3{margin:-1px 0 0 -30px;}
+.payprompt .ico_protect{margin-left:-26px;margin-top:-3px\9;}
+.payprompt2{margin:4px 0 25px;padding:3px 15px 3px 28px;border:1px solid #BEDDF9;background-color:#EDF7FF;}
+.payprompt2 .ico_tip1{float:left;margin:3px 0 0 -18px;}
+
+/* payarea */
+.payarea{margin:20px 0;}
+
+/* paytab */
+.paytab{height:37px;}
+.paytab li{float:left;margin-right:5px;}
+.paytab li a{position:relative;_top:2px;float:left;padding:0 16px;min-width:83px;height:34px;line-height:34px;text-align:center;font-weight:bold;font-size:16px;color:#333;border:3px solid #A2C5EB;border-bottom:0 none;}
+.paytab li a:hover{text-decoration:none;}
+.paytab .current a{height:36px;padding:1px 17px 0;border-width:2px 2px 0;border-color:#06C;color:#1069C5;background-color:#FFF;}
+.paytab a .tag_sale{position:absolute;top:-12px;right:-3px;line-height:1}
+.paytab a .tag_sale:after{border:3px solid;border-color:#FB9F0C transparent transparent transparent;display:block;width:0;height:0;content:"";position:absolute;left:6px;bottom:-6px;}
+.paytab a .ico_phone{display:inline;float:left;margin:7px 3px 0 0;}
+.paytab .current a .ico_phone{background-position:-15px -220px;}
+.paytab .current .tag_sale{right: -2px;top: -11px}
+.paytab_tip_green{position:absolute;top:-15px;left:55%;z-index:1;padding:0px 10px;font:normal 12px/1.5 Simsun;color:#FFF;background-color:#90BB16;}
+.paytab_tip_green b{position:absolute;bottom:-4px;left:2px;width:0;height:0;line-height:0;font-size:0;border-left:4px solid #FFF;border-right:4px solid #FFF;border-top:4px solid #90BB16;}
+.paytab .current .paytab_tip_green{top:-14px;}
+
+/* paybox */
+.paybox{padding:20px 25px;border:2px solid #06C;background-color:#FFF;}
+.paybox h3{margin-bottom:10px;font-weight:normal;font-size:14px;}
+.paybox h4{font-weight:normal;font-size:14px;}
+.paybox_tip{font-family:simsun;color:#999;}
+.paybox .paybox_hr{margin-top:20px;}
+.paybox .paybox_hr .credit_pic{margin:0 10px;vertical-align:middle;}
+.paybox .paybox_hr .credit_pic input{display:none;}
+.paybox .paybox_hr .credit_pic label{display:block;width:156px;height:32px;border:1px solid #DDD;cursor:pointer;}
+.paybox .paybox_hr .credit_pic .selected label,.paybox .paybox_hr .credit_pic label:hover{position:relative;margin:-1px;border:2px solid #F80;}
+.paybox .paylabel{font-size:14px;}
+.paybox .bggray .paylabel{font-size:12px;}
+.paycash{padding:10px;font-size:14px;}
+.paycash span{color:#666;}
+.paycash .paylabel{margin-left:20px;}
+.paybox .payform{margin-left:-15px;}
+.paybox .payform th{width:120px;color:#666;}
+.paybox .payform .txt_gray{font-size:12px;}
+.paybox .payform .txt_gray td{padding-top:0;}
+.paybox_error{margin-top:20px;font-size:14px;}
+.paybox_error .ico_alert3{margin-right:10px;vertical-align:-7px;*vertical-align:-4px;}
+.paybox .bggray{margin:0 -15px;padding:15px;background-color:#EFF6FC;}
+.paybox .tips-warning{margin:-10px -15px 10px;}
+.paybox_wx{position:relative;height:230px;font-family:"Microsoft Yahei";}
+.paybox_wx .wx_sale{position:absolute;top:50%;left:30px;margin-top:-25px;font-size:18px;color:#F60;}
+.paybox_wx .wx_sale strong{margin:0 10px;font-weight:normal;font-size:28px;color:#333;}
+.paybox_wx .wx_tip{float:right;width:500px;height:230px;text-align:center;font-size:14px;color:#999;background-color:#F8F8F8;}
+.paybox_wx .wx_tip_pic{width:255px;height:130px;margin:30px auto 25px;background:url(../images/pic_wx.png) no-repeat;}
+.ico_wx{display:inline-block;width:60px;height:50px;vertical-align:middle;background:url(../images/pic_wx.png) no-repeat 0 100%;}
+.assure_giftcard{margin-top:10px;padding:10px 15px;border-top:1px solid #CCC;}
+.assure_giftcard h4.split{padding-top:10px;border-top:1px dashed #CCC;}
+.assure_giftcard .paytitle{margin-top:0;}
+
+/* paylist */
+.paylist{overflow:hidden;*zoom:1;}
+.paylist li{float:left;padding:15px 40px 15px 0;}
+.paylist li input{float:left;width:13px;height:13px;margin:10px 5px 0 0;cursor:pointer;}
+.paylist li label{float:left;width:158px;height:34px;cursor:pointer;border:1px solid #DDD;background-color:#FFF;}
+.paylist li label:hover{border-color:#FFA200;}
+.paylist li input:hover+label{border-color:#FFA200;}
+.paylist li p{float:left;margin-bottom:-18px;padding-left:18px;white-space:nowrap;clear:both;}
+.paylist .selected label{border-color:#FFA200;}
+.mask .paylist li{padding-right:25px;}
+
+/*payticket */
+.payticket li{margin-top:4px;padding:10px 15px;background-color:#F8F8F8;}
+.payticket .selected{background-color:#EFF6FC;}
+.payticket li a{margin-left:20px;}
+.payticket li p{margin-bottom:8px;}
+.payticket li p a{margin:0px;}
+.payticket .txt_gray{margin-left:20px;}
+.payticket .txt_gray span{vertical-align:-1px;_vertical-align:1px;font-size:14px;color:#666;}
+.payticket .txt_gray dfn{color:#666;_vertical-align:1px;}
+.payticket_tip{margin-left:30px;}
+.payticket .payticket_tip a{margin-left:0;}
+.payticket .assure_tip{position:relative;top:12px;margin-top:-12px;padding-bottom:0;}
+.payticket .assure_tip a{margin:0;}
+
+/* paychoice */
+.paychoice{*zoom:1;}
+.paychoice:after{clear:both;content:'.';display:block;height:0;line-height:0;font-size:0;overflow:hidden;}
+.paychoice li{float:left;width:303px;margin:0 10px 0 0;color:#666;border:1px solid #DDD;background-color:#FFF;border-radius:3px;}
+.paychoice_border{_width:265px;min-height:160px;_height:160px;padding:5px 18px;border:1px solid #FFF;position:relative;}
+.paychoice li:hover{border-color:#FE8800;box-shadow:0 1px 0 #E4D6CB;}
+.paychoice li:hover .paychoice_border{border-color:#FE8800;}
+.paychoice li .ico_selected{display:none;}
+.paychoice .selected{z-index:1;border-color:#FE8800;box-shadow:0 1px 0 #E4D6CB;}
+.paychoice .selected .paychoice_border{border-color:#FE8800;}
+.paychoice .selected .ico_selected{display:inline-block;}
+.mask .paychoice{margin:20px -20px 0 0;*margin-bottom:20px;}
+.mask .paychoice li{margin-bottom:20px;}
+.paychoice li.paychoice_clear{clear:both;width:500px;height:0;margin:0;line-height:0;font-size:0;border:0 none;*clear:none;}
+
+/* card_list */
+.card_list{padding-bottom:10px;font-size:12px;overflow:hidden;*zoom:1;}
+.card_list dt{float:left;width:72px;padding-right:8px;line-height:30px;text-align:right;}
+.card_list dd{float:left;line-height:28px;}
+.card_list .card_num{position:relative;padding:0 5px;width:175px;height:30px;background-color:#F4F4F4;border-radius:5px;font-size:14px;font-family:Tahoma;color:#333;font-weight:bold;}
+.card_list .card_num span{margin-left:5px;font-family:Simsun;font-weight:normal;}
+.card_list .card_num .input_text{position:absolute;right:0;top:0;}
+.card_list .card_phone{padding:0 5px;font-size:14px;font-family:tahoma;}
+.card_list .card_phone span{font-family:Simsun;}
+.card_list .card_phone_modify{margin-left:5px;vertical-align:1px;_vertical-align:-1px;}
+.card_list .btn,.card_list .btn_disabled{width:105px;margin-left:10px;padding:0;}
+.card_list dd select{width:76px;}
+:root .card_list dd select{margin-right:-1px\0;}
+.card_list dd .hyphen{margin:0 15px;*vertical-align:4px;}
+.card_validity{padding-top:2px;*padding-top:0px;_padding-top:3px;}
+.card_list .tip_check{margin-left:10px;}
+p.card_list{padding-left:21px;text-indent:-21px;}
+
+/* payform */
+.payform{font-size:14px;margin-top: 45px}
+.payform th{width:130px;padding:8px 10px;text-align:right;font-weight:normal;}
+.payform td{padding:8px 3px;}
+.payform .credit_pic{vertical-align:middle;}
+.payform .input_text,.payform .input_text_error{width:180px;}
+.payform .txt_tip{margin:0 5px;vertical-align:middle;color:#999;}
+.payform .ico_tip1{margin-left:8px;_vertical-align:-1px;}
+.payform .tip_check{margin-left:10px;}
+.payform .no_abs{position:static;float:left;margin:0;}
+.payform .sale_info{margin:-24px 0 0 322px;*margin:-6px 0 0 10px;}
+.paybox .payform .sale_info{margin:-24px 0 0 322px;*margin:-6px 0 0 5px;}
+.credit_pic{display:inline-block;*display:inline;*zoom:1;width:158px;height:34px;}
+.payform .hyphen{margin:0 5px;*vertical-align:5px;}
+.payform .loading_tip{margin-left:43px;vertical-align:middle;_vertical-align:-1px;font-size:12px;color:#999;}
+.payform .btn3,.payform .btn3_disabled{min-width:60px;height:26px;line-height:26px;font-size:14px;}
+.payform .btn,.payform .btn_disabled,.payform .btn3,.payform .btn3_disabled{margin-left:10px;}
+.payform .txt_gray{margin-left:10px;*vertical-align:5px;font-size:12px;}
+.unionpay_tip{font-size:12px;}
+.unionpay_tip .ico_tip1{margin:0 5px 0 0;}
+.common_card_tip{font-size:12px;color:#999;margin-left:18px;}
+.payform .goback{font-weight: bold;}
+.payform .symbol{color: #06C;font-family: tomato;font-style: normal;margin-right: 5px;vertical-align: -2px;font-weight: normal;}
+.payform .payment{position: relative;}
+.payform .payment .tip_check{margin-left: 0;top: -30px;left:0;}
+/* paytable */
+.paytable{font-size:12px;color:#4D4D4D;}
+.paytable.used{color: #999}
+.paytable .tr{text-align: right;position:relative;padding:3px 20px 3px 5px;}
+.paytable .event_alert{position: absolute;right: -10px;top: 7px}
+.paytable_border tbody td{border-bottom:1px dashed #C9C9C9;}
+.paytable thead th{padding:3px 10px;text-align:left;border-top:1px solid #DDD;background-color:#F1F1F1;height: 34px}
+.paytable tbody th{padding:8px 10px;text-align:right;font-weight:normal;}
+.paytable tbody td{padding:8px 10px;}
+.paytable .paytable_total th,.paytable .paytable_total td{height:32px;padding:0 10px;background-color:#F1F1F1;}
+.paytable_total strong{vertical-align:middle;_vertical-align:baseline;}
+.paytable_total .price{font-size:16px;}
+.paytable_total .price dfn{vertical-align:middle;}
+.paytable .input_text,.paytable .input_text_error{width:140px;}
+.paytable_tip{margin:-2px 0 0 15px;}
+.paytable .no_abs{position:static;float:left;margin-top:-8px;}
+
+/* paysubmit */
+.paysubmit{padding:0 20px;text-align:center;}
+.paysubmit .goback{float:left;margin-right:-43px;font-size:14px;}
+.service_pay{margin-bottom:10px;font-size:12px;}
+.bank_maintain{margin-bottom:10px;color:#B00;}
+
+/* paynotice */
+.paynotice{margin-top:30px;padding:15px;background-color:#F8F8F8;}
+.paycredit_info{margin-bottom:10px;font-size:14px;}
+.paycredit_info2{margin-top:5px;color:#666;}
+
+/* payerror */
+.payerror{width:340px;margin:70px auto 0;padding:40px 90px 50px 190px;border:1px solid #D7E4F4;background-color:#EFF6FC;}
+.payerror p{margin-bottom:20px;font:20px "microsoft yahei";}
+.payerror .repay{font-size:14px;}
+.payerror .repay b{display:inline-block;height:0;line-height:0;font-size:0;border:6px solid #EFF6FC;border-left-color:#333;}
+.payerror .ico_error{margin:0 0 -54px -85px;}
+
+/* mask */
+.mask{/*position:absolute;*/padding:15px;/*overflow:hidden;*/border:8px solid #DCDCDC;background-color:#FFF;}
+.mask_hd{margin:-15px 0 -1px;line-height:38px;font-size:14px;border-bottom:1px solid #E1E1E1;}
+.mas_bd_content {
+    width: 675px;
+    padding: 10px;
+    border: 1px solid #CCC;
+    height: 480px;
+    overflow: auto;
+}
+.mas_bd_content dt {margin-bottom: 10px;}
+.mas_bd_content dd {margin-bottom: 20px;}
+
+.mask_hd_tab{margin-top:-15px;line-height:38px;border-bottom:2px solid #CCC;}
+.mask_hd_tab div{*zoom:1;}
+.mask_hd_tab div:after{clear:both;content:'.';display:block;height:0;line-height:0;font-size:0;overflow:hidden;}
+.mask_hd_tab div a{position:relative;float:left;height:36px;margin:0 20px -2px 0;font-size:14px;color:#333;border-bottom:2px solid #CCC;}
+.mask_hd_tab div a:hover{text-decoration:none;}
+.mask_hd_tab div .current{font-weight:bold;border-color:#06C;}
+.mask_hd_tab div a b{position:absolute;bottom:0;left:50%;height:0;margin-left:-5px;line-height:0;font-size:0;border:5px solid #FFF;}
+.mask_hd_tab div .current b{border-bottom-color:#06C;}
+.mask_bd{padding:20px 0;}
+.mask p{margin-bottom:20px;}
+.mask .card_list{margin-bottom:0;}
+.mask_paybox{margin:15px 0;}
+.mask .ico_tip2,.mask .ico_alert3,.mask .ico_success3{float:left;margin:-1px 0 0 -40px;}
+.mask_info{padding:0 50px 0 70px;font-size:14px;}
+.mask_info .btn2{margin-right:15px;}
+.mask_btn{text-align:center;font-size:12px;}
+.mask_btn div{margin:10px 0;}
+.mask_btn .ico_loading{margin-top:4px;}
+.mask_trade{margin-top:15px;padding:0 10px;font-size:12px;color:#}
+.mask_trade .input_text{margin-left:20px;}
+.mask_page{margin-bottom:15px;*margin-top:20px;_margin-top:0;text-align:center;}
+.mask_page a{margin:0 10px;text-decoration:underline;font-size:14px;}
+.mask_page a:hover{text-decoration:none;}
+.mask_page .current{text-decoration:none;cursor:default;color:#333;}
+.mask_tab{margin-bottom:10px;overflow:hidden;*zoom:1;}
+.mask_tab a{float:left;height:20px;margin-right:30px;padding:0px 7px;line-height:20px;}
+.mask_tab .current{color:#FFF;border-radius:3px;background-color:#98BDEC;}
+.mask_tab .current:hover{text-decoration:none;cursor:default;}
+.mask_ddc{margin:-10px 0 10px;line-height:2;font-size:12px;}
+.mask .service_pay{margin-bottom:0;}
+.mask .forget{margin-left:15px;}
+.mask .infotext{display:inline-block;color: #ccc;vertical-align:middle;margin:19px 0 0 20px;width:245px;}
+/* paynum */
+.paynum{position:relative;display:inline-block;}
+.paynum a{position:absolute;top:3px;*top:4px;width:17px;height:18px;background:url(../images/un_soa.png) no-repeat;}
+.paynum .input_text{width:70px;padding:2px;text-align:center;}
+.paynum .num_minus{left:3px;background-position:0 -176px;}
+.paynum .num_plus{right:3px;background-position:-17px -176px;}
+
+/* get_giftcard */
+.get_giftcard{font-size:12px;}
+.get_giftcard li{margin-bottom:15px;}
+.get_giftcard li input{width:150px;margin:0 10px;}
+.get_giftcard .ico_add,.get_giftcard .ico_delete{margin-right:5px;}
+.get_giftcard .tip_check{position:relative;top:10px;left:70px;display:inline-block;margin-bottom:10px;}
+
+/* security_info */
+.security_info{position:absolute;top:150px;width:250px;margin-left:800px;padding:15px 20px;background:url(../images/bg_repeatx.png) repeat-x #FFF;}
+.security_info{margin-left:660px;}
+.security_info dt{height:44px;line-height:44px;margin-bottom:10px;font-size:14px;font-weight:bold;}
+.security_info .security_creditcard{line-height:1.5;text-align:center;font-size:16px;}
+.security_info dd{margin:8px 0 8px 8px;text-indent:-8px;}
+.ico_security{float:left;width:38px;height:43px;margin-right:10px;background-position:-80px -160px;}
+.security_creditcard .ico_security{margin:0 -45px 0 8px;}
+.ico_dot{width:3px;height:3px;margin-right:5px;vertical-align:middle;_vertical-align:-4px;background-position:-112px -96px;}
+
+/* payother */
+.payother{margin-top:15px;padding-top:15px;font-size:12px;color:#666;border-top:1px dotted #6A6A6A;}
+.payother .btn_light{margin-left:10px;}
+.payother2{width:650px;margin:15px 0 0 30px;padding:15px 0 0 97px;font-size:14px;color:#666;border-top:1px dashed #CCC;}
+.payother2{width:600px;padding-left:26px;}
+.payother2 .btn_light{margin-left:12px;}
+
+/* payinfo_pop */
+/*.payinfo_pop{position:absolute;width:405px;font-size:14px;border:1px solid #67A1E2;background-color:#FFF;box-shadow:2px 2px 2px rgba(200,200,200,0.7);}
+.payinfo_pop table th{padding:10px;text-align:left;vertical-align:top;font-weight:bold;border-bottom:1px solid #DDD;background-color:#F9F9F9;}
+.payinfo_pop table td{padding:10px;vertical-align:top;border-bottom:1px solid #DDD;}
+.payinfo_pop .close{position:absolute;top:-1px;right:-21px;_right:-22px;width:20px;height:20px;text-align:center;font:bold 16px/20px Verdana;color:#FFF;background-color:#67A1E2;}
+.payinfo_pop .close:hover{text-decoration:none;}*/
+
+/* un_card */
+.creditcard_cmb,.creditcard_ccb,.creditcard_icbc,.creditcard_boc,.creditcard_comm,.creditcard_gdb,.creditcard_citic,.creditcard_spdb,.creditcard_abc,.creditcard_bjbank,.creditcard_cebbank,.creditcard_cmbc,.creditcard_shbank,.creditcard_cib,.creditcard_spabank,.creditcard_sdb,.creditcard_hxb,.creditcard_nbbank,.creditcard_hkbea,.creditcard_jsb,.creditcard_psbc,.creditcard_ceb,
+.creditcard_jcb,.creditcard_americanexpress,.creditcard_visa,.creditcard_mastercard,.creditcard_DinersClub,
+.more_unionpay,.more_alipay,.more_tenpay,.more_paypal,.more_chinapay,.more_alipayscan{background-image:url(../images/un_card.png?20131204.png);background-repeat:no-repeat;}
+/* creditcard */
+.creditcard_ccb{background-position:0 -47px;}
+.creditcard_cmb{background-position:0 2px;}
+.creditcard_icbc{background-position:0 -94px;}
+.creditcard_boc{background-position:0 -142px;}
+.creditcard_comm{background-position:0 -190px;}
+.creditcard_abc{background-position:0 -382px;}
+.creditcard_gdb{background-position:0 -238px;}
+.creditcard_spdb{background-position:0 -334px;}
+.creditcard_cmbc{background-position:0 -525px;}
+.creditcard_citic{background-position:0 -286px;}
+.creditcard_spabank{background-position:0 -670px;}
+.creditcard_cebbank{background-position:0 -478px;}
+.creditcard_cib{background-position:0 -622px;}
+.creditcard_shbank{background-position:0 -576px;}
+.creditcard_sdb{background-position:0 -718px;}
+.creditcard_bjbank{background-position:0 -430px;}
+.creditcard_hxb{background-position:0 -766px;}
+.creditcard_jsb{background-position:0 -1683px;}
+.creditcard_psbc{background-position:0 -1636px;}
+.creditcard_nbbank{background-position:0 -815px;}
+.creditcard_hkbea{background-position:0 -861px;}
+
+.creditcard_visa{background-position:0 -1155px;}
+.creditcard_mastercard{background-position:0 -1203px;}
+.creditcard_jcb{background-position:0 -1058px;}
+.creditcard_americanexpress{background-position:3px -1107px;}
+.creditcard_DinersClub{background-position:0 -1252px;}
+
+/* more */
+.more_unionpay{background-position:0 -1299px;}
+.more_alipay{background-position:0 -1347px;}
+.more_tenpay{background-position:0 -1396px;}
+.more_paypal{background-position:0 -1586px;}
+.more_chinapay{background-position:0 -1730px;}
+.more_alipayscan{background-position:0 -1780px;}
+
+/* unknown */
+.more_ump{background-image:url(../images/un_card.png);background-repeat:no-repeat;}
+.more_ump{background-position: 0 -1390px;}
+
+/* other banks */
+.creditcard_bocd{background-image:url(../images/bank/bocd.png);}
+.creditcard_cdrcb{background-image:url(../images/bank/cdrcb.png);}
+.creditcard_cdb{background-image:url(../images/bank/cdb.png);}
+.creditcard_cqrcb{background-image:url(../images/bank/cqrcb.png);}
+.creditcard_csrcb{background-image:url(../images/bank/csrcb.png);}
+.creditcard_czcb{background-image:url(../images/bank/czcb.png);}
+.creditcard_grcb{background-image:url(../images/bank/grcb.png);}
+.creditcard_gyccb{background-image:url(../images/bank/gyccb.png);}
+.creditcard_gzcb{background-image:url(../images/bank/gzcb.png);}
+.creditcard_gzccb{background-image:url(../images/bank/gzccb.png);}
+.creditcard_heb{background-image:url(../images/bank/heb.png);}
+.creditcard_hrbcb{background-image:url(../images/bank/hrbcb.png);}
+.creditcard_hsbank{background-image:url(../images/bank/hsb.png);}
+.creditcard_jjccb{background-image:url(../images/bank/jjccb.png);}
+.creditcard_jprcu{background-image:url(../images/bank/jprcu.png);}
+.creditcard_jxccb{background-image:url(../images/bank/jxccb.png);}
+.creditcard_ljbc{background-image:url(../images/bank/ljbc.png);}
+.creditcard_bol{background-image:url(../images/bank/bol.png);}
+.creditcard_mtb{background-image:url(../images/bank/mtb.png);}
+.creditcard_nccb{background-image:url(../images/bank/nccb.png);}
+.creditcard_njcb{background-image:url(../images/bank/njcb.png);}
+.creditcard_qbccb{background-image:url(../images/bank/qbccb.png);}
+.creditcard_qlbc{background-image:url(../images/bank/qlbc.png);}
+.creditcard_sdeb{background-image:url(../images/bank/sdeb.png);}
+.creditcard_sdnxs{background-image:url(../images/bank/sdnxs.png);}
+.creditcard_srb{background-image:url(../images/bank/srb.png);}
+.creditcard_srcb{background-image:url(../images/bank/srbc.png);}
+.creditcard_scb{background-image:url(../images/bank/scb.png);}
+.creditcard_szb{background-image:url(../images/bank/szb.png);}
+.creditcard_taccb{background-image:url(../images/bank/taccb.png);}
+.creditcard_tzb{background-image:url(../images/bank/tzb.png);}
+.creditcard_uccb{background-image:url(../images/bank/uccb.png);}
+.creditcard_wfccb{background-image:url(../images/bank/wfccb.png);}
+.creditcard_whccb{background-image:url(../images/bank/whccb.png);}
+.creditcard_wjrcb{background-image:url(../images/bank/wjrcb.png);}
+.creditcard_wrcb{background-image:url(../images/bank/wrcb.png);}
+.creditcard_wzcb{background-image:url(../images/bank/wzcb.png);}
+.creditcard_xmccb{background-image:url(../images/bank/xmccb.png);}
+.creditcard_zrcb{background-image:url(../images/bank/zrcb.png);}
+.creditcard_bsb{background-image:url(../images/bank/bsb.png);}
+.creditcard_dyccb{background-image:url(../images/bank/dyccb.png);}
+.creditcard_fdb{background-image:url(../images/bank/fdb.png);}
+.creditcard_hnnxs{background-image:url(../images/bank/hnnxs.png);}
+.creditcard_jyrcb{background-image:url(../images/bank/jyrcb.png);}
+.creditcard_ordosbank{background-image:url(../images/bank/ordosbank.png);}
+.creditcard_szrcb{background-image:url(../images/bank/szrcb.png);}
+.creditcard_cgnb{background-image:url(../images/bank/cgnb.png);}
+.creditcard_qhrcb{background-image:url(../images/bank/qhrcb.png);}
+.creditcard_pdscb{background-image:url(../images/bank/pdscb.png);}
+.creditcard_gxrcb{background-image:url(../images/bank/gxrcb.png);}
+.creditcard_nmgrcb{background-image:url(../images/bank/nmgrcb.png);}
+.creditcard_smxb{background-image:url(../images/bank/smxb.png);}
+.creditcard_hdcb{background-image:url(../images/bank/hdcb.png);}
+.creditcard_shb{background-image:url(../images/bank/shb.png);}
+.creditcard_hbb{background-image:url(../images/bank/hbb.png);}
+.creditcard_boimc{background-image:url(../images/bank/boimc.png);}
+.creditcard_lsccb{background-image:url(../images/bank/lsccb.png);}
+.creditcard_jxb{background-image:url(../images/bank/jxb.png);}
+.creditcard_drcb{background-image:url(../images/bank/drcb.png);}
+.creditcard_bdb{background-image:url(../images/bank/bdb.png);}
+.creditcard_citybank{background-image:url(../images/bank/citybank.png);}
+.creditcard_klb{background-image:url(../images/bank/klb.png);}
+.creditcard_asrbs{background-image:url(../images/bank/asrbs.png);}
+.creditcard_hebnx{background-image:url(../images/bank/hebnx.png);}
+.creditcard_hbxh{background-image:url(../images/bank/hbxh.png);}
+.creditcard_jnrcb{background-image:url(../images/bank/jnrcb.png);}
+.creditcard_jxnxs{background-image:url(../images/bank/jxnxs.png);}
+.creditcard_scrcu{background-image:url(../images/bank/scrcu.png);}
+.creditcard_tsbank{background-image:url(../images/bank/tsbank.png);}
+.creditcard_cbnb{background-image:url(../images/bank/cbhb.png);}
+.creditcard_deyangccb{background-image:url(../images/bank/deyangccb.png);}
+
+
+/*no used */
+.creditcard_beeb{background-image:url(../images/bank/beeb.png);}
+.creditcard_bjrcb{background-image:url(../images/bank/bjrcb.png);}
+.creditcard_cqcb{background-image:url(../images/bank/cqcbank.png);}
+.creditcard_cscb{background-image:url(../images/bank/cscb.png);}
+.creditcard_czbank{background-image:url(../images/bank/czbank.png);}
+.creditcard_bankofdl{background-image:url(../images/bank/dlbank.png);}
+.creditcard_dongguanbank{background-image:url(../images/bank/dongguanbank.png);}
+.creditcard_dzbchina{background-image:url(../images/bank/dzbchina.png);}
+.creditcard_egbank{background-image:url(../images/bank/egbank.png);}
+.creditcard_fjnx{background-image:url(../images/bank/fjnx.png);}
+.creditcard_crcb{background-image:url(../images/bank/grcbank.png);}
+.creditcard_hzbank{background-image:url(../images/bank/hzbank.png);}
+.creditcard_hkbchina{background-image:url(../images/bank/hkbchina.png);}
+.creditcard_jnccb{background-image:url(../images/bank/jhccb.png);}
+.creditcard_jiangmingbank{background-image:url(../images/bank/jiangmingbank.png);}
+.creditcard_boj{background-image:url(../images/bank/jinzhoubank.png);}
+.creditcard_jnbank{background-image:url(../images/bank/jnbank.png);}
+.creditcard_kunmingcb{background-image:url(../images/bank/kunmingcb.png);}
+.creditcard_lsbankchina{background-image:url(../images/bank/lsbankchina.png);}
+.creditcard_boq{background-image:url(../images/bank/qhbank.png);}
+.creditcard_rizhaobank{background-image:url(../images/bank/rizhaobank.png);}
+.creditcard_shengjingbank{background-image:url(../images/bank/shengjingbank.png);}
+.creditcard_tccb{background-image:url(../images/bank/tccb.png);}
+.creditcard_yccb{background-image:url(../images/bank/yccb.png);}
+.creditcard_ycccb{background-image:url(../images/bank/ycccb.png);}
+.creditcard_zjnx{background-image:url(../images/bank/zjnx.png);}
+.creditcard_zjtlcb{background-image:url(../images/bank/zjtlcb.png);}
+.creditcard_ydrcb{background-image:url(../images/bank/ydrcb.png);}
+
+
+.ctrl_tip{display:inline-block;position:absolute;left:0px;top:0px;margin:0px;padding:5px;font:12px/2 Arial,Simsun,sans-serif;color:#333;z-index:999;}
+.ctrl_tip .tri_box_base{display:inline-block;position:relative;padding:2px 3px;border:1px solid #D6C197;background-color:#FFFCD8;}
+.ctrl_tip .tri_box_base b{position:absolute;background-image:url(../images/un_soa.png);background-repeat:no-repeat;overflow:hidden;}
+.ctrl_tip .tri_box_t{margin-top:5px;}
+.ctrl_tip .tri_box_t b{width:9px;height:5px;top:-5px;left:0px;}
+.ctrl_tip .tri_box_base .tri_t{background-position:-48px -185px;}
+.ctrl_tip .tri_box_b{margin-bottom:5px;}
+.ctrl_tip .tri_box_b b{width:9px;height:5px;bottom:-5px;left:0px;}
+.ctrl_tip .tri_box_base .tri_b{background-position:-48px -176px;}
+.ctrl_tip .tri_box_l{margin-left:5px;}
+.ctrl_tip .tri_box_l b{width:5px;height:9px;left:-5px;top:0px;}
+.ctrl_tip .tri_box_base .tri_l{background-position:-59px -176px;}
+
+/* add by xiepeng 2014-05-06 */
+.w_mask_trade{padding:20px 10px 20px 20px;font-size:14px;color:#4D4D4D;border-top:1px solid #E1E1E1;}
+.w_mask_trade .input_text{margin-left:20px; width:136px; height:22px;}
+.w_btn {display:block; margin:10px auto; width:55px;}
+.w_paytable thead th{padding:3px 10px 3px 20px;text-align:left;border-top:1px solid #DDD;background-color:#F1F1F1; font-weight:400; color:#999; height:34px;}
+.w_paytable tbody th{padding:8px 10px;text-align:right;font-weight:normal;}
+.w_maks_paytable {white-space:nowrap; padding-left:20px;}
+.w_paytable tbody tr {height:44px; line-height:44px;}
+.w_paytable .price dfn {margin-right: 2px;vertical-align: 6px;color: #333;vertical-align: 0;}
+.w_paytable .price {font-size:26px; font-weight: 700;}
+.w_paytable .input_text {width:83px;}
+.w_paytable tr .sale_info, .w_paytable tr .paytable_tip {line-height:20px;}
+.w_paytable tr .paytable_tip {margin:6px 0 0 10px;}
+.w_paytable tr .event_alert {padding:0;}
+
+/*140624 pci dss*/
+.security_info dd.pcidss{margin:15px -10px 0 5px}
+.ico-pcidss{display: inline-block;width: 42px;height: 28px;background: url(../images/pcidss.jpg);margin-right: 4px;vertical-align: middle;}
+.pcidss-box{font-size: 12px;line-height: 50px;color: #333;text-align: center;margin: 0 0 40px 0;}
+/*140909 手机加验证码*/
+
+.indent-list{color: #4D4D4D}
+.indent-list label,.indent-list .th{margin-left:-159px;width: 140px;padding-right:19px;text-align: right;display:inline-block;}
+.indent-list label,.indent-list .th{*display: inline;}
+.indent-list .list-item{margin-top: 10px;padding-left: 159px;vertical-align: middle;height: 30px;line-height: 30px}
+.indent-list .list-item.title{background:#f1f1f1;height: 40px;line-height: 40px;border-top:1px solid #ddd;margin-bottom: 20px;margin-top: 0;color: #333;font-weight: bold}
+.indent-list .th,.indent-list .total{background:#f1f1f1;}
+.indent-list .total{text-align: center;height: 30px;line-height: 30px;margin:25px 0 20px;}
+.indent-list .total .price{font-size: 14px}
+.indent-list .def-hide{border-top:1px solid #ddd;margin-top: 10px;display: none;}
+.indent-list .input_text{width: 150px;height:20px;font-size: 12px;}
+.indent-list .placeholder{color:#999}
+.indent-list .tip_check{line-height: 18px}
+.indent-list .tip_check.indent-tip{margin-left:15px;}
+.indent-list .btn-area{padding:10px 0 20px 159px;}
+.btn-getcode{background: #ffb100;border:1px solid #e97c00;border-radius:2px;width: 85px;height: 26px;line-height: 26px;color: #fff;font-weight: bold;display: inline-block;margin-left: 10px;vertical-align: middle;text-align: center;text-decoration: none!important;}
+.btn-getcode.disabled{background: #c8c8c8;border-color: #b5b5b5;font-weight: normal;}
+.mask .attention{color: #999;padding: 8px 0 0;border-top: 1px dashed #ccc;display: none;}

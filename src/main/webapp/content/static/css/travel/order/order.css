@@ -1,0 +1,431 @@
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, em, button { margin:0; padding:0; }
+html { background-color:#FFF; }
+body { background-color:#FFF; font-size:12px; line-height:1.5; font-family:Tahoma,Simsun,sans-serif; color:#333; }
+img, fieldset { margin:0; padding:0; border:0; }
+input, textarea { font-size:12px; outline:none; }
+table { border-collapse:collapse; }
+th, td { vertical-align:top; }
+a { color:#06C; text-decoration:none; outline:none; }
+a:hover { text-decoration:underline; cursor:pointer; }
+a:focus { outline:none; }
+h1, h2, h3, h4, h5 { font-size:100%; font-family:Tahoma,Simsun,sans-serif; }
+ul li, ol li { list-style:none; }
+dfn { margin-right:2px; font:normal 12px Arial; }
+section { display:block; }
+select { height:22px; margin:0; padding:1px; font:12px/22px Tahoma,Simsun,sans-serif; border:1px solid #BBB; background-color:#FFF; }
+input[type="button"],input[type="submit"] { -webkit-appearance:none; cursor:pointer; }
+.basefix { *zoom:1; }
+.basefix:after { clear:both; content:'.'; display:block; height:0; overflow:hidden; }
+.base_txtgray { color:#888; }
+.base_txtsilver { color:#666; }
+.base_price { color:#F60; font:normal 18px Tahoma; }
+.float_left { float:left; }
+.float_right { float:right; }
+.text_right { text-align:right !important; }
+.text_center { text-align:center; }
+.invisible { visibility:hidden; }
+.hidden { display:none; }
+.input_text { height:16px; padding:3px 5px; line-height:16px; vertical-align:middle; border:1px solid #BBB; background-color:#FFF; }
+.input_text::-webkit-input-placeholder { color:#999; }
+.input_alert { border-color:#D80000; background-color:#FFFCD8; }
+.input_text:focus { border-color:#5D9DE5; }
+.border_none { border:0 none !important; }
+.base_txtdiv { display:inline-block; border-bottom:1px dashed #333; cursor:pointer; color:#06C; }
+
+/* Structure Begin */
+.cui_hd { padding:0; _width:980px; }
+.w1180 { min-width: 980px; max-width: 1180px; width: 100%; _width:980px; margin: 0 auto; position: relative; }
+.wrapper { *zoom:1; }
+.wrapper:after { clear:both; content:'.'; display:block; height:0; overflow:hidden; }
+.main_box { float:left; width:100%; }
+.main_wrap { padding-right:320px; }
+.side_box { float:right; width:300px; margin-left:-300px; }
+.side_fix_box { width:300px; }
+/* Structure End */
+
+/* Picture Begin */
+.order_progress .step i, .order_progress .step .progress_line { background:url(http://pic.c-ctrip.com/railway_v2/book_progress2_8.png) no-repeat; }
+.line_arrow { display:inline-block; width:47px; height:11px; vertical-align:middle; *vertical-align:0; _vertical-align:-6px; background:url(http://pic.c-ctrip.com/railway_v2/arrow_trip.gif?140305.gif) no-repeat; }
+.icon_notice, .side_alert b, .block_alert b, .side_alert i, .icon_tip, .btn_add_p b, .block_notice b, .add_child b, .add_child_disable b, .product_choice dd, .app_dl .app_correct, .app_dl .app_wrong { background:url(http://pic.c-ctrip.com/railway_v2/un_icon_book.png) no-repeat; }
+.base_pop_bd .icon_alert_big { background:url(http://pic.c-ctrip.com/railway_v2/icon_alert_big.gif) no-repeat; }
+.complete_box b, .ypbooking_link a, .icon_refund, .rec_flight_box .title .icon_flight_arrow { background:url(http://pic.c-ctrip.com/railway_v2/un_complete.png) no-repeat; }
+.banner_client .qrcode, .banner_client .download, .banner_client .client_feature, .banner_client { background:url(http://pic.c-ctrip.com/railway_v2/banner_client.png) no-repeat; }
+.icon_notice { display:inline-block; width:12px; height:12px; margin-right:3px; background-position:0 -32px; vertical-align:middle; }
+.icon_tip { display:inline-block; width:16px; height:16px; margin-left:5px; vertical-align:middle; background-position:0 -160px; cursor:pointer; }
+.icon_rec { display:inline-block; height:16px; margin-left:5px; padding:0px 5px; font-weight:normal; line-height:16px; vertical-align:middle; border-radius:3px; background-color:#FBA62C; color:#FFF; overflow:hidden; }
+.icon_refund { display:inline-block; height:14px; margin-left:10px; padding:0 3px 0 18px; line-height:14px; color:#fba62c; border:1px solid #fba62c; background-position:-76px -32px; background-color:#FFF; }
+.icon_arrow_down { position:absolute; width:0; height:0; margin:10px 0 0 -20px; border-width:5px; border-style:solid; border-color:#666 transparent transparent; _border-style:solid dashed dashed; overflow:hidden; }
+/* Picture End */
+
+/* Common Begin */
+/*=s labels&it's input */
+.base_label { _padding-bottom: 1px; *display: inline-block; border-bottom:1px solid transparent; _border-bottom:none; _font-family:Simsun; cursor: pointer; }
+.base_label:hover { border-bottom: 1px dashed #aaa; }
+.base_label input { margin: -4px 3px 0 0; *margin-top: -2px; *width: 12px; *height: 12px; overflow:hidden; border: none; font-family:Arial; vertical-align: middle; }
+/*=e labels&it's input */
+/*=s pop ups */
+.pop_ups { position:absolute; *left:185px; *margin-top:24px; border:1px solid #CCC; border-top:0 none; background-color:#FFF; z-index:10; }
+.pop_ups .pop_title { display:block; padding:5px 10px 5px 15px; border-top:1px solid #CCC; border-bottom:1px solid #CCC; background-color:#F1F1F1; overflow:hidden; *zoom:1; }
+.pop_ups .pop_title span { float:left; }
+.pop_ups .pop_bd { padding:5px 10px; }
+.pop_ups .pop_bd li { padding:3px 0; border-bottom:1px dashed #CCC; *zoom:1; }
+.pop_ups .pop_bd li:after { clear:both; content:'.'; display:block; height:0; overflow:hidden; }
+.pop_ups .pop_bd a { padding:2px 5px; *zoom:1; }
+.pop_ups .pop_bd a:hover { text-decoration:none; background-color:#2577E3; color:#FFF; }
+
+.pop_ups .s_pages { padding:5px 0; text-align:center; font-size:14px; color:#06C; }
+.pop_ups .s_pages a { margin:0 5px; text-decoration:underline; }
+.pop_ups .s_pages .current { text-decoration:none; color:#666; border:0 none; cursor:default; }
+/*=e pop ups */
+/*=s stars & diamonds */
+.hotel_diamond01, .hotel_diamond02, .hotel_diamond03, .hotel_diamond04, .hotel_diamond05, .hotel_diamond06, .hotel_halfdiamond01, .hotel_halfdiamond02, .hotel_halfdiamond03, .hotel_halfdiamond04, .hotel_halfdiamond05, .hotel_halfdiamond06, .hotel_stars01, .hotel_stars02, .hotel_stars03, .hotel_stars04, .hotel_stars05 { display:inline-block; background:url(http://pic.c-ctrip.com/railway_v2/un_complete.png) no-repeat; overflow:hidden; vertical-align:middle; }
+
+.hotel_stars01, .hotel_stars02, .hotel_stars03, .hotel_stars04, .hotel_stars05 { height:16px; background-position:0 -10px; }
+.hotel_stars01 { width:12px; }
+.hotel_stars02 { width:24px; }
+.hotel_stars03 { width:36px; }
+.hotel_stars04 { width:48px; }
+.hotel_stars05 { width:60px; }
+
+.hotel_diamond01, .hotel_diamond02, .hotel_diamond03, .hotel_diamond04, .hotel_diamond05, .hotel_diamond06, .hotel_halfdiamond01, .hotel_halfdiamond02, .hotel_halfdiamond03, .hotel_halfdiamond04, .hotel_halfdiamond05, .hotel_halfdiamond06 { height:12px; }
+.hotel_diamond01, .hotel_halfdiamond01 { width:11px; }
+.hotel_diamond02, .hotel_halfdiamond02 { width:23px; }
+.hotel_diamond03, .hotel_halfdiamond03 { width:35px; }
+.hotel_diamond04, .hotel_halfdiamond04 { width:47px; }
+.hotel_diamond05, .hotel_halfdiamond05 { width:59px; }
+.hotel_diamond06, .hotel_halfdiamond06 { width:71px; }
+.hotel_diamond01, .hotel_diamond02, .hotel_diamond03, .hotel_diamond04, .hotel_diamond05, .hotel_diamond06 { background-position:0 3px; }
+.hotel_halfdiamond01 { background-position:-72px 3px; }
+.hotel_halfdiamond02 { background-position:-60px 3px; }
+.hotel_halfdiamond03 { background-position:-48px 3px; }
+.hotel_halfdiamond04 { background-position:-36px 3px; }
+.hotel_halfdiamond05 { background-position:-24px 3px; }
+.hotel_halfdiamond06 { background-position:-12px 3px; }
+/*=e stars & diamonds */
+/* Common End */
+
+/* Progress Bar Begin */
+.order_progress { *zoom:1; margin-bottom: 20px; }
+.order_progress:before, .order_progress:after { content: " "; display: table; }
+.order_progress:after { clear: both; }
+.order_progress .step { width: 24.9%; float: left; height: 15px; position: relative; }
+.order_progress .step.one_third { width: 33.3%; }
+.order_progress .step h4 { font-size: 12px; line-height: 14px; width: 36px; font-weight: normal; color: #9a9a9a; position: absolute; right: 0; }
+.order_progress .step i, .order_progress .step .progress_line { position: absolute; font-size:0; }
+.order_progress .step i { width: 55px; height: 15px; display: block; right: 0; top: 0; background-color: #fff; background-position: -785px -16px; }
+.order_progress .step .progress_line { width: 100%; height: 15px; background-position: 0 -16px; top: 0; left: 0; }
+.order_progress .step.wide { width: 50%; }
+.order_progress .finished h4 { color: #799d08; }
+.order_progress .finished i { background-position: -785px 0; }
+.order_progress .finished .progress_line { background-position: 0 0; }
+
+.block_notice { position:relative; max-width:1143px; min-width:943px; width:auto; _width:943px; margin:0 auto 10px; padding:5px 0 5px 35px; border:1px solid #D6C197; background-color:#FFFCD8; }
+.block_notice b { position:absolute; top:7px; left:10px; width:16px; height:16px; background-position:0 -304px; }
+.block_notice.alert b { background-position:2px -95px; }
+/* Progress Bar End */
+
+/* Main Box Begin */
+.form_panel { min-height:42px; margin-bottom:10px; padding-left:110px; border:1px solid #D7E8F5; *zoom: 1; }
+.form_panel h3 { position:absolute; margin-left:-110px; padding:8px 10px 8px 15px; font:16px/34px "Microsoft Yahei", Tahoma, Arial, sans-serif; color:#666; }
+.form_field { min-height:32px; _height:32px; padding:15px; background-color:#eff6fc; *zoom:1; }
+.form_field:after { clear:both; content:'.'; display:block; height:0; overflow:hidden; }
+/*=s train info */
+.tb_train_info th, .tb_train_info td { padding:3px 10px 3px 0; line-height:1.8; }
+.tb_train_info th { font-weight:normal; text-align:left; border-top:1px dotted #CCC; }
+.tb_train_info dfn { vertical-align:3px; }
+.tb_train_info .base_price { font:normal 16px Tahoma, Simsun; }
+.tb_train_info em { font:bold 14px Tahoma, Simsun, sans-serif; color:#4C4C4C; }
+.tb_train_info .bus_no { display:inline-block; width:100px; color:#333; word-wrap:break-word; word-break:break-all; }
+/*=e train info */
+/*=s passenger info */
+.passenger_list { padding:15px 0 15px 15px; }
+.no_passenger { padding:10px 0; text-align:center; }
+.passenger { max-height:68px; margin-top:10px; _height:68px; }
+.passenger .base_label { display:inline-block; width:19.3%; height:20px; *width:18.4%; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+
+.form_field.p_info { padding:0; background-color:#FFF; }
+.single_passenger { margin-bottom:15px; padding:15px; border-top:1px solid #C8D9EF; background-color:#EFF6FC; z-index:2; *zoom:1; }
+.single_passenger.child_p { margin-top:-15px; z-index:1; }
+.single_passenger .add_to_reg { float:right; }
+.single_passenger .title { display:inline-block; color:#666; margin:0 20px 10px 0; *vertical-align:top; }
+
+.tb_form th, .tb_form td { padding-bottom:10px; }
+.tb_form th { width:60px; padding-right:10px; font-weight:normal; text-align:right; color:#666; }
+
+.dropdown { display:inline-block; *display:inline; width:142px; height:24px; margin-right:8px; vertical-align:middle; *zoom:1; }
+.dropdown .current { display:inline-block; position:relative; width:130px; height:16px; padding:3px 5px; line-height:16px; border:1px solid #BBB; background-color:#FFF; color:#333; }
+.dropdown .current b { position:absolute; width:0; height:0; top:10px; right:5px; border-width:5px; border-style:solid; border-color:#666 transparent transparent; _border-style:solid dashed dashed; overflow:hidden; }
+.dropdown .current:hover { text-decoration:none; }
+.dropdown .options { position:absolute; width:318px; margin-top:-1px; *margin:23px 0 0 1px; }
+.options a { display:block; }
+
+.add_child { display:inline-block; }
+.add_child_disable { color:#999; cursor:default; }
+.add_child_disable:hover { text-decoration:none; }
+.child_ins { color:#888; }
+.btn_box { position:relative; margin-bottom:15px; text-align:center; *zoom:1; _height:37px; }
+.p_info .btn_box { text-align:left; _height:39px; }
+.btn_add_p { display:inline-block; width:129px; _width:109px; height:36px; _padding-left:20px; font:14px/36px "Microsoft Yahei", Simsun, sans-serif; text-align:center; vertical-align:middle; border:1px solid #D1D1D1; border-radius:3px; color:#333; background-color:#FFF; box-shadow:0 1px 0 rgba(95, 50, 0, 0.5); }
+.btn_add_p b, .add_child b { display:inline-block; width:16px; height:16px; margin-right:5px; vertical-align:middle; overflow:hidden; }
+.btn_add_p b { _position:absolute; _margin:3px 0 0 -25px; }
+.btn_add_p:hover { text-decoration:none; color:#FFF; background-color:#27C; border-color:#27C; }
+.btn_add_p:hover b { background-position:0 -240px; }
+.btn_add_p_disable, .btn_add_p_disable:hover { color:#CCC; background-color:#FFF; border-color:#D1D1D1; cursor:default; }
+.btn_add_p_disable b, .btn_add_p_disable:hover b, .add_child_disable b { background-position:0 -336px; }
+
+.product_choice { margin:10px 0; padding:10px 0; border-top:1px solid #DDD; *zoom:1; }
+.product_choice:after { clear:both; content:'.'; display:block; height:0; overflow:hidden; }
+.product_choice select { float:left; margin-right:10px; }
+.product_choice dl { float:left; }
+.product_choice dt { margin-bottom:3px; font-weight:bold; }
+.product_choice dd { margin-bottom:3px; padding-left:16px; background-position:0 -61px; }
+.product_choice .paidui dd { background-position:0 -93px; }
+.product_choice .upgrade_dd { margin-top:20px; background:none; }
+
+.fre_pop { width:398px; margin-top:-1px; *margin:24px 0 0 1px; }
+.fre_pop li, .invoice_pop li { overflow:hidden; }
+.fre_pop .frequent_user, .invoice_pop .frequent_user { float:left; width:102px; margin-right:10px; *zoom:1; }
+.fre_pop .base_txtgray { display:block; }
+.fre_pop .frequent_user:hover .base_txtgray { color:#FFF; }
+
+.invoice_pop { width:518px; margin-top:-1px; *margin:24px 0 0 1px; }
+.invoice_pop .pop_bd a { display:block; padding:2px 0; overflow:hidden; }
+.invoice_pop a span { float:left; padding-left:5px; margin-right:10px; }
+.invoice_pop .pop_bd .frequent_user { width:150px; _width:145px; padding-left:5px; }
+
+.city_pop { width:382px; margin-top:-1px; *margin:24px 0 0 1px; padding:5px; border-top:1px solid #BBB; overflow:hidden; }
+.city_pop a { float:left; width:116px; padding:2px 5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:#333; }
+.city_pop a:hover { text-decoration:none; color:#FFF; background-color:#2577E3; }
+/*=e passenger info */
+/*=s invoice info */
+.invoice_field .base_label, .invoice_field .base_txtgray { display:inline-block; margin-bottom:20px; vertical-align:middle; }
+/*=e invoice info */
+/*=s check button */
+.error_label { border-color:#D80000; background-color:#FFFCD8; }
+.btn_check, .btn_check_disable { display:inline-block; height:36px; margin:0 auto; padding:0 30px; border:1px solid #E77C00; border-radius:3px; box-shadow:0 1px 0 rgba(95,50,0,0.7); vertical-align:middle; font:bold 16px/36px Simsun, sans-serif; color:#fff; text-align:center; overflow:hidden; cursor:pointer; outline:none; *filter:chroma(color=#000000); }
+.btn_check { background-color:#ffb000;border:1px solid #E77C00;}
+.btn_check:hover { border:1px solid #DE7800; background-color:#F79700; }
+.btn_check_disable, .btn_check_disable:hover { color:#999;background-color:#efefef;border:solid 1px #ccc; cursor:default; }
+/*=e check button */
+/*=s alert */
+.side_alert, .block_alert { display:inline-block; height:22px; padding:0 5px; _padding-left:20px; line-height:22px; border:1px solid #DCA; border-left:0 none; background-color:#FFFCD8; }
+.side_alert b, .block_alert b { display:inline-block; _position:absolute; width:12px; height:12px; margin-right:5px; _margin:0 0 0 -15px; vertical-align:middle; overflow:hidden; background-position:0 -96px; }
+.side_alert { position:relative; margin-left:5px; vertical-align:middle; }
+.side_alert i { position:absolute; left:-5px; top:-1px; width:5px; height:24px; background-position:-11px -192px; }
+.block_alert { display:block; height:auto; min-height:22px; _height:22px; margin-top:5px; border-left:1px solid #DCA; }
+.block_alert.fake { display:inline-block; margin-bottom:5px; }
+.block_inform { display:block; width:430px; height:22px; margin-top:8px; padding:0 5px; _padding-left:20px; line-height:22px; border:1px solid #DDD; background-color:#FFF; }
+.block_inform b { _position:absolute; _margin:2px 0 0 -15px; }
+.qupiao_alert { margin:0 0 10px 0; }
+/*=e alert */
+/* Main Box End */
+
+/* Side Box Begin */
+.price_box { margin-bottom:10px; padding:10px; border:1px solid #F0E9D6; background-color:#FFFAED; }
+.price_detail_list { position:relative; height:9px; margin-bottom:15px; border-bottom:1px dotted #CCC; }
+.price_detail_list .float_right { _position:absolute; _right:0; padding:0 5px; background-color:#FFFAED; }
+.price_detail_list p { float:left; _position:absolute; _float:none; padding:0 5px; background-color:#FFFAED; }
+.price_box strong { padding:0 5px; font-size:14px; }
+.price_box .base_price { padding-right:5px; font-size:36px; }
+.price_box .basefix .float_right { margin-top:-6px; }
+.price_box .basefix dfn { vertical-align:16px; }
+
+.tip_box { padding:10px 15px; border:1px solid #DDD; background-color:#FFF; }
+.tip_box dt { margin-bottom:10px; font-weight:bold; }
+.tip_box dd { position:relative; margin-bottom:2px; padding-left:10px; *zoom:1; }
+.tip_box i { position:absolute; top:-3px; _top:3px; left:0; _left:-8px; font:normal 24px Arial; _font-size:14px; vertical-align:middle; }
+/* Side Box End */
+
+/* Base Pop Begin */
+.pop_v2 { position:relative; width:390px; padding:10px 15px; font-family:Tahoma, Simsun; border:9px solid #DCDCDC; background-color:#FFF; }
+.pop_v2 .pop_hd_v2 { height:28px; margin-bottom:10px; padding-bottom:5px; border-bottom:1px solid #E1E1E1; font:bold 14px/28px Tahoma, Simsun; }
+.pop_v2 .sub_title_v2 { font-weight:bold; }
+.pop_v2 .icon_close { position:absolute; right:0; top:0; padding:0 5px; font:normal 18px/28px Tahoma; color:#CCC; }
+.pop_v2 .icon_close:hover { text-decoration: none; color:#FFA800; }
+.pop_v2 .btn_box_v2 { clear:both; min-height:28px; _height:28px; text-align:center; }
+.pop_v2 .btn_box_v2 .btn_c, .pop_v2 .btn_box_v2 .btn_w, .product_choice .btn_c, .btn_wangfan { display:inline-block; height:24px; margin-right:10px; padding:0 10px; font-weight:bold; text-align:center; line-height:24px; color:#FFF; box-shadow:0 1px 0 rgba(0,85,170,0.8); border-radius:3px; *filter:chroma(color=#000000);clear:both; background-color:#27C; border:1px solid #05A; }
+.pop_v2 .btn_box_v2 .btn_w { background-color:#FFF; border-color:#CCC; box-shadow:0 1px 0 rgba(0,0,0,.6); color:#333; }
+.pop_v2 .btn_box_v2 .btn_c:hover, .product_choice .btn_c:hover, .btn_wangfan:hover { text-decoration:none; background-color:#29F; border-color:#07D; }
+.pop_v2 .btn_box_v2 .btn_w:hover { text-decoration:none; background-color:#27C; border-color:#27C; color:#FFF; box-shadow:0 1px 0 rgba(0,85,170,0.8); }
+/* Base Pop End */
+
+/* Check Page Begin */
+.c_p_info h3 { *position:static; }
+.c_p_info .form_field { margin-top:-15px; *margin-top:-65px; }
+.c_p_info .form_field.p_info { background-color:transparent; }
+.check_p_info { min-height:32px; _height:32px; margin-top:15px; padding:10px 15px; background-color:#EFF6FC; }
+.check_child { margin:0; border-top:1px solid #D7E8F5; }
+.btn_box .go_back { position:absolute; left:0; font:14px Simsun, sans-serif; }
+.btn_box img { position:absolute; margin:10px 0 0 10px; }
+/* Check Page End */
+
+/* Complete Page Begin */
+.complete_box { position:relative; margin:20px 0; padding:40px 30px 40px 270px; border:1px solid #CFDEF1; background-color:#EFF6FC; *zoom:1; }
+.complete_box b { position:absolute; left:190px; top:40px; width:64px; height:64px; background-position:0 -32px; }
+.complete_box p { margin-bottom:5px; font:22px "Microsoft Yahei", Simsun, sans-serif; }
+.complete_box .complete_detail { margin-bottom:15px; font-size:14px; }
+.complete_box .complete_detail strong, .complete_box .complete_detail a, .complete_box .complete_detail span { margin-right:20px; }
+.complete_box .complete_detail dfn { font-size:14px; }
+.complete_box .complete_detail .base_price { margin-right:0; font-size:14px; }
+.ypbooking_link { height:27px; margin-bottom:10px; line-height:27px; font-family:Simsun, sans-serif; }
+.ypbooking_link a { padding:6px 0 6px 34px; background-position:-64px -69px; }
+/*=s hotel recommend */
+.rec_hotel_box, .rec_flight_box { margin-bottom:15px; padding:10px 20px 20px; border:1px solid #E0E0E0; background-color:#F4F4F4; }
+.rec_hotel_box .title, .rec_flight_box .title { margin-bottom:10px; font:18px "Microsoft Yahei", Simsun, sans-serif; }
+.rec_hotel_box .hotel_list, .rec_flight_box .flight_list { *zoom:1; }
+.rec_hotel_box .hotel_list:after, .rec_flight_box .flight_list:after { clear:both; content:'.'; display:block; height:0; overflow:hidden; }
+.rec_hotel_box .hotel_list li { float:left; width:33.3%; _width:312px; }
+.rec_hotel_box .hotel_list img { float:left; margin-right:10px; }
+.rec_hotel_box .hotel_name, .rec_hotel_box .hotel_region { _width:212px; height:18px; margin:0 10px 2px 0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.rec_hotel_box .hotel_name { font-weight:bold; }
+.rec_hotel_box .hotel_region { margin:2px 10px 5px 0; color:#666; }
+.rec_hotel_box .hotel_comment { margin-left:15px; vertical-align:middle; color:#666; }
+.hotel_list dfn { vertical-align:2px; }
+.hotel_list .base_price { vertical-align:-2px; margin-right:3px; }
+/*=e hotel recommend */
+/*=s flight recommend */
+.rec_flight_box .title span { margin-left:10px; font:12px Simsun, sans-serif; }
+.rec_flight_box .title .icon_flight_arrow { display:inline-block; width:15px; height:9px; margin:0 5px; vertical-align:-1px; background-position:-76px -55px; }
+.rec_flight_box .flight_list { padding-left:1px; }
+.rec_flight_box .flight_list a { float:left; width:12.5%; margin-left:-1px; text-align:center; background-color:#FFF; color:#4D4D4D; }
+.rec_flight_box .flight_list dfn { vertical-align:5px; }
+.rec_flight_box .flight_list .base_price { font-size:20px; }
+.rec_flight_box .flight_list .date, .rec_flight_box .flight_list .money { display:block; height:24px; line-height:24px; border:1px solid #D1D1D1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.rec_flight_box .flight_list .date { padding:20px 15px 0; border-bottom:0 none; }
+.rec_flight_box .flight_list .money { padding:5px 15px 20px; border-top:0 none; }
+.rec_flight_box .first .date { border-top-left-radius:3px; }
+.rec_flight_box .first .money { border-bottom-left-radius:3px; }
+.rec_flight_box .last .date { border-top-right-radius:3px; }
+.rec_flight_box .last .money { border-bottom-right-radius:3px; }
+.rec_flight_box .flight_list a:hover { text-decoration:none; background-color:#27C; color:#FFF; }
+.rec_flight_box .flight_list a:hover .base_price { color:#FFF; }
+/*=e flight recommend */
+/*=s mobile propaganda */
+.banner_client { margin-top: 20px; padding: 10px; height: 72px; border: 4px solid #ddd; background-color: #fff; background: white url(http://pic.c-ctrip.com/railway_v2/wireless_banner.png) 0 0 no-repeat; }
+.banner_client .client_features { height: 100%; margin-left: 250px; }
+.banner_client .client_feature { float: left; width: 25%; height: 100%; padding-left: 30px; background: white url(http://pic.c-ctrip.com/railway_v2/wireless_banner.png) 0 -115px no-repeat; }
+.banner_client .client_feature.first { background-image: none; }
+.banner_client h3 { font-family: "Microsoft Yahei", Tahoma, Arial, \5b8b\4f53, sans-serif; font-weight: normal; font-size: 16px; }
+.banner_client p { color: #666; margin-bottom: 5px; }
+.banner_client .download { width: 86px; height: 25px; text-indent: -9999em; display: block; background: url(http://pic.c-ctrip.com/railway_v2/wireless_banner.png) 0 -220px no-repeat; }
+.banner_client .qrcode { float: right; width: 75px; height: 74px; background: white url(http://pic.c-ctrip.com/railway_v2/wireless_banner.png) 100% -220px no-repeat; }
+/*=e mobile propagenda */
+/* Complete Page End */
+
+/* 订单填写页登录入口 */
+.btn_zhongtu { display:inline-block; margin:0 0 10px 20px; *margin:-4px 0 10px 20px; padding:2px 5px; *vertical-align:bottom; border:1px solid #87B6E2; border-radius:3px; background-color:#E5F3FE; box-shadow:0 1px 0px #CCC; }
+.paidui .btn_zhongtu { *position:absolute; margin-left:5px; *margin-top:1px; }
+
+/* 单程推往返 */
+.complete_box .btn_wangfan { margin-top:10px; }
+
+/* 无票推荐 */
+.r_calendar { margin:5px 0; }
+.r_calendar .cal_middle {   }
+.r_calendar li { display:inline-block; *display:inline; *zoom:1; width:70px; height:50px; margin-left:-1px; text-align:center; font-weight:bold; }
+.r_calendar a { display:block; width:68px; height:38px; padding:5px 0; border:1px solid #DDD; border-bottom-color:#1D74E6; background-color:#F5F5F5; color:#666; }
+.r_calendar a:hover { text-decoration:none; background-color:#2577E3; border-color:#2577E3; color:#FFF; }
+.r_calendar a.current { position:relative; padding:3px 0 4px; background-color:#FFF; border-color:#1D74E6; border-top-width:3px; border-bottom-color:#FFF; color:#666; }
+
+.wupiao_box { margin-bottom:15px; }
+.tb_railway_list td { padding-top:5px;  border-bottom:1px solid #E5E5E5; }
+.tb_railway_list .railway_time { font:bold 14px Tahoma; }
+.tb_railway_list .railway_seat, .tb_railway_list .railway_mode { height:24px; margin-bottom:4px; white-space:nowrap; }
+.tb_railway_list .railway_mode { text-align:center; }
+.icon_start, .icon_end, .icon_pass, .icon_checkbox, .icon_checkbox_selected, .icon_checkbox_disable { background:url(http://pic.c-ctrip.com/railway_v2/un_list_h.png?140102.png) no-repeat; }
+.icon_start, .icon_end, .icon_pass { display:inline-block; width:15px; height:15px; margin-right:5px; vertical-align:middle; background-position: -175px -48px; }
+.icon_end { background-position:-175px -64px; }
+.icon_pass { background-position:-175px -80px; }
+.tb_railway_list dfn { margin-left:5px; }
+.tb_railway_list .base_price { font:16px Tahoma; vertical-align:-3px; }
+.icon_checkbox, .icon_checkbox_selected, .icon_checkbox_disable { display:inline-block; width:16px; height:16px; margin-top:4px; background-position:0 -224px; }
+.icon_checkbox:hover { background-position:-16px -224px; }
+.icon_checkbox_selected { background-position:-32px -224px; }
+.icon_checkbox_disable { background-position:-128px -192px; cursor:default; }
+.exceed_five { height:310px; overflow-y:scroll; }
+.btn_box_v2.ab { position:relative; height:26px; }
+.btn_box_v2.ab .btn_c { position:absolute; left:50%; margin-left:-37px; }
+.pop_bd_v2 .side_alert { position:absolute; top:0; left:280px; margin-top:1px; }
+.sold_out_alert { padding:50px 0; text-align:center; font-size:14px; }
+.icon_alert_large { display:block; width:64px; height:64px; margin:0 auto 30px; background:url(http://pic.c-ctrip.com/railway_v2/icon_notice_large.png) no-repeat; }
+
+/* [Jira] (TRAINPM-82) 订单填写页车次信息样式修改 */
+.sumup_box { margin-bottom:10px; border:1px solid #DCDCDC; background-color:#F7F7F7; }
+.sumup_list li { padding:10px; border-bottom:1px dashed #CCC; }
+.sumup_list .text_center { margin:5px 0; text-align:center; }
+.sumup_list .line_arrow { *vertical-align:9px; _vertical-align:4px; }
+.sumup_list .sumup_schedule { display:inline-block; margin:0 5px; font-weight:bold; text-align:left; }
+.sumup_schedule strong { display:block; margin-bottom:3px; font-weight:normal; }
+.sumup_list .base_price { font-size:14px; }
+.sumup_list .base_txtgray { display:block; margin-top:5px; padding-left:22px; }
+.sumup_list .icon_notice { position:absolute; margin:5px 0 0 5px; }
+.sumup_box .sumup_edit { padding:10px 15px; }
+.sumup_box .base_txtdiv { position:absolute; margin:-2px 0 0 5px; color:#06C; border-bottom-color:#06C; font-weight:normal; }
+
+/* 12306身份绑定 */
+.pop_v2 .pop_hd_v2 { height:auto; }
+.pop_v2 .pop_bd_v2 { *zoom:1; }
+.pop_v2 .pop_bd_v2:after { clear:both; content:'.'; display:block; height:0; overflow:hidden; }
+.pop_hd_v2 .add_info { font-size:12px; font-weight:normal; color:#999; }
+.binding .base_label { display:inline-block; margin-bottom:5px; }
+.binding .binding_box { margin:0 0 10px 15px; }
+.binding_box .binding_form { margin-bottom:5px; }
+.binding_box .input_text { margin:0 8px; }
+.binding_box .block_alert { margin:0 0 5px; }
+.binding_load { height:50px; line-height:50px; text-align:center; }
+.binding_load img { vertical-align:middle; }
+.binding_b p { margin-bottom:10px; text-indent:2em; }
+
+.icon_alert { display:inline-block; *float:left; width:48px; height:48px; margin:0 15px 10px; background:url(http://pic.c-ctrip.com/railway_v2/icon_alert.png) no-repeat; }
+.alert_text { display:inline-block; width:400px; margin-bottom:10px; vertical-align:top; }
+.btn_box_v2 .back_back { position:absolute; left:15px; margin-top:5px; }
+
+/* 12306账号直连 2014.3.19 */
+.tb_binding th, .tb_binding td { padding:3px 10px; font-weight:normal; }
+.tb_binding th { text-align:right; }
+.auto_reg { margin-top:10px; padding:10px 0; border-top:1px dashed #E1E1E1; }
+.tb_binding .btn_c, .tb_binding .btn_w { display:inline-block; height:24px; margin-right:10px; padding:0 10px; font-weight:bold; text-align:center; line-height:24px; color:#FFF; box-shadow:0 1px 0 rgba(0,85,170,0.8); border-radius:3px; clear:both; background-color:#27C; border:1px solid #05A; }
+.tb_binding .btn_w { background-color:#FFF; border-color:#CCC; box-shadow:0 1px 0 rgba(0,0,0,.6); color:#333; }
+.tb_binding .btn_c:hover { text-decoration:none; background-color:#29F; border-color:#07D; }
+.tb_binding .btn_w:hover { text-decoration:none; background-color:#27C; border-color:#27C; color:#FFF; box-shadow:0 1px 0 rgba(0,85,170,0.8); }
+.tb_binding .disable, .tb_binding .disable:hover { background-color:#EFEFEF; color:#999; border-color:#CCC; box-shadow:0 1px 0 rgba(95,50,0,0.7); cursor:default; }
+
+/* 去哪儿渠道0保险订单APP推荐 */
+.app_dl_box { padding-bottom:0; }
+.pop_v2 .btn_box_v2 .btn_w.app { padding-right:25px; }
+.btn_w.app .icon_arrow_down { margin-left:6px; *margin-top:5px; }
+.btn_w.app:hover .icon_arrow_down { border-top-color:#FFF; }
+.app_dl { position:relative; width:390px; margin:10px 0 0 -15px; _margin-right:-15px; padding:15px; font-size:14px; background-color:#F2F2F2; *zoom:1; }
+.app_dl:after { clear:both; content:'.'; display:block; height:0; overflow:hidden; }
+.app_dl b { position:absolute; top:-16px; left:240px; width:0; height:0; border-width:8px; border-style:solid; border-color:transparent transparent #F2F2F2; _border-style:dashed dashed solid; overflow:hidden; }
+.app_dl .float_left { float:none; display:inline-block; *display:inline; width:180px; margin-right:12px; vertical-align:top; *zoom:1; }
+.app_dl .title { height:14px; margin-bottom:10px; padding-left:10px; font:bold 16px/14px "Microsoft Yahei"; *line-height:16px; color:#666; border-left:6px solid #999; vertical-align:auto; }
+.app_dl .sub_title { margin-bottom:10px; }
+.app_dl .input_text { width:144px; height:22px; margin-bottom:10px; line-height:22px; }
+.app_dl .btn_get, .pop_v2 .btn_l { display:inline-block; width:150px; height:30px; margin:0 auto 5px; background-color:#FFB000; border:1px solid #E77C00; border-radius:3px; box-shadow:0 1px 0 rgba(95,50,0,0.7); vertical-align:middle; font:bold 14px/30px Simsun, sans-serif; color:#fff; text-align:center; overflow:hidden; cursor:pointer; outline:none; }
+.app_dl .btn_get:hover, .pop_v2 .btn_l:hover { text-decoration:none; background-color:#FF8400; border-color:#DE7800; }
+.app_dl .btn_get.disable, .app_dl .btn_get.disable:hover, .pop_v2 .btn_l.disable, .pop_v2 .btn_l.disable:hover { font-weight:normal; font-size:12px; background-color:#E0E0E0; color:#999; border-color:#CCC; box-shadow:0 1px 0 rgba(95,50,0,0.7); cursor:default; }
+.app_dl .icon_close { top:auto; right:auto; margin-left:-30px; margin:-40px 0 0 130px\9; *margin:2px 0 0 -28px; color:#333; }
+.app_dl .app_correct, .app_dl .app_wrong { padding-left:16px; font-size:12px; background-position:0 -60px; }
+.app_dl .app_wrong { background-position:0 -92px; }
+
+/* 12306身份认证-注册按钮醒目显示 */
+.reg .login_box { float:left; width:330px; padding:15px 30px 10px 0; }
+.reg .reg_box { float:left; width:300px; min-height:168px; _height:168px; padding:10px 0; text-align:center; background:url(http://pic.c-ctrip.com/railway_v2/reg_sep.png) no-repeat center left; }
+.reg .input_text { width:205px; height:22px; }
+.reg th { font-size:14px; white-space:nowrap; }
+.pop_v2 .btn_l, .reg .btn_w { width:102px; margin:10px 0 0; padding:0; height:30px; font:bold 14px/30px "Microsoft Yahei", Simsun, sans-serif; vertical-align:middle; }
+.pop_v2 .btn_l { margin-right:8px; }
+.reg .tb_binding th, .reg .tb_binding td { padding:5px 10px; }
+.reg .tb_binding th { padding-top:10px; }
+.reg_box p { padding:15px 0 25px; font-size:14px; }
+.reg_box strong { display:block; }
+.btn_reg { display:block; width:196px; height:30px; margin:0 auto 10px; font-size:14px; line-height:30px; background-color:#E6F3FF; border:1px solid #88B6E3; border-radius:3px; box-shadow:0 1px 0 #88B6E3; }
+.btn_reg:hover { text-decoration:none; border-color:#134D84; background-color:#185A9B; color:#FFF; }
+.reg .loading { width:192px; margin:0 auto; text-align:left; }
+.reg .loading img { vertical-align:top; }
+.reg .loading .base_txtsilver { display:inline-block; width:168px; }
+
+/**/
+.app_rec_box { position:absolute; top:0; right:33px; margin:21px 0; }
+.app_rec_box a { display:block; }

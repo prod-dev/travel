@@ -17,7 +17,7 @@
         </div>
         <div id="head_float_level" class="cui_wireless"><a class="cui_wireless_pic">
             携程无线<i></i></a><div id="head_float_box" class="cui_wireless_box" style="display: none;"><div class="cui_wireless_inbox"><a id="head_float_close" href="javascript:;" class="cui_wireless_close">×</a><dl class="cui_wireless_type"><dt>1</dt><dd><p class="cui_wireless_title">发送下载地址至手机</p><div id="head_float_num" class="cui_input_box"><input type="text" class="cui_wireless_input" placeholder="请输入手机号" pl="请输入手机号" maxlength="11"><span class="cui_input_close" style="visibility:hidden">×</span></div><input type="button" id="head_float_sendMsg" class="cui_wireless_btn" value="免费获取"><div id="head_float_qtip" class="cui_wireless_msg" style="display:none"><i class="cui_ico_s"></i>短信发送成功，请稍后查看</div></dd></dl><dl class="cui_wireless_type"><dt>2</dt><dd><p class="cui_wireless_title">手机扫描快速下载</p><i class="cui_wireless_code"></i></dd></dl><a id="head_float_outlink" class="cui_link_app">携程旅行手机版<i></i></a></div></div></div>
-        <div class="cui_pagehead_pic"></div><i class="cui_ico_new" style="left:500px;"></i></div>
+        </div>
 </div>
 </body>
 </html>

@@ -755,205 +755,7 @@ function busToCityCallback(data) {
     <th width="80" class="price"><a href="###" class="px_up f_sort_list" sort_name="full_price" onclick="return sortObj(this);">票价<b class="icon_arrow_up"></b></a></th>
     <th width="180"></th>
 </tr>
-<!--推荐火车票start-->
-<tr class="prop bus last" id="tuijian_train">
-    <td class="f_td">
-        <div class="r_box">
-            <span class="r_title z_up f-ora"><i class="i-prop i2"></i>火车票</span>
-            <span class="railway_time">15:25</span>
-            <br>
-            06:18+1
-        </div>
-    </td>
-    <td><span class="icon_start"></span>
 
-
-
-
-        深圳东
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <br><span class="icon_pass"></span>
-
-
-
-
-
-
-
-
-        南宁
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </td>
-    <td><span class="f-bold">K1208/K1205</span></td>
-    <td class="price">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <div class="railway_seat">
-            <span class="seat_type">硬座</span>
-            <div class="price_r">
-                <dfn>¥</dfn><span class="base_price">124</span>
-            </div>
-        </div>
-
-        <div class="railway_seat">
-            <span class="seat_type">硬卧</span>
-            <div class="price_r">
-                <dfn>¥</dfn><span class="base_price">230</span>
-            </div>
-        </div>
-
-        <div class="railway_seat">
-            <span class="seat_type">软卧</span>
-            <div class="price_r">
-                <dfn>¥</dfn><span class="base_price">351</span>
-            </div>
-        </div>
-
-        <div class="railway_seat">
-            <span class="seat_type">无座</span>
-            <div class="price_r">
-                <dfn>¥</dfn><span class="base_price">124</span>
-            </div>
-        </div>
-
-
-
-    </td>
-    <td class="text_right">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <div class="railway_btn">
-
-            <input type="button" data-params="{options:{tid:17333,did:3125,aid:909,date:&quot;2014-10-08&quot;,dname:&quot;&quot;,aname:&quot;&quot;,dpy:&quot;shenzhendong&quot;,apy:&quot;nanning&quot;,filter:0,number:&quot;&quot;,seatid:201}}" class="btn_book buy_train_ticket" value="预订">
-
-
-        </div>
-
-        <div class="railway_btn">
-
-            <input type="button" data-params="{options:{tid:17333,did:3125,aid:909,date:&quot;2014-10-08&quot;,dname:&quot;&quot;,aname:&quot;&quot;,dpy:&quot;shenzhendong&quot;,apy:&quot;nanning&quot;,filter:0,number:&quot;&quot;,seatid:224}}" class="btn_book buy_train_ticket" value="预订">
-
-
-        </div>
-
-        <div class="railway_btn">
-
-            <input type="button" class="btn_book disable" value="预订">
-
-
-        </div>
-
-        <div class="railway_btn">
-
-            <input type="button" class="btn_book disable" value="预订">
-
-
-            <a href="http://trains.ctrip.com/TrainBooking/Search.aspx?from=shenzhen&amp;to=nanning&amp;day=2#ctm_ref=bus_sr_rectra_sr_txt_df" target="_blank" style="padding-right:5px;position: absolute; right: 10px; bottom: 4px;">更多深圳到南宁火车票&gt;&gt;</a>
-
-        </div>
-
-
-
-    </td>
-</tr>
-<tr id="tuijian_train_tr" style="">
-</tr><tr class="prop solid">
-    <td colspan="6" class="f_td"><span></span></td>
-</tr>
-<!--推荐火车票end-->
 <tr class="train_result_list">
     <td><span class="railway_time">08:00</span><br>18:43 左右 今天</td>
     <td><span class="icon_start"></span>深圳汽车客运站<br><span class="icon_end"></span>南宁</td>
@@ -2846,167 +2648,9 @@ function busToCityCallback(data) {
 <form id="jump_form" target="_blank">
 </form>
 <input type="hidden" id="min_price" value="210.00">
-<script type="text/template" id="tuijian_train_tmp">
-    <td class="f_td">
-        <div class="r_box">
-            <span class="r_title z_up f-ora"><i class="i-prop i2"></i>火车票</span>
-            <span class="railway_time">${DepartureTime}</span>
-            </br>
-            ${ArrivalTime}
-        </div>
-    </td>
-    <td><span class="${StartStationCss}"></span>
-        {{enum(key,objs) TicketResult}}
-        {{if key=='DepartureStationName'}}
-        ${objs}
-        {{/if}}
-        {{/enum}}
-        <br><span class="${EndStationCss}"></span>
-        {{enum(key,objs) TicketResult}}
-        {{if key=='ArrivalStationName'}}
-        ${objs}
-        {{/if}}
-        {{/enum}}
-    </td>
-    <td><span class="f-bold">${TrainName}</span></td>
-    <td class="price">
-        {{enum(key,objs) TicketResult}}
-        {{if key=='TicketItems'}}
-        {{each(i,r) objs}}
-        <div class="railway_seat">
-            <span class="seat_type">${r.SeatTypeName}</span>
-            <div class="price_r">
-                <dfn>&yen;</dfn><span class="base_price">${r.Price}</span>
-            </div>
-        </div>
-        {{/each}}
-        {{/if}}
-        {{/enum}}
-    </td>
-    <td class="text_right">
 
-        {{enum(key,objs) TicketResult}}
-        {{if key=='TicketItems'}}
-        {{each(i,r) objs}}
-        <div class="railway_btn">
-            {{if r.Bookable}}
-            <input type="button" data-params='{options:{tid:${TrainID},did:${DepartureStationID},aid:${ArrivalStationID},date:"2014-10-08",dname:"",aname:"",dpy:"${Dpy}",apy:"${Apy}",filter:0,number:"",seatid:${r.SeatTypeID}}}' class="btn_book buy_train_ticket" value="预订">
-            {{else}}
-            <input type="button" class="btn_book disable" value="预订">
-            {{/if}}
-            {{if i == TicketItemsCount}}
-            <a href="${moreTrainUrl}" target="_blank" style="padding-right:5px;position: absolute; right: 10px; bottom: 4px;">更多${DepartureSearchName}到${ArrivalStationName}火车票&gt;&gt;</a>
-            {{/if}}
-        </div>
-        {{/each}}
-        {{/if}}
-        {{/enum}}
-    </td>
-</script>
-<script type="text/javascript">
-    // 获取一条推荐火车票数据
-    function getOneTuijianTrain() {
-        cQuery.jsonp('http://bus.ctrip.com/index.php?param=/data/tuijianTrain&callback=getOneTuijianTrainCallback&DepartCity=深圳&ArriveCity=南宁&DepartDate=2014-10-08&RecommandFlag=2&t=' + new Date().getTime(), {onload: function(){
-        }});
-    }
 
-    // 获取推荐火车票数据回调函数
-    function getOneTuijianTrainCallback(data) {
-        if (data['code'] != 1) {
-            return;
-        }
-
-        data = data['return'];
-
-        if (data['ResponseStatus']['Ack'] == 'Success') {
-            var train = {};
-            var item = data['ResponseBody']['TrainItems'];
-
-            if (item.length > 0) {
-                train['TrainID'] = item[0]['TrainID'];
-                train['StartStationID'] = item[0]['StartStationID'];
-                train['EndStationID'] = item[0]['EndStationID'];
-                train['StartTime'] = item[0]['StartTime'];
-                train['StartStationName'] = item[0]['StartStationName'];
-                train['EndStationName'] = item[0]['EndStationName'];
-                train['TrainName'] = item[0]['TrainName'];
-                train['Price'] = item[0]['TicketResult']['TicketItems'][0]['Price'];
-                train['moreTrainUrl'] = 'http://trains.ctrip.com/TrainBooking/Search.aspx?from='+data['ResponseBody']['DepartureSearchPinYin']+'&to='+data['ResponseBody']['ArrivalSearchPinYin']+'&day=2#ctm_ref=bus_sr_rectra_sr_txt_df';
-                train['SeatTypeID'] = item[0]['TicketResult']['TicketItems'][0]['SeatTypeID'];
-                train['Dpy'] = item[0]['TicketResult']['DepartureStationPinyin'];
-                train['Apy'] = item[0]['TicketResult']['ArrivalStationPinyin'];
-
-                train['DepartureSearchName'] = data['ResponseBody']['DepartureSearchName'];
-                train['ArrivalStationName'] = data['ResponseBody']['ArrivalSearchName'];
-                train['DepartureStationID'] = item[0]['TicketResult']['DepartureStationID'];
-                train['ArrivalStationID'] = item[0]['TicketResult']['ArrivalStationID'];
-                train['DepartureTime'] = item[0]['TicketResult']['DepartureTime'];
-                // 判断是否是当天到达
-                if (item[0]['TicketResult']['TakeDays'] > 0) {
-                    train['ArrivalTime'] = item[0]['TicketResult']['ArrivalTime'] + '+' + item[0]['TicketResult']['TakeDays'];
-                } else {
-                    train['ArrivalTime'] = item[0]['TicketResult']['ArrivalTime'];
-                }
-                train['StartStationCss'] = item[0]['TicketResult']['DepartureStationID'] == item[0]['StartStationID'] ? 'icon_start' : 'icon_pass';
-                train['EndStationCss'] = item[0]['TicketResult']['ArrivalStationID'] == item[0]['EndStationID'] ? 'icon_end' : 'icon_pass';
-
-                var newTicketItems = [],
-                        noSeatItems = {},
-                        minPrice = parseFloat(jQuery('#min_price').val());
-
-                for (var i = 0, l = item[0]['TicketResult']['TicketItems'].length; i < l; i++) {
-                    // 过滤火车票价格高于汽车票价格的推荐火车票信息
-                    if (item[0]['TicketResult']['TicketItems'][i]['Price'] > minPrice) {
-                        //return;
-                    }
-
-                    if (item[0]['TicketResult']['TicketItems'][i]['SeatTypeName'] == '无座') {
-                        noSeatItems = item[0]['TicketResult']['TicketItems'][i];
-                    } else {
-                        newTicketItems.push(item[0]['TicketResult']['TicketItems'][i]);
-                    }
-                }
-
-                // 判断是否有无座，如果有无座则无座显示在最后
-                if (noSeatItems.Price) {
-                    newTicketItems.push(noSeatItems);
-                }
-
-                item[0]['TicketResult']['TicketItems'] = newTicketItems;
-
-                train['TicketResult'] = item[0]['TicketResult'];
-                train['TicketItemsCount'] = item[0]['TicketResult']['TicketItems'].length - 1;
-
-                var html = cQuery.tmpl.render(cQuery('#tuijian_train_tmp').html(), train);
-
-                jQuery('#tuijian_train').html(html).show();
-                jQuery('#tuijian_train_html').html(html);
-                jQuery('#tuijian_train_tr').show();
-            }
-        }
-    }
-
-    getOneTuijianTrain();
-
-    // 点击火车票预订按钮
-    jQuery('.buy_train_ticket').live('click', function(){
-        // 获取参数
-        var params = jQuery(this).attr('data-params');
-        params = eval('(' + params + ')');
-
-        var buyTrainTicketUrl = 'http://trains.ctrip.com/TrainBooking/InputPassengers.aspx';
-
-        params['options']['tickettypeid'] = 0;
-
-        // 拼装订单填写页面url参数
-        var buildParams = '';
-        for (var p in params['options']) {
-            buildParams += '<input type="hidden" name="'+p+'" value="'+params['options'][p]+'" />';
-        }
-        buildParams += '<input type="hidden" name="ctm_ref" value="bus_sr_rectra_bk_bn_df" />';
-        jQuery('#jump_form').attr('action', buyTrainTicketUrl).html(buildParams).submit();
-    });
-</script>				<div class="block_alert">
+				<div class="block_alert">
     <b></b> 到达时间为预估时间，实际到达时间可能会因为路况和天气等因素影响而变动。
 </div>
 <div class="date_flip">
@@ -3025,16 +2669,17 @@ function busToCityCallback(data) {
 <div class="page_box">
     <div class="c_page">
         <div class="c_page_list layoutfix" id="showPage">
-            <a href="###" class="current" data-page="1" onclick="doPaging(this);">1</a>
+            <a href="###" class="current" data-page="1" onclick="">1</a>
 
-            <a href="###" data-page="2" onclick="doPaging(this);">2</a>
+            <a href="###" data-page="2" onclick="">2</a>
 
-            <a href="###" data-page="3" onclick="doPaging(this);">3</a>
+            <a href="###" data-page="3" onclick="">3</a>
 
-            <a href="###" data-page="4" onclick="doPaging(this);">4</a>
+            <a href="###" data-page="4" onclick="">4</a>
         </div>
         <script type="text/template" id="page_template">
-            <a href="###" ${class} data-page="${page}" onclick="doPaging(this);">${page}</a>
+
+
         </script>
         <script type="text/javascript">
             displayListPage('4', '1');
@@ -3052,5 +2697,8 @@ function busToCityCallback(data) {
 
 </div>
 </div>
+<jsp:include page='footer.jsp'/>
+
 </body>
+
 </html>

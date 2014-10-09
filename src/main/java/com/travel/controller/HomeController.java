@@ -7,23 +7,20 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Bright Huang on 10/7/14.
- */
 @Controller
-@RequestMapping("/home")
 public class HomeController {
-    private static final String HOME_PAGE = "home";
 
-    @RequestMapping(method = RequestMethod.GET)
-    public ModelAndView show(HttpServletRequest request, HttpServletResponse response) {
+	private static final String HOME_PAGE = "home";
 
-        Map<String, Object> models = new HashMap<String, Object>();
-        models.put("home", new Object());
+	@RequestMapping(value = "home", method = RequestMethod.GET)
+	public ModelAndView home(HttpServletRequest request, HttpServletResponse response) {
 
-        return new ModelAndView(HOME_PAGE, models);
-    }
+		Map<String, Object> models = new HashMap<String, Object>();
+		models.put("home", new Object());
+		return new ModelAndView(HOME_PAGE, models);
+	}
 }

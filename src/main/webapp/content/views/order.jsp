@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Bright Huang
-  Date: 10/7/14
-  Time: 13:06
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -13,6 +6,11 @@
 </head>
 <jsp:include page='header.jsp'/>
 <body>
+<script type="text/javascript">
+    function payment(){
+    	 window.location.href = "./payments";
+    }
+</script>
 <div class="w1180 order_progress">
     <div class="step finished">
         <div class="progress_line"></div>
@@ -98,7 +96,7 @@
                 </div>
             </div>
             <!--赠送意外险end-->
-            <div class="btn_box" style="margin:20px 0 50px;"><a href="###" class="go_back" onclick="history.go(-1);return false;">&lt; 返回修改订单</a><input type="button" value="下一步，支付" id="pay" class="btn_check"><img id="imgLoading" src="http://pic.c-ctrip.com/common/loading.gif" alt="" style="display:none;"></div>
+            <div class="btn_box" style="margin:20px 0 50px;"><a href="###" class="go_back" onclick="history.go(-1);return false;">&lt; 返回修改订单</a><input type="button" value="下一步，支付" id="pay" class="btn_check" onclick="payment()"><img id="imgLoading" src="http://pic.c-ctrip.com/common/loading.gif" alt="" style="display:none;"></div>
 
         </div>
     </div>

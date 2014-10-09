@@ -14,12 +14,11 @@ import java.util.Map;
  * Created by Bright Huang on 10/7/14.
  */
 @Controller
-@RequestMapping("/order")
 public class OrderController {
 
     private static final String ORDER_PAGE = "order";
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "/order", method = RequestMethod.GET)
     public ModelAndView show(HttpServletRequest request, HttpServletResponse response) {
 
         Map<String, Object> models = new HashMap<String, Object>();

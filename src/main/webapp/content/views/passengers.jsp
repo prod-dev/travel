@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: apple
-  Date: 10/7/14
-  Time: 12:55
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -239,7 +232,7 @@
 
             </div>
         </div>
-        <div class="btn_box" style="margin:20px 0 50px;"><a style="cursor:pointer;" class="go_back go_back_page">&lt; 返回上一页</a><input type="button" value="下一步，核对" id="commitOrder" class="btn_check"><img id="imgLoading" src="http://pic.c-ctrip.com/common/loading.gif" alt="" style="display:none;"></div>
+        <div class="btn_box" style="margin:20px 0 50px;"><a style="cursor:pointer;" class="go_back go_back_page">&lt; 返回上一页</a><input type="button" value="下一步，核对" id="commitOrder" class="btn_check" onclick="checking()"><img id="imgLoading" src="http://pic.c-ctrip.com/common/loading.gif" alt="" style="display:none;"></div>
     </div>
 </div>
 <div class="side_box">
@@ -333,6 +326,10 @@
             location.href = '/busList.html?from=' + from + '&to=' + to + '&date=' + date;
         }
     });
+    
+    function checking(){
+       window.location.href = "./order";
+    }
 </script>
 <!--页尾end-->
 </form>

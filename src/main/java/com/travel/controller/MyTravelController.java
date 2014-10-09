@@ -10,9 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Bright Huang on 10/7/14.
- */
 @Controller
 public class MyTravelController {
     private static final String MY_ORDERS_PAGE = "myorders";

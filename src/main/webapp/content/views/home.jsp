@@ -1,16 +1,8 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: apple
-  Date: 10/7/14
-  Time: 10:29
-  To change this template use File | Settings | File Templates.
---%>
-
-<%@page language="java" contentType="text/html; charset=GB2312" pageEncoding="GB2312"%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 <head>
     <title></title>
-    <meta http-equiv="Content-Type" content="text/html charset=GB2312">
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     <link rel="stylesheet" href="content/static/css/travel/home/home.css" />
 </head>
 <jsp:include page='header.jsp'/>
@@ -18,30 +10,30 @@
 <body marginwidth="0" marginheight="0">
 <div class="base_top">
 <iframe id="iframeCrmAds" scrolling="no" frameborder="0" style="width: 100%; height: 360px;" marginwidth="0" marginheight="0" src="http://bus.ctrip.com/banner.html"></iframe>
-<form action="http://bus.ctrip.com/busList.html" id="searchBusForm" method="get" accept-charset="utf-8">
+<form action="buslines" id="searchBusForm" method="POST" accept-charset="utf-8">
     <div class="s_wrapper">
         <div class="s_box">
             <div class="search_box_tab">
-                <span class="search_for_b"><b></b>Æû³µÆ±²éÑ¯</span>
+                <span class="search_for_b"><b></b>æ±½è½¦ç¥¨æŸ¥è¯¢</span>
             </div>
             <div id="searchBox1" class="search_box">
                 <div class="search_form">
                     <table width="100%" cellspacing="0" cellpadding="0" class="searchbox">
                         <tbody><tr>
-                            <th>³ö·¢³ÇÊĞ</th>
-                            <td><input type="text" tabindex="1" name="from" id="notice01" class="input_txt" autocomplete="on" _cqnotice="ÖĞÎÄ/Æ´Òô/Ê××ÖÄ¸"></td>
+                            <th>å‡ºå‘åŸå¸‚</th>
+                            <td><input type="text" tabindex="1" name="from" id="notice01" class="input_txt" autocomplete="on" _cqnotice="ä¸­æ–‡/æ‹¼éŸ³/é¦–å­—æ¯"></td>
                         </tr>
                         <tr>
-                            <th>µ½´ï³ÇÊĞ</th>
-                            <td><input type="text" tabindex="2" name="to" id="notice02" class="input_txt" autocomplete="on" _cqnotice="ÖĞÎÄ/Æ´Òô/Ê××ÖÄ¸"></td>
+                            <th>åˆ°è¾¾åŸå¸‚</th>
+                            <td><input type="text" tabindex="2" name="to" id="notice02" class="input_txt" autocomplete="on" _cqnotice="ä¸­æ–‡/æ‹¼éŸ³/é¦–å­—æ¯"></td>
                         </tr>
                         <tr>
-                            <th>³ö·¢ÈÕÆÚ</th>
-                            <td><input type="text" tabindex="3" name="date" value="2014-10-08" id="dateObj" class="input_txt" readonly="readonly" placeholder="yyyy-mm-dd" _cqnotice="yyyy-mm-dd"></td>
+                            <th>å‡ºå‘æ—¥æœŸ</th>
+                            <td><input type="text" tabindex="3" name="startDate" value="2014-10-08" id="dateObj" class="input_txt" readonly="readonly" placeholder="yyyy-mm-dd" _cqnotice="yyyy-mm-dd"></td>
                         </tr>
                         </tbody></table>
                     <div class="search_btn_box">
-                        <input type="button" value="ËÑ Ë÷" id="searchBusTicket" class="btn_search">
+                        <input type="submit" value="æœ ç´¢" id="searchBusTicket" class="btn_search">
                     </div>
                 </div>
             </div>
@@ -82,12 +74,12 @@ var notice01 = null;
 var notice02 = null;
 
 cQuery.ready(function(){
-    // ÏÈ¼ÓÔØµØÖ·Ñ¡ÔñÆ÷Ä£¿é
+    // å…ˆåŠ è½½åœ°å€é€‰æ‹©å™¨æ¨¡å—
     cQuery.mod.load("address", "1.0");
     cQuery.mod.load("notice", "1.0");
     cQuery.mod.load("calendar", "3.0");
 
-    // ÔÙ×¢²áµØÖ·Ñ¡ÔñÆ÷Ä£¿é
+    // å†æ³¨å†Œåœ°å€é€‰æ‹©å™¨æ¨¡å—
     var from = cQuery('#notice01'),
             to = cQuery('#notice02'),
             date = cQuery('#dateObj');
@@ -95,16 +87,16 @@ cQuery.ready(function(){
     from.regMod('notice' , '1.0', {
         name: 'notice01',
         selClass: "base_txtgray",
-        tips: "ÖĞÎÄ/Æ´Òô/Ê××ÖÄ¸"
+        tips: "ä¸­æ–‡/æ‹¼éŸ³/é¦–å­—æ¯"
     });
 
     to.regMod('notice' , '1.0', {
         name: 'notice02',
         selClass: "base_txtgray",
-        tips: "ÖĞÎÄ/Æ´Òô/Ê××ÖÄ¸"
+        tips: "ä¸­æ–‡/æ‹¼éŸ³/é¦–å­—æ¯"
     });
 
-    // ÅĞ¶ÏÊÇ·ñÓĞÀúÊ·ËÑË÷
+    // åˆ¤æ–­æ˜¯å¦æœ‰å†å²æœç´¢
     var bus_from = cQuery.storage.get('bus_from');
     var bus_to = cQuery.storage.get('bus_to');
     if (bus_from && bus_to) {
@@ -116,18 +108,18 @@ cQuery.ready(function(){
         var noticeAddress = $(input).regMod('address', '1.0', {
             name: name,
             message: {
-                suggestion: 'Çë´ÓÏÂÁĞ³ÇÊĞÑ¡Ôñ',
-                noFilterResult:"±§Ç¸£¬ÕÒ²»µ½£º'${val}'  ÇëÊÖ¶¯ÊäÈë"
+                suggestion: 'è¯·ä»ä¸‹åˆ—åŸå¸‚é€‰æ‹©',
+                noFilterResult:"æŠ±æ­‰ï¼Œæ‰¾ä¸åˆ°ï¼š'${val}'  è¯·æ‰‹åŠ¨è¾“å…¥"
             },
             isFocusNext: true,
             //isAutoCorrect: true,
             template: {
                 suggestion: '{{if (data = formatBusData(data))}}{{/if}}' +
                         '<div class="city_select_lhsl">' +
-                        '<p class="title"><a class="close" href="javascript:;">¡Á</a>Ö§³ÖÖĞÎÄ/Æ´Òô/¼òÆ´ÊäÈë</p>' +
+                        '<p class="title"><a class="close" href="javascript:;">Ã—</a>æ”¯æŒä¸­æ–‡/æ‹¼éŸ³/ç®€æ‹¼è¾“å…¥</p>' +
 
                         (!!tagHistory ? (
-                                '<p class="sarch_history_title">ËÑË÷ÀúÊ·</p>' +
+                                '<p class="sarch_history_title">æœç´¢å†å²</p>' +
                                 '<div class="search_history_box">'
                                 + tagHistory +
                                 '</div>') : '') +
@@ -176,7 +168,7 @@ cQuery.ready(function(){
                 cQuery(this).addClass("hot_selected");
                 cQuery(".city_item", a[0]).css("display", "none");
                 var keywords = cQuery("span", $(this)[0])[0].innerHTML;
-                if (keywords.trim() == 'ÈÈÃÅ') {
+                if (keywords.trim() == 'çƒ­é—¨') {
                     cQuery(".city_item:eq(0)", a[0]).css("display", "");
                 }
                 else {
@@ -224,7 +216,7 @@ cQuery.ready(function(){
         }
     }, true);
 
-    // ±íµ¥ÑéÖ¤
+    // è¡¨å•éªŒè¯
     cQuery.mod.load('validate','1.1',function(){
         var validateShow = function (obj, message) {
             cQuery(document).regMod('validate', '1.1').method("show", { $obj: obj, data: message, removeErrorClass: true, hideEvent: "blur", isFocus: true });
@@ -235,14 +227,14 @@ cQuery.ready(function(){
                     notice02 = cQuery("#notice02"),
                     dateObj = cQuery("#dateObj");
 
-            if (notice01.value().trim() == "ÖĞÎÄ/Æ´Òô/Ê××ÖÄ¸" || notice01.value().trim() == "") {
-                validateShow(notice01, "ÇëÊäÈë³ö·¢³ÇÊĞÃû³Æ");
+            if (notice01.value().trim() == "ä¸­æ–‡/æ‹¼éŸ³/é¦–å­—æ¯" || notice01.value().trim() == "") {
+                validateShow(notice01, "è¯·è¾“å…¥å‡ºå‘åŸå¸‚åç§°");
                 return false;
-            } else if (notice02.value().trim() == "ÖĞÎÄ/Æ´Òô/Ê××ÖÄ¸" || notice02.value().trim() == "") {
-                validateShow(notice02, "ÇëÊäÈëµ½´ï³ÇÊĞÃû³Æ");
+            } else if (notice02.value().trim() == "ä¸­æ–‡/æ‹¼éŸ³/é¦–å­—æ¯" || notice02.value().trim() == "") {
+                validateShow(notice02, "è¯·è¾“å…¥åˆ°è¾¾åŸå¸‚åç§°");
                 return false;
             } else if (dateObj.value().trim().replace(/\//g, '-').trim() == "yyyy-mm-dd" || dateObj.value().trim() == "") {
-                validateShow(dateObj, "ÇëÑ¡Ôñ³ö·¢ÈÕÆÚ");
+                validateShow(dateObj, "è¯·é€‰æ‹©å‡ºå‘æ—¥æœŸ");
                 return false;
             }
 
@@ -257,11 +249,11 @@ cQuery.ready(function(){
             var notice01 = cQuery("#notice03"),
                     notice02 = cQuery("#notice04");
 
-            if (notice01.value().trim() == "ÖĞÎÄ/Æ´Òô/Ê××ÖÄ¸" || notice01.value().trim() == "") {
-                validateShow(notice01, "ÇëÊäÈë³ö·¢³ÇÊĞÃû³Æ");
+            if (notice01.value().trim() == "ä¸­æ–‡/æ‹¼éŸ³/é¦–å­—æ¯" || notice01.value().trim() == "") {
+                validateShow(notice01, "è¯·è¾“å…¥å‡ºå‘åŸå¸‚åç§°");
                 return false;
-            } else if (notice02.value().trim() == "ÖĞÎÄ/Æ´Òô/Ê××ÖÄ¸" || notice02.value().trim() == "") {
-                validateShow(notice02, "ÇëÊäÈëµ½´ï³ÇÊĞÃû³Æ");
+            } else if (notice02.value().trim() == "ä¸­æ–‡/æ‹¼éŸ³/é¦–å­—æ¯" || notice02.value().trim() == "") {
+                validateShow(notice02, "è¯·è¾“å…¥åˆ°è¾¾åŸå¸‚åç§°");
                 return false;
             }
 
@@ -286,7 +278,7 @@ function busFromCityCallback(data) {
 }
 
 function getBusToCity(fromCity) {
-    if (fromCity != '' && fromCity != 'ÖĞÎÄ/Æ´Òô/Ê××ÖÄ¸') {
+    if (fromCity != '' && fromCity != 'ä¸­æ–‡/æ‹¼éŸ³/é¦–å­—æ¯') {
         cQuery.jsonp('/index.php?param=/data/toCityList&fromCity=' + fromCity + '&callback=busToCityCallback', {onload: function(){
         }});
     }

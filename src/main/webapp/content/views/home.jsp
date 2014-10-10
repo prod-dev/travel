@@ -1,23 +1,29 @@
 <%--
   Created by IntelliJ IDEA.
-  User: apple
+  User: Bright Huang
   Date: 10/7/14
   Time: 10:29
   To change this template use File | Settings | File Templates.
 --%>
-
-<%@page language="java" contentType="text/html; charset=GB2312" pageEncoding="GB2312"%>
+<%@page language="java" contentType="text/html; charset=GB2312" pageEncoding="GB2312" %>
+<!DOCTYPE html>
 <html>
 <head>
     <title></title>
     <meta http-equiv="Content-Type" content="text/html charset=GB2312">
-    <link rel="stylesheet" href="content/static/css/travel/home/home.css" />
+    <link rel="stylesheet" href="content/static/css/bootstrap-3.2.0/bootstrap.min.css"/>
+    <link rel="stylesheet" href="content/static/css/bootstrap-datepicker-1.3.0/datepicker.css"/>
+    <link rel="stylesheet" href="content/static/css/travel/home/home.css"/>
+    <link rel="stylesheet" href="content/static/css/travel/home/citypicker.css"/>
 </head>
 <jsp:include page='header.jsp'/>
 <jsp:include page='navbar.jsp'/>
+
+
 <body marginwidth="0" marginheight="0">
 <div class="base_top">
-<iframe id="iframeCrmAds" scrolling="no" frameborder="0" style="width: 100%; height: 360px;" marginwidth="0" marginheight="0" src="http://bus.ctrip.com/banner.html"></iframe>
+<iframe id="iframeCrmAds" scrolling="no" frameborder="0" style="width: 100%; height: 360px;" marginwidth="0"
+        marginheight="0" src="http://bus.ctrip.com/banner.html"></iframe>
 <form action="http://bus.ctrip.com/busList.html" id="searchBusForm" method="get" accept-charset="utf-8">
     <div class="s_wrapper">
         <div class="s_box">
@@ -27,19 +33,26 @@
             <div id="searchBox1" class="search_box">
                 <div class="search_form">
                     <table width="100%" cellspacing="0" cellpadding="0" class="searchbox">
-                        <tbody><tr>
+                        <tbody>
+                        <tr>
                             <th>出发城市</th>
-                            <td><input type="text" tabindex="1" name="from" id="notice01" class="input_txt" autocomplete="on" _cqnotice="中文/拼音/首字母"></td>
+                            <td><input type="text" tabindex="1" name="from" id="notice01" class="input_txt"
+                                       autocomplete="on" _cqnotice="中文/拼音/首字母"></td>
                         </tr>
                         <tr>
                             <th>到达城市</th>
-                            <td><input type="text" tabindex="2" name="to" id="notice02" class="input_txt" autocomplete="on" _cqnotice="中文/拼音/首字母"></td>
+                            <td><input type="text" tabindex="2" name="to" id="notice02" class="input_txt"
+                                       autocomplete="on" _cqnotice="中文/拼音/首字母"></td>
                         </tr>
                         <tr>
                             <th>出发日期</th>
-                            <td><input type="text" tabindex="3" name="date" value="2014-10-08" id="dateObj" class="input_txt" readonly="readonly" placeholder="yyyy-mm-dd" _cqnotice="yyyy-mm-dd"></td>
+                            <td><input type="text" tabindex="3" name="date" value="" id="dateObj"
+                                       class="input_txt" readonly="readonly" placeholder="yyyy-mm-dd"
+                                       _cqnotice="yyyy-mm-dd">
+                            </td>
                         </tr>
-                        </tbody></table>
+                        </tbody>
+                    </table>
                     <div class="search_btn_box">
                         <input type="button" value="搜 索" id="searchBusTicket" class="btn_search">
                     </div>
@@ -48,260 +61,79 @@
         </div>
     </div>
 </form>
-<script type="text/javascript">
-function formatBusData(data) {
-    var obj = {};
-    for (var key in data) {
-        obj[key] = {};
-        if (key.search(/[A-Z]/i) != -1) {
-            for (var i = 0; i < data[key].length; i++) {
-                var groupBy = data[key][i]['data'].split('|')[2].substr(0, 1).toUpperCase();
-                if (obj[key][groupBy]) {
-                    obj[key][groupBy].push(data[key][i]);
-                } else {
-                    obj[key][groupBy] = [];
-                    obj[key][groupBy].push(data[key][i]);
-                }
-            }
-        } else {
-            for (var i = 0; i < data[key].length; i++) {
-                if (obj[key]['']) {
-                    obj[key][''].push(data[key][i]);
-                } else {
-                    obj[key][''] = [];
-                    obj[key][''].push(data[key][i]);
-                }
-            }
-        }
-    }
-    return obj;
-}
 
-var toCityList = {};
-var notice01 = null;
-var notice02 = null;
 
-cQuery.ready(function(){
-    // 先加载地址选择器模块
-    cQuery.mod.load("address", "1.0");
-    cQuery.mod.load("notice", "1.0");
-    cQuery.mod.load("calendar", "3.0");
+<div style="position: absolute; z-index: 2000; top: 320px; left: 480px;" winstyle="hot">
+    <div style="width:430px;display:block " class="com_hotrenew">
+        <div style="width:100%;">
+            <div class="ac_title"><span>支持中文/拼音/简拼输入</span></div>
+            <ul method="hotTab" class="AbcSearchnew clx">
+                <li method="liHotTab" index="0" class="action">热门</li>
+                <li method="liHotTab" index="1">ABCD</li>
+                <li method="liHotTab" index="2">EFGHJ</li>
+                <li method="liHotTab" index="3">KLMN</li>
+                <li method="liHotTab" index="4" class="">PQRSTW</li>
+                <li method="liHotTab" index="5">XYZ</li>
+            </ul>
+            <ul method="hotData" class="popcitylistnew" style="">
+                <li method="liHotData" data="0|0" title="北京" class="ac_even ac_over">北京</li>
+                <li method="liHotData" data="0|1" title="上海" class="ac_odd">上海</li>
+                <li method="liHotData" data="0|2" title="天津" class="ac_even">天津</li>
+                <li method="liHotData" data="0|3" title="重庆" class="ac_odd">重庆</li>
+                <li method="liHotData" data="0|4" title="长沙" class="ac_even">长沙</li>
+                <li method="liHotData" data="0|5" title="长春" class="ac_odd">长春</li>
+                <li method="liHotData" data="0|6" title="成都" class="ac_even">成都</li>
+                <li method="liHotData" data="0|7" title="福州" class="ac_odd">福州</li>
+                <li method="liHotData" data="0|8" title="广州" class="ac_even">广州</li>
+                <li method="liHotData" data="0|9" title="贵阳" class="ac_odd">贵阳</li>
+                <li method="liHotData" data="0|10" title="呼和浩特" class="ac_even">呼和浩特</li>
+                <li method="liHotData" data="0|11" title="哈尔滨" class="ac_odd">哈尔滨</li>
+                <li method="liHotData" data="0|12" title="合肥" class="ac_even">合肥</li>
+                <li method="liHotData" data="0|13" title="杭州" class="ac_odd">杭州</li>
+                <li method="liHotData" data="0|14" title="海口" class="ac_even">海口</li>
+                <li method="liHotData" data="0|15" title="济南" class="ac_odd">济南</li>
+                <li method="liHotData" data="0|16" title="昆明" class="ac_even">昆明</li>
+                <li method="liHotData" data="0|17" title="拉萨" class="ac_odd">拉萨</li>
+                <li method="liHotData" data="0|18" title="兰州" class="ac_even">兰州</li>
+                <li method="liHotData" data="0|19" title="南宁" class="ac_odd">南宁</li>
+                <li method="liHotData" data="0|20" title="南京" class="ac_even">南京</li>
+                <li method="liHotData" data="0|21" title="南昌" class="ac_odd">南昌</li>
+                <li method="liHotData" data="0|22" title="沈阳" class="ac_even">沈阳</li>
+                <li method="liHotData" data="0|23" title="石家庄" class="ac_odd">石家庄</li>
+                <li method="liHotData" data="0|24" title="太原" class="ac_even">太原</li>
+                <li method="liHotData" data="0|25" title="乌鲁木齐" class="ac_odd">乌鲁木齐</li>
+                <li method="liHotData" data="0|26" title="武汉" class="ac_even">武汉</li>
+                <li method="liHotData" data="0|27" title="西宁西" class="ac_odd">西宁西</li>
+                <li method="liHotData" data="0|28" title="西安" class="ac_even">西安</li>
+                <li method="liHotData" data="0|29" title="银川" class="ac_odd">银川</li>
+                <li method="liHotData" data="0|30" title="郑州" class="ac_even">郑州</li>
+                <li method="liHotData" data="0|31" title="深圳" class="ac_odd">深圳</li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+        <div class="clear"></div>
+    </div>
+</div>
 
-    // 再注册地址选择器模块
-    var from = cQuery('#notice01'),
-            to = cQuery('#notice02'),
-            date = cQuery('#dateObj');
-
-    from.regMod('notice' , '1.0', {
-        name: 'notice01',
-        selClass: "base_txtgray",
-        tips: "中文/拼音/首字母"
-    });
-
-    to.regMod('notice' , '1.0', {
-        name: 'notice02',
-        selClass: "base_txtgray",
-        tips: "中文/拼音/首字母"
-    });
-
-    // 判断是否有历史搜索
-    var bus_from = cQuery.storage.get('bus_from');
-    var bus_to = cQuery.storage.get('bus_to');
-    if (bus_from && bus_to) {
-        cQuery('#notice01').value(bus_from);
-        cQuery('#notice02').value(bus_to);
-    }
-
-    function regBusAddress(input, name, tagHistory) {
-        var noticeAddress = $(input).regMod('address', '1.0', {
-            name: name,
-            message: {
-                suggestion: '请从下列城市选择',
-                noFilterResult:"抱歉，找不到：'${val}'  请手动输入"
-            },
-            isFocusNext: true,
-            //isAutoCorrect: true,
-            template: {
-                suggestion: '{{if (data = formatBusData(data))}}{{/if}}' +
-                        '<div class="city_select_lhsl">' +
-                        '<p class="title"><a class="close" href="javascript:;">×</a>支持中文/拼音/简拼输入</p>' +
-
-                        (!!tagHistory ? (
-                                '<p class="sarch_history_title">搜索历史</p>' +
-                                '<div class="search_history_box">'
-                                + tagHistory +
-                                '</div>') : '') +
-
-                        '<ul class="tab_box">{{enum(key) data}}<li><span>${key}</span></li>{{/enum}}</ul>' +
-                        '{{enum(key,objs) data}}' +
-                        '<div class="city_item">' +
-                        '{{enum(k,arr) objs}}' +
-                        '<div class="city_item_in">' +
-                        '<span class="city_item_letter">${k}</span>' +
-                        '{{each(index, item) arr}}<a href="javascript:void(0);" data="${item.data}">${item.display}</a>{{/each}}' +
-                        '</div>' +
-                        '{{/enum}}' +
-                        '</div>' +
-                        '{{/enum}}' +
-                        '</div>',
-
-                suggestionStyle: '.city_select_lhsl{width:408px;padding:10px;border:1px solid #999;background-color:#fff;}' +
-                        '.city_select_lhsl .close{float:right;width:20px;height:20px;color:#666;text-align:center;font:bold 16px/20px Simsun;}' +
-                        '.city_select_lhsl .close:hover{text-decoration:none;color:#FFA800;}' +
-                        '.city_select_lhsl .title{margin-bottom:10px;color:#999;}' +
-                        '.city_select_lhsl .tab_box{width:100%;height:22px;margin-bottom:6px;margin-top:0;border-bottom:2px solid #ccc;}' +
-                        '.city_select_lhsl .tab_box li{position:relative;float:left;display:inline;margin-right:2px;line-height:22px;cursor:pointer;}' +
-                        '.city_select_lhsl .tab_box li b{display:none;}' +
-                        '.city_select_lhsl .tab_box li span{padding:0 8px;}' +
-                        '.city_select_lhsl .tab_box .hot_selected{border-bottom:2px solid #06c;margin-bottom:-2px;font-weight:bold;color:#06c;}' +
-                        '.city_select_lhsl .tab_box .hot_selected b{position:absolute;top:23px;left:50%;display:block;width:0;height:0;margin-left:-5px;overflow:hidden;font-size:0;line-height:0;border-color:#06c transparent transparent transparent;border-style:solid dashed dashed dashed;border-width:5px;}' +
-                        '.city_select_lhsl .city_item, .city_select_lhsl .search_history_box {display:inline-block;*zoom:1;overflow:hidden;}' +
-                        '.city_select_lhsl .city_item{width:408px;}' +
-                        '.city_select_lhsl .city_item a, .city_select_lhsl .search_history_box a {float:left;display:inline;width:52px;height:22px;margin:0 2px 2px 0;padding-left:8px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;line-height:22px;color:#333;}' +
-                        '.city_select_lhsl .city_item a:hover,.city_select_lhsl .search_history_box a:hover{background-color:#2577E3;text-decoration:none;color:#fff;}' +
-                        '.city_item .city_item_in{width:378px;padding-left:30px;*zoom:1;}' +
-                        '.city_item .city_item_in:after,.city_select_lhsl .search_history_box:after{display:block;height:0;visibility:hidden;overflow:hidden;content:".";clear:both;}' +
-                        '.city_item .city_item_letter{float:left;width:30px;height:22px;margin-left:-30px;line-height:22px;text-align:center;color:#E56700;}' +
-                        '.city_select_lhsl .sarch_history_title{margin-bottom:2px;font-weight:bold;color:#06c;}' +
-                        '.city_select_lhsl .search_history_box{margin-bottom:6px;}',
-
-                suggestionInit: function (el) {
-                    suggestInit(el);
-                }
-            }
-        });
-        function suggestInit(a) {
-            cQuery(".tab_box li", a[0]).bind("mousedown", function () {
-                cQuery(".tab_box li", a[0]).removeClass("hot_selected");
-                cQuery(this).addClass("hot_selected");
-                cQuery(".city_item", a[0]).css("display", "none");
-                var keywords = cQuery("span", $(this)[0])[0].innerHTML;
-                if (keywords.trim() == '热门') {
-                    cQuery(".city_item:eq(0)", a[0]).css("display", "");
-                }
-                else {
-                    cQuery(".city_item").each(function (c) {
-                        var letter = cQuery(".city_item_letter", c[0])[0].innerHTML;
-                        if (letter != '' && keywords.indexOf(letter) > -1) {
-                            cQuery(c).css("display", "");
-                        }
-                    });
-                }
-            });
-            cQuery(".search_history_box a", a[0]).bind("mousedown", function () {
-                cQuery(input).value(this.innerHTML);
-                noticeAddress.method("hidden");
-            });
-            cQuery(".title .close", a[0]).bind("mousedown", function () {
-                noticeAddress.method("hidden");
-            });
-            cQuery(".tab_box li:eq(0)", a[0]).trigger("mousedown");
-        };
-
-        return noticeAddress;
-    }
-
-    notice02 = regBusAddress('#notice02', 'notice02', '');
-    notice01 = regBusAddress('#notice01', 'notice01', '');
-
-    getBusFromCity();
-
-    cQuery("#notice02").bind("focus", function(){
-        getBusToCity(encodeURIComponent(cQuery("#notice01").value().trim()));
-    });
-
-    date.regMod('notice' , '1.0', {
-        name: 'dateObj',
-        selClass: "base_txtgray",
-        tips: "yyyy-mm-dd"
-    });
-
-    date.regMod("calendar", "3.0", {
-        options: {
-            showWeek: true,
-            container: cQuery.container,
-            maxDate: "2014-11-05"
-        }
-    }, true);
-
-    // 表单验证
-    cQuery.mod.load('validate','1.1',function(){
-        var validateShow = function (obj, message) {
-            cQuery(document).regMod('validate', '1.1').method("show", { $obj: obj, data: message, removeErrorClass: true, hideEvent: "blur", isFocus: true });
-        };
-
-        cQuery("#searchBusTicket").bind('click', function (e) {
-            var notice01 = cQuery("#notice01"),
-                    notice02 = cQuery("#notice02"),
-                    dateObj = cQuery("#dateObj");
-
-            if (notice01.value().trim() == "中文/拼音/首字母" || notice01.value().trim() == "") {
-                validateShow(notice01, "请输入出发城市名称");
-                return false;
-            } else if (notice02.value().trim() == "中文/拼音/首字母" || notice02.value().trim() == "") {
-                validateShow(notice02, "请输入到达城市名称");
-                return false;
-            } else if (dateObj.value().trim().replace(/\//g, '-').trim() == "yyyy-mm-dd" || dateObj.value().trim() == "") {
-                validateShow(dateObj, "请选择出发日期");
-                return false;
-            }
-
-            cQuery.storage.set('bus_from', notice01.value().trim());
-            cQuery.storage.set('bus_to', notice02.value().trim());
-
-            document.getElementById("searchBusForm").submit();
-            return false;
-        });
-
-        cQuery("#searchBusShike").bind('click', function (e) {
-            var notice01 = cQuery("#notice03"),
-                    notice02 = cQuery("#notice04");
-
-            if (notice01.value().trim() == "中文/拼音/首字母" || notice01.value().trim() == "") {
-                validateShow(notice01, "请输入出发城市名称");
-                return false;
-            } else if (notice02.value().trim() == "中文/拼音/首字母" || notice02.value().trim() == "") {
-                validateShow(notice02, "请输入到达城市名称");
-                return false;
-            }
-
-            document.getElementById('searchBusShikeForm').submit();
-            return false;
-        });
-    });
-});
-
-function getBusFromCity() {
-    cQuery.jsonp('/index.php?param=/data/cityList&callback=busFromCityCallback', {onload: function(){
-    }});
-}
-
-function busFromCityCallback(data) {
-    if (data['code'] == 1 && notice01) {
-        notice01.method("source_set", {
-            suggestion: data['return']['suggestion'],
-            data:data['return']['data']
-        });
-    }
-}
-
-function getBusToCity(fromCity) {
-    if (fromCity != '' && fromCity != '中文/拼音/首字母') {
-        cQuery.jsonp('/index.php?param=/data/toCityList&fromCity=' + fromCity + '&callback=busToCityCallback', {onload: function(){
-        }});
-    }
-}
-
-function busToCityCallback(data) {
-    if (data['code'] == 1 && notice02) {
-        notice02.method("source_set", {
-            suggestion: data['return']['suggestion'],
-            data:data['return']['data']
-        });
-    }
-}
-</script>
 </div>
 </body>
 <jsp:include page='footer.jsp'/>
+
+<script src="content/static/js/lib/require-2.1.15.min.js" defer async="true" data-main="content/static/js/travel/main"></script>
+
+<!--
+<script src="content/static/js/lib/jquery-2.1.1.min.js"></script>
+<script src="content/static/js/travel/home/cQuery.js"></script>
+<script type="text/javascript" charset="utf-8" async="" src="http://bus.ctrip.com/index.php?param=/data/skCityList&callback=busSkFromCityCallback"></script>
+<script type="text/javascript" charset="utf-8" async="" src="http://bus.ctrip.com/index.php?param=/data/cityList&callback=busFromCityCallback"></script>
+<script src="content/static/js/travel/home/address-1.0.js"></script>
+<script src="content/static/js/travel/home/notice-1.0.js"></script>
+<script src="content/static/js/travel/home/calendar-3.0.js"></script>
+-->
+<!--
+<script src="content/static/js/lib/require-2.1.15.min.js" defer async="true" data-main="content/static/js/travel/main"></script>
+<script src="content/static/js/lib/jquery-2.1.1.min.js"></script>
+<script src="content/static/js/travel/home/home.js"></script>
+<script src="content/static/js/lib/bootstrap-datepicker-1.3.0.js"></script>
+-->
 </html>

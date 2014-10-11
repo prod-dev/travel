@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Bright Huang
-  Date: 10/7/14
-  Time: 21:09
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -45,9 +38,7 @@
     </dl>
     <dl class="sidenav sidenav_c">
         <dt><a href="javascript:;"><span>订单中心</span><i class="ico_arr"></i></a></dt>
-        <dd><a href="
-          http://my.ctrip.com/Home/Order/AllOrderList.aspx
-            "><span>全部订单</span></a><a href="
+        <dd><a href="./myorders"><span>全部订单</span></a><a href="
           http://my.ctrip.com/Home/Order/FlightOrderList.aspx
             "><span>机票订单</span></a><a href="
           http://my.ctrip.com/Home/Order/HotelOrderList.aspx

@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: apple
-  Date: 10/7/14
-  Time: 13:14
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -13,6 +6,11 @@
 </head>
 <jsp:include page='header.jsp'/>
 <body>
+<script type="text/javascript">
+  function payment(){
+    window.location.href = "./confirmation";
+  }
+</script>
 <div class="wrapper">
 <div class="payinfo">
     <div class="payinfo_price">
@@ -461,8 +459,7 @@
         <input id="hidEnableInvoice" type="hidden" value="false">
         <input id="hidVoucherMixedDisabledPayWay" type="hidden" value="">
         <input id="hidIsEnableEBankNewPay" type="hidden" value="False">
-        <input type="button" value="下一步" class="btn_submit" id="btnNextCommand">
-        <input type="submit" value="下一步" style="display: none;" class="btn_submit" id="btnNextCommandForEBankPay">
+        <input type="button" value="下一步" class="btn_submit" id="btnNextCommand" onclick="payment()">
         <span id="spanSubmitLoading" class="ico_loading" style="display: none;"></span>
     </form>
 </div>

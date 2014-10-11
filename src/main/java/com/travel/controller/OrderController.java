@@ -10,20 +10,17 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Bright Huang on 10/7/14.
- */
 @Controller
 public class OrderController {
 
-    private static final String ORDER_PAGE = "order";
+	private static final String ORDER_PAGE = "order";
 
-    @RequestMapping(value = "/order", method = RequestMethod.GET)
-    public ModelAndView show(HttpServletRequest request, HttpServletResponse response) {
+	@RequestMapping(value = "/order", method = RequestMethod.GET)
+	public ModelAndView show(HttpServletRequest request, HttpServletResponse response) {
 
-        Map<String, Object> models = new HashMap<String, Object>();
-        models.put("order", new Object());
+		Map<String, Object> models = new HashMap<String, Object>();
+		models.put("order", new Object());
 
-        return new ModelAndView(ORDER_PAGE, models);
-    }
+		return new ModelAndView(ORDER_PAGE, models);
+	}
 }

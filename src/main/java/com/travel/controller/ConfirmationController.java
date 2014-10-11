@@ -20,12 +20,12 @@ import com.travel.model.Ticket;
 import com.travel.service.ITicketService;
 
 @Controller
-public class IndexController {
+public class ConfirmationController {
 
 	@Autowired
 	ITicketService ticketService;
 
-	private static final Logger LOG = Logger.getLogger(IndexController.class);
+	private static final Logger LOG = Logger.getLogger(ConfirmationController.class);
 
 	@RequestMapping(value = "index", method = RequestMethod.GET)
 	public ModelAndView index(HttpServletRequest request, HttpServletResponse response) {
@@ -59,33 +59,14 @@ public class IndexController {
 		return new ModelAndView("list", models);
 	}
 
-	@RequestMapping(value = "booking", method = RequestMethod.POST)
-	public ModelAndView booking(SearchCondition condition, HttpServletRequest request, HttpServletResponse response) {
-		Map<String, Object> models = new HashMap<String, Object>();
-		List<LineInfo> lines = ticketService.getLines();
-		models.put("line", lines.get(0));
-		models.put("condition", condition);
+	
 
-		return new ModelAndView("booking", models);
-	}
-
-	@RequestMapping(value = "payment", method = RequestMethod.POST)
-	public ModelAndView payment(SearchCondition condition, HttpServletRequest request, HttpServletResponse response) {
-		Map<String, Object> models = new HashMap<String, Object>();
-		List<LineInfo> lines = ticketService.getLines();
-		models.put("line", lines.get(0));
-		models.put("condition", condition);
-
-		return new ModelAndView("payment", models);
-	}
-
-	@RequestMapping(value = "confirmation", method = RequestMethod.POST)
+	@RequestMapping(value = "confirmation", method = RequestMethod.GET)
 	public ModelAndView confirmation(SearchCondition condition, HttpServletRequest request, HttpServletResponse response) {
 		Map<String, Object> models = new HashMap<String, Object>();
 		List<LineInfo> lines = ticketService.getLines();
 		models.put("line", lines.get(0));
 		models.put("condition", condition);
-
 		return new ModelAndView("confirmation", models);
 	}
 }

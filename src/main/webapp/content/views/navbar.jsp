@@ -73,7 +73,7 @@
             <li id="loginDivLi" class="cui_myctrip cui_myctrip_hover cui_myctrip_hover cui_myctrip_hover">
                 <div id="div_LoginShow" style="display:none;"><span class="cui_myctrip_status" id="usernameId"><a rel="nofollow" id="c_ph_myhome" href="http://my.ctrip.com/home/myinfo.aspx">我的携程
                 </a></span><b></b><a href="" class="cui_links_exit" id="c_ph_logout">退出</a></div>
-                <div id="notLogin"><a rel="nofollow" id="c_ph_myhome" href="http://my.ctrip.com/home/myinfo.aspx" class="cui_myctrip_status">我的携程</a><div class="cui_myctrip_username" title="尊敬的会员">尊敬的会员</div><b></b><a rel="nofollow" id="c_ph_logout" href="https://accounts.ctrip.com/member/logout.aspx" class="cui_links_exit">退出</a></div>
+                <div id="notLogin"><a rel="nofollow" id="c_ph_myhome" href="./myinfo" class="cui_myctrip_status">我的携程</a><div class="cui_myctrip_username" title="尊敬的会员">尊敬的会员</div><b></b><a rel="nofollow" id="c_ph_logout" href="https://accounts.ctrip.com/member/logout.aspx" class="cui_links_exit">退出</a></div>
                 <div class="cui_account" id="notLoginDiv" style="display:none;">
                     <div class="cui_account_info"><a rel="nofollow" href="http://my.ctrip.com/Home/Order/FlightOrderList.aspx">机票订单
                     </a><a rel="nofollow" href="http://my.ctrip.com/Home/Order/HotelOrderList.aspx">酒店订单

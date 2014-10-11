@@ -22,7 +22,7 @@
                 <tbody>
                   <tr>
                     <th></th>
-                    <td><input type="radio">单程&nbsp;&nbsp;<input type="radio">往返</td>
+                    <td><input type="radio" name="single">单程&nbsp;&nbsp;<input type="radio" name="return">往返</td>
                   </tr>
                   <tr>
                     <th>出发城市</th>
@@ -34,12 +34,12 @@
                   </tr>
                   <tr>
                     <th>出发日期</th>
-                    <td><input type="text" tabindex="3" name="startDate" value="2014-10-08" id="dateObj" class="input_txt" readonly="readonly" placeholder="yyyy-mm-dd"
+                    <td><input type="text" tabindex="3" name="departDate" value="2014-10-08" id="dateObj" class="input_txt" readonly="readonly" placeholder="yyyy-mm-dd"
                       _cqnotice="yyyy-mm-dd"></td>
                   </tr>
                   <tr>
                     <th>返回日期</th>
-                    <td><input type="text" tabindex="3" name="returnDate" value="2014-10-08" id="dateObj" class="input_txt" readonly="readonly" placeholder="yyyy-mm-dd"
+                    <td><input type="text" tabindex="3" name="returnDate" value="2014-10-20" id="dateObj" class="input_txt" readonly="readonly" placeholder="yyyy-mm-dd"
                       _cqnotice="yyyy-mm-dd"></td>
                   </tr>
                 </tbody>

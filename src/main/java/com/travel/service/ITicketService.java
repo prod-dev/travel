@@ -9,6 +9,4 @@ public interface ITicketService {
 
 	List<Ticket> getTickets();
 
-	List<LineInfo> getLines();
-
 }

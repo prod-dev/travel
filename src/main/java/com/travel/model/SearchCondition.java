@@ -4,11 +4,10 @@ public class SearchCondition {
 
 	private boolean isSingle;
 	private boolean isReturn;
-	private boolean isConnect;
 	private String from;
 	private String to;
-	private String startDate;
-	private String endDate;
+	private String departDate;
+	private String returnDate;
 
 	public boolean isSingle() {
 		return isSingle;
@@ -24,14 +23,6 @@ public class SearchCondition {
 
 	public void setReturn(boolean isReturn) {
 		this.isReturn = isReturn;
-	}
-
-	public boolean isConnect() {
-		return isConnect;
-	}
-
-	public void setConnect(boolean isConnect) {
-		this.isConnect = isConnect;
 	}
 
 	public String getFrom() {
@@ -50,20 +41,24 @@ public class SearchCondition {
 		this.to = to;
 	}
 
-	public String getStartDate() {
-		return startDate;
+	public String getDepartDate() {
+		return departDate;
 	}
 
-	public void setStartDate(String startDate) {
-		this.startDate = startDate;
+	public void setDepartDate(String departDate) {
+		this.departDate = departDate;
 	}
 
-	public String getEndDate() {
-		return endDate;
+	public String getReturnDate() {
+		return returnDate;
 	}
 
-	public void setEndDate(String endDate) {
-		this.endDate = endDate;
+	public void setReturnDate(String returnDate) {
+		this.returnDate = returnDate;
 	}
 
+	public String toString() {
+		return "{isSingle:" + isSingle + ", isReturn:" + isReturn + ", from:" + from + ", to:" + to + ", departDate:" + ", returnDate" + returnDate + "}";
+
+	}
 }

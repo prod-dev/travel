@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.travel.dao.ITicketDao;
-import com.travel.model.LineInfo;
 import com.travel.model.Ticket;
 import com.travel.service.ITicketService;
 
@@ -19,9 +18,4 @@ public class TicketService implements ITicketService {
 	public List<Ticket> getTickets() {
 		return ticketDao.getTickets();
 	}
-
-	public List<LineInfo> getLines() {
-		return ticketDao.getLines();
-	}
-
 }

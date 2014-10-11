@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: apple
-  Date: 10/7/14
-  Time: 12:30
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -17,6 +10,9 @@
 <iframe id="__SSO_iframe_0" frameborder="0" scrolling="no" width="394px" height="582px" style="display:none;"></iframe>
 <iframe id="__SSO_iframe_1" frameborder="0" scrolling="no" width="394px" height="582px" style="display:none;"></iframe>
 <script type="text/javascript">
+     function booking(){
+    	 window.location.href = "./passengers";
+     }
     //免登 元素id,快速预订
     function __SSO_booking(a,t){
         var el=cQuery("#__SSO_iframe_"+t);
@@ -53,15 +49,15 @@
     }
 </script>
 <!--搜索框开始-->
-<form action="http://bus.ctrip.com/busList.html" id="searchBusForm" method="get" accept-charset="utf-8">
+<form action="buslines" id="searchBusForm" method="POST" accept-charset="utf-8">
     <div class="searchbox">
         出发城市
-        <input type="text" id="notice01" name="from" value="深圳" class="input_text" style="width:82px; color: gray;" autocomplete="on" _cqnotice="中文/拼音/首字母">
+        <input type="text" id="notice01" name="from" value="${condition.from }" class="input_text" style="width:82px; color: gray;" autocomplete="on" _cqnotice="中文/拼音/首字母">
         到达城市
-        <input type="text" id="notice02" name="to" value="南宁" class="input_text" style="width:82px; color: gray;" autocomplete="on" _cqnotice="中文/拼音/首字母">
+        <input type="text" id="notice02" name="to" value="${condition.to }" class="input_text" style="width:82px; color: gray;" autocomplete="on" _cqnotice="中文/拼音/首字母">
         出发日期
-        <input type="text" id="dateObj" name="date" value="2014-10-08" class="input_text" style="width:120px; color: gray;" _cqnotice="yyyy-mm-dd">
-        <input type="button" class="btn_search" id="searchBusTicket" value="搜索">
+        <input type="text" id="dateObj" name="date" value="${condition.startDate }" class="input_text" style="width:120px; color: gray;" _cqnotice="yyyy-mm-dd">
+        <input type="submit" class="btn_search" id="searchBusTicket" value="搜索">
     </div>
 </form>
 <script type="text/javascript">
@@ -775,7 +771,7 @@ function busToCityCallback(data) {
         </div>
     </td>
     <td class="text_right">
-        <input type="button" class="btn_book goBook" data-params="{from:'深圳',fromStation:'深圳汽车客运站',to:'南宁',busNo:'YFYHPGP0001',date:'2014-10-08',time:'08:00',hashkey:'38f87e10283fc0e2247abcf1a9063dbb'}" value="预订">
+        <input type="button" class="btn_book goBook" data-params="{from:'深圳',fromStation:'深圳汽车客运站',to:'南宁',busNo:'YFYHPGP0001',date:'2014-10-08',time:'08:00',hashkey:'38f87e10283fc0e2247abcf1a9063dbb'}" value="预订" onclick="booking()">
         <br><a href="javascript:void(0);" style="display:none;" class="check_more" data-trid="appTR0">查看<b class="icon_show"></b></a><!--  icon展开状态使用类名“icon_show" 收起状态“icon_hide”  -->
     </td>
 </tr>

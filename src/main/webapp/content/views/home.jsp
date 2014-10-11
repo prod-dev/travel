@@ -5,12 +5,12 @@
   Time: 10:29
   To change this template use File | Settings | File Templates.
 --%>
-<%@page language="java" contentType="text/html; charset=GB2312" pageEncoding="GB2312" %>
+<%@page language="java" contentType="text/html; charset=utf-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
     <title></title>
-    <meta http-equiv="Content-Type" content="text/html charset=GB2312">
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     <link rel="stylesheet" href="content/static/css/bootstrap-3.2.0/bootstrap.min.css"/>
     <link rel="stylesheet" href="content/static/css/bootstrap-datepicker-1.3.0/datepicker.css"/>
     <link rel="stylesheet" href="content/static/css/travel/home/home.css"/>
@@ -18,35 +18,33 @@
 </head>
 <jsp:include page='header.jsp'/>
 <jsp:include page='navbar.jsp'/>
-
-
 <body marginwidth="0" marginheight="0">
 <div class="base_top">
 <iframe id="iframeCrmAds" scrolling="no" frameborder="0" style="width: 100%; height: 360px;" marginwidth="0"
         marginheight="0" src="http://bus.ctrip.com/banner.html"></iframe>
-<form action="http://bus.ctrip.com/busList.html" id="searchBusForm" method="get" accept-charset="utf-8">
+<form action="buslines" id="searchBusForm" method="POST" accept-charset="utf-8">
     <div class="s_wrapper">
         <div class="s_box">
             <div class="search_box_tab">
-                <span class="search_for_b"><b></b>Æû³µÆ±²éÑ¯</span>
+                <span class="search_for_b"><b></b>æ±½è½¦ç¥¨æŸ¥è¯¢</span>
             </div>
             <div id="searchBox1" class="search_box">
                 <div class="search_form">
                     <table width="100%" cellspacing="0" cellpadding="0" class="searchbox">
                         <tbody>
                         <tr>
-                            <th>³ö·¢³ÇÊÐ</th>
+                            <th>å‡ºå‘åŸŽå¸‚</th>
                             <td><input type="text" tabindex="1" name="from" id="notice01" class="input_txt"
-                                       autocomplete="on" _cqnotice="ÖÐÎÄ/Æ´Òô/Ê××ÖÄ¸"></td>
+                                       autocomplete="on" _cqnotice="ä¸­æ–‡/æ‹¼éŸ³/é¦–å­—æ¯"></td>
                         </tr>
                         <tr>
-                            <th>µ½´ï³ÇÊÐ</th>
+                            <th>åˆ°è¾¾åŸŽå¸‚</th>
                             <td><input type="text" tabindex="2" name="to" id="notice02" class="input_txt"
-                                       autocomplete="on" _cqnotice="ÖÐÎÄ/Æ´Òô/Ê××ÖÄ¸"></td>
+                                       autocomplete="on" _cqnotice="ä¸­æ–‡/æ‹¼éŸ³/é¦–å­—æ¯"></td>
                         </tr>
                         <tr>
-                            <th>³ö·¢ÈÕÆÚ</th>
-                            <td><input type="text" tabindex="3" name="date" value="" id="dateObj"
+                            <th>å‡ºå‘æ—¥æœŸ</th>
+                            <td><input type="text" tabindex="3" name="startDate" value="" id="dateObj"
                                        class="input_txt" readonly="readonly" placeholder="yyyy-mm-dd"
                                        _cqnotice="yyyy-mm-dd">
                             </td>
@@ -54,7 +52,7 @@
                         </tbody>
                     </table>
                     <div class="search_btn_box">
-                        <input type="button" value="ËÑ Ë÷" id="searchBusTicket" class="btn_search">
+                        <input type="submit" value="æœ ç´¢" id="searchBusTicket" class="btn_search">
                     </div>
                 </div>
             </div>
@@ -62,13 +60,12 @@
     </div>
 </form>
 
-
-<div style="position: absolute; z-index: 2000; top: 320px; left: 480px;" winstyle="hot">
+    <div style="position: absolute; z-index: 2000; top: 320px; left: 480px;" winstyle="hot">
     <div style="width:430px;display:block " class="com_hotrenew">
         <div style="width:100%;">
-            <div class="ac_title"><span>Ö§³ÖÖÐÎÄ/Æ´Òô/¼òÆ´ÊäÈë</span></div>
+            <div class="ac_title"><span>æ”¯æŒä¸­æ–‡/æ‹¼éŸ³/ç®€æ‹¼è¾“å…¥</span></div>
             <ul method="hotTab" class="AbcSearchnew clx">
-                <li method="liHotTab" index="0" class="action">ÈÈÃÅ</li>
+                <li method="liHotTab" index="0" class="action">çƒ­é—¨</li>
                 <li method="liHotTab" index="1">ABCD</li>
                 <li method="liHotTab" index="2">EFGHJ</li>
                 <li method="liHotTab" index="3">KLMN</li>
@@ -76,45 +73,44 @@
                 <li method="liHotTab" index="5">XYZ</li>
             </ul>
             <ul method="hotData" class="popcitylistnew" style="">
-                <li method="liHotData" data="0|0" title="±±¾©" class="ac_even ac_over">±±¾©</li>
-                <li method="liHotData" data="0|1" title="ÉÏº£" class="ac_odd">ÉÏº£</li>
-                <li method="liHotData" data="0|2" title="Ìì½ò" class="ac_even">Ìì½ò</li>
-                <li method="liHotData" data="0|3" title="ÖØÇì" class="ac_odd">ÖØÇì</li>
-                <li method="liHotData" data="0|4" title="³¤É³" class="ac_even">³¤É³</li>
-                <li method="liHotData" data="0|5" title="³¤´º" class="ac_odd">³¤´º</li>
-                <li method="liHotData" data="0|6" title="³É¶¼" class="ac_even">³É¶¼</li>
-                <li method="liHotData" data="0|7" title="¸£ÖÝ" class="ac_odd">¸£ÖÝ</li>
-                <li method="liHotData" data="0|8" title="¹ãÖÝ" class="ac_even">¹ãÖÝ</li>
-                <li method="liHotData" data="0|9" title="¹óÑô" class="ac_odd">¹óÑô</li>
-                <li method="liHotData" data="0|10" title="ºôºÍºÆÌØ" class="ac_even">ºôºÍºÆÌØ</li>
-                <li method="liHotData" data="0|11" title="¹þ¶û±õ" class="ac_odd">¹þ¶û±õ</li>
-                <li method="liHotData" data="0|12" title="ºÏ·Ê" class="ac_even">ºÏ·Ê</li>
-                <li method="liHotData" data="0|13" title="º¼ÖÝ" class="ac_odd">º¼ÖÝ</li>
-                <li method="liHotData" data="0|14" title="º£¿Ú" class="ac_even">º£¿Ú</li>
-                <li method="liHotData" data="0|15" title="¼ÃÄÏ" class="ac_odd">¼ÃÄÏ</li>
-                <li method="liHotData" data="0|16" title="À¥Ã÷" class="ac_even">À¥Ã÷</li>
-                <li method="liHotData" data="0|17" title="À­Èø" class="ac_odd">À­Èø</li>
-                <li method="liHotData" data="0|18" title="À¼ÖÝ" class="ac_even">À¼ÖÝ</li>
-                <li method="liHotData" data="0|19" title="ÄÏÄþ" class="ac_odd">ÄÏÄþ</li>
-                <li method="liHotData" data="0|20" title="ÄÏ¾©" class="ac_even">ÄÏ¾©</li>
-                <li method="liHotData" data="0|21" title="ÄÏ²ý" class="ac_odd">ÄÏ²ý</li>
-                <li method="liHotData" data="0|22" title="ÉòÑô" class="ac_even">ÉòÑô</li>
-                <li method="liHotData" data="0|23" title="Ê¯¼Ò×¯" class="ac_odd">Ê¯¼Ò×¯</li>
-                <li method="liHotData" data="0|24" title="Ì«Ô­" class="ac_even">Ì«Ô­</li>
-                <li method="liHotData" data="0|25" title="ÎÚÂ³Ä¾Æë" class="ac_odd">ÎÚÂ³Ä¾Æë</li>
-                <li method="liHotData" data="0|26" title="Îäºº" class="ac_even">Îäºº</li>
-                <li method="liHotData" data="0|27" title="Î÷ÄþÎ÷" class="ac_odd">Î÷ÄþÎ÷</li>
-                <li method="liHotData" data="0|28" title="Î÷°²" class="ac_even">Î÷°²</li>
-                <li method="liHotData" data="0|29" title="Òø´¨" class="ac_odd">Òø´¨</li>
-                <li method="liHotData" data="0|30" title="Ö£ÖÝ" class="ac_even">Ö£ÖÝ</li>
-                <li method="liHotData" data="0|31" title="ÉîÛÚ" class="ac_odd">ÉîÛÚ</li>
+                <li method="liHotData" data="0|0" title="åŒ—äº¬" class="ac_even ac_over">åŒ—äº¬</li>
+                <li method="liHotData" data="0|1" title="ä¸Šæµ·" class="ac_odd">ä¸Šæµ·</li>
+                <li method="liHotData" data="0|2" title="å¤©æ´¥" class="ac_even">å¤©æ´¥</li>
+                <li method="liHotData" data="0|3" title="é‡åº†" class="ac_odd">é‡åº†</li>
+                <li method="liHotData" data="0|4" title="é•¿æ²™" class="ac_even">é•¿æ²™</li>
+                <li method="liHotData" data="0|5" title="é•¿æ˜¥" class="ac_odd">é•¿æ˜¥</li>
+                <li method="liHotData" data="0|6" title="æˆéƒ½" class="ac_even">æˆéƒ½</li>
+                <li method="liHotData" data="0|7" title="ç¦å·ž" class="ac_odd">ç¦å·ž</li>
+                <li method="liHotData" data="0|8" title="å¹¿å·ž" class="ac_even">å¹¿å·ž</li>
+                <li method="liHotData" data="0|9" title="è´µé˜³" class="ac_odd">è´µé˜³</li>
+                <li method="liHotData" data="0|10" title="å‘¼å’Œæµ©ç‰¹" class="ac_even">å‘¼å’Œæµ©ç‰¹</li>
+                <li method="liHotData" data="0|11" title="å“ˆå°”æ»¨" class="ac_odd">å“ˆå°”æ»¨</li>
+                <li method="liHotData" data="0|12" title="åˆè‚¥" class="ac_even">åˆè‚¥</li>
+                <li method="liHotData" data="0|13" title="æ­å·ž" class="ac_odd">æ­å·ž</li>
+                <li method="liHotData" data="0|14" title="æµ·å£" class="ac_even">æµ·å£</li>
+                <li method="liHotData" data="0|15" title="æµŽå—" class="ac_odd">æµŽå—</li>
+                <li method="liHotData" data="0|16" title="æ˜†æ˜Ž" class="ac_even">æ˜†æ˜Ž</li>
+                <li method="liHotData" data="0|17" title="æ‹‰è¨" class="ac_odd">æ‹‰è¨</li>
+                <li method="liHotData" data="0|18" title="å…°å·ž" class="ac_even">å…°å·ž</li>
+                <li method="liHotData" data="0|19" title="å—å®" class="ac_odd">å—å®</li>
+                <li method="liHotData" data="0|20" title="å—äº¬" class="ac_even">å—äº¬</li>
+                <li method="liHotData" data="0|21" title="å—æ˜Œ" class="ac_odd">å—æ˜Œ</li>
+                <li method="liHotData" data="0|22" title="æ²ˆé˜³" class="ac_even">æ²ˆé˜³</li>
+                <li method="liHotData" data="0|23" title="çŸ³å®¶åº„" class="ac_odd">çŸ³å®¶åº„</li>
+                <li method="liHotData" data="0|24" title="å¤ªåŽŸ" class="ac_even">å¤ªåŽŸ</li>
+                <li method="liHotData" data="0|25" title="ä¹Œé²æœ¨é½" class="ac_odd">ä¹Œé²æœ¨é½</li>
+                <li method="liHotData" data="0|26" title="æ­¦æ±‰" class="ac_even">æ­¦æ±‰</li>
+                <li method="liHotData" data="0|27" title="è¥¿å®è¥¿" class="ac_odd">è¥¿å®è¥¿</li>
+                <li method="liHotData" data="0|28" title="è¥¿å®‰" class="ac_even">è¥¿å®‰</li>
+                <li method="liHotData" data="0|29" title="é“¶å·" class="ac_odd">é“¶å·</li>
+                <li method="liHotData" data="0|30" title="éƒ‘å·ž" class="ac_even">éƒ‘å·ž</li>
+                <li method="liHotData" data="0|31" title="æ·±åœ³" class="ac_odd">æ·±åœ³</li>
             </ul>
         </div>
         <div class="clear"></div>
         <div class="clear"></div>
     </div>
 </div>
-
 </div>
 </body>
 <jsp:include page='footer.jsp'/>

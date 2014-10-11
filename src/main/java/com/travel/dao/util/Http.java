@@ -17,10 +17,28 @@ import org.apache.http.client.protocol.HttpClientContext;
 import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.protocol.*;
+import org.apache.log4j.Logger;
 
 public class Http {
 
+	private static final Logger LOG = Logger.getLogger(Http.class);
+
 	public static String requestGet(String uri, List<NameValuePair> paramList) throws Exception {
+		String url = getURL(uri, paramList);
+		LOG.debug("GET: " + url);
+		HttpGet request = new HttpGet(url);
+		return getResponse(request);
+	}
+
+	public static String requestPost(String uri, List<NameValuePair> postList) throws Exception {
+		String url = getURL(uri, postList);
+		LOG.debug("POST: " + url);
+		HttpPost request = new HttpPost(uri);
+		request.setEntity(new UrlEncodedFormEntity(postList, "utf-8"));
+		return getResponse(request);
+	}
+
+	private static String getURL(String uri, List<NameValuePair> paramList) {
 		StringBuilder urlBuilder = new StringBuilder(uri);
 		for (int i = 0; i < paramList.size(); i++) {
 			NameValuePair nvp = paramList.get(i);
@@ -33,14 +51,7 @@ public class Http {
 			urlBuilder.append("=");
 			urlBuilder.append(nvp.getValue());
 		}
-		HttpGet request = new HttpGet(urlBuilder.toString());
-		return getResponse(request);
-	}
-
-	public static String requestPost(String url, List<NameValuePair> postList) throws Exception {
-		HttpPost request = new HttpPost(url);
-		request.setEntity(new UrlEncodedFormEntity(postList, "utf-8"));
-		return getResponse(request);
+		return urlBuilder.toString();
 	}
 
 	private static String getResponse(HttpRequestBase request) throws Exception {

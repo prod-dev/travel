@@ -2,8 +2,8 @@
 <html>
 <head>
     <title></title>
-    <link rel="stylesheet" href="content/static/css/travel/mytravel/mytravel.css" />
-    <link rel="stylesheet" href="content/static/css/travel/mytravel/myorders.css" />
+    <link rel="stylesheet" href="content/static/css/travel/mytravel/mytravel.css"/>
+    <link rel="stylesheet" href="content/static/css/travel/mytravel/myorders.css"/>
 </head>
 <jsp:include page='header.jsp'/>
 <jsp:include page="navbar.jsp"/>
@@ -13,12 +13,7 @@
 <li id="base_bd">
 
 
-
-
-
-<div class="breadcrumb"><a href="
-          http://my.ctrip.com/home/myinfo.aspx
-        ">
+<div class="breadcrumb"><a href="http://my.ctrip.com/home/myinfo.aspx">
     我的携程
 </a>
     &gt;
@@ -46,7 +41,9 @@
           http://my.ctrip.com/Home/Order/PkgOrderList.aspx
             "><span>旅游度假订单</span></a><a href="
           http://my.ctrip.com/Home/Order/RailwayOrderList.aspx
-            "><span>国内火车票订单</span></a><div id="hideOrder" class="hide_order"><a href="
+            "><span>国内火车票订单</span></a>
+
+            <div id="hideOrder" class="hide_order"><a href="
           http://my.ctrip.com/Home/Order/OuTieOrderList.aspx
               "><span>
                 国际火车票订单<i class="ico_new2"></i></span></a><a href="
@@ -83,8 +80,9 @@
           http://my.ctrip.com/Home/Order/InsuranceOrderList.aspx
               "><span>
                 度假保险订单
-              </span></a></div><a id="moreOrder" href="javascript:;" class="more_order">
-            更多订单<i class="ico_arr"></i></a></dd>
+              </span></a></div>
+            <a id="moreOrder" href="javascript:;" class="more_order">
+                更多订单<i class="ico_arr"></i></a></dd>
     </dl>
     <dl class="sidenav">
         <dt><a href="javascript:;"><span>
@@ -175,10 +173,13 @@
           http://www.ctrip.com/community/holiday_senate/index.asp
             "><span>度假参谋论坛</span></a></dt>
     </dl>
-</div><script type="text/javascript" src="http://webresource.c-ctrip.com/ResCRMOnline/R2/pagemenu/js/MenuJscript140228.js?temp=20140729" charset="utf-8"></script>
+</div>
+<script type="text/javascript"
+        src="http://webresource.c-ctrip.com/ResCRMOnline/R2/pagemenu/js/MenuJscript140228.js?temp=20140729"
+        charset="utf-8"></script>
 
 <script type="text/javascript">
-    var ClubInfoForMenuStr = {"IsSnateClub":false,"IsPkgClub":false,"IsCorpMileage":false};
+    var ClubInfoForMenuStr = {"IsSnateClub": false, "IsPkgClub": false, "IsCorpMileage": false};
     if (ClubInfoForMenuStr.IsSnateClub) {
         document.getElementById("pagemenu_cyjlb").style.display = "block";
     } else {
@@ -206,7 +207,7 @@
                         liveChat: '在线客服'
                     }
                 });
-                if ((url.indexOf("OrderList") > 0)&&!(url.indexOf("RailwayOrderList.aspx") > 0)) {
+                if ((url.indexOf("OrderList") > 0) && !(url.indexOf("RailwayOrderList.aspx") > 0)) {
                     $(".c_sidebar:eq(1)").css("display", "none");
                 }
             });
@@ -245,162 +246,219 @@
 </script>
 
 
-
-
 <div class="mb10 layoutfix">
-    <div class="mb10 unsearch layoutfix">
-        <div class="bs01 mc_info">
-            <!--- 我的基本信息 --->
+<div class="mb10 unsearch layoutfix">
+    <div class="bs01 mc_info">
+        <!--- 我的基本信息 --->
 
 
-            <div class="mb5">用户：<a href="http://you.ctrip.com/members/">h****g@live.com</a>
-                <span id="ctl00_MainContentPlaceHolder_MyBasicInfo1_div_showCtripCardNo" style=" display:none;" class="card_num">(卡号：)</span>
-                <span id="ctl00_MainContentPlaceHolder_MyBasicInfo1_div_showCorpCardName" style=" display:none;" class="card_num">(卡主：)</span>
+        <div class="mb5">用户：<a href="http://you.ctrip.com/members/">h****g@live.com</a>
+                <span id="ctl00_MainContentPlaceHolder_MyBasicInfo1_div_showCtripCardNo" style=" display:none;"
+                      class="card_num">(卡号：)</span>
+                <span id="ctl00_MainContentPlaceHolder_MyBasicInfo1_div_showCorpCardName" style=" display:none;"
+                      class="card_num">(卡主：)</span>
 
 
-            </div>
-            <a href="https://sinfo.ctrip.com/MyInfo/AccountCenter/UserInfoUpdate.aspx?v=avapicture" class="mc_face">
-                <img src="http://images4.c-ctrip.com/target/headphoto/portrait_100_100.jpg" width="100" height="100">
-                <span class="face_mask"></span><span class="load_face">上传头像</span>
-            </a>
-            <ul class="mc_info_detail">
-                <li>
-                    <div id="dv_paypwd_note" class="jmp_yellow" style="margin: -5px 0px 0px 120px;"><b class="jmp_lt"></b><div class="jmp_cn">保护资金安全，请立即<a href="https://sinfo.ctrip.com/Payment-Base-PaymentPwd/SecuritySetting.aspx">设置交易密码&gt;&gt;</a></div></div>
-                    账户安全：中<a href="https://sinfo.ctrip.com/MyInfo/AccountCenter/AccountSecurity.aspx?v=mobile" class="mg02 fs12 sc01">[修改]</a>
-                </li>
-                <li class="pr clearfix">
+        </div>
+        <a href="https://sinfo.ctrip.com/MyInfo/AccountCenter/UserInfoUpdate.aspx?v=avapicture" class="mc_face">
+            <img src="http://images4.c-ctrip.com/target/headphoto/portrait_100_100.jpg" width="100" height="100">
+            <span class="face_mask"></span><span class="load_face">上传头像</span>
+        </a>
+        <ul class="mc_info_detail">
+            <li>
+                <div id="dv_paypwd_note" class="jmp_yellow" style="margin: -5px 0px 0px 120px;"><b
+                        class="jmp_lt"></b>
 
-                    <div id="div_userLevelTip" class="jmp_yellow" style=" display:none; top:28px;left:100px;width:116px;">
-                        <b class="jmp_tl"></b>
-                        <div class="jmp_cn">数字代表<a target="_blank" href="http://help.ctrip.com/questiondetail.aspx?questionId=334">基本积分</a></div>
+                    <div class="jmp_cn">保护资金安全，请立即<a
+                            href="https://sinfo.ctrip.com/Payment-Base-PaymentPwd/SecuritySetting.aspx">设置交易密码&gt;&gt;</a>
                     </div>
-                    <div class="fl">会员等级：</div>
-                    <div class="grade_box">
-                        <div class="process_bar">
-                            <a href="http://my.ctrip.com/adv/Loyalty/MyGrowup.aspx" id="ctl00_MainContentPlaceHolder_MyBasicInfo1_a_Grade_Now" target="_blank" class="pb_label">普通</a>
-                            <div id="ctl00_MainContentPlaceHolder_MyBasicInfo1_dv_Grade" class="pb_wrapper">
-                                <span id="ctl00_MainContentPlaceHolder_MyBasicInfo1_sp_Level_F" style="text-align:center;" class="pb_text">0/2000</span>
-                                <div id="ctl00_MainContentPlaceHolder_MyBasicInfo1_dv_Level_P" class="pb_value" style="width:0%;"></div>
-                            </div>
-                            <a href="http://my.ctrip.com/adv/Loyalty/MyGrowup.aspx" id="ctl00_MainContentPlaceHolder_MyBasicInfo1_a_Grade_Next" target="_blank" class="pb_label">金牌</a>
-                            &nbsp;<a href="/adv/Loyalty/MyGrowup.aspx" target="_blank">我的成长</a>
+                </div>
+                账户安全：中<a href="https://sinfo.ctrip.com/MyInfo/AccountCenter/AccountSecurity.aspx?v=mobile"
+                         class="mg02 fs12 sc01">[修改]</a>
+            </li>
+            <li class="pr clearfix">
+
+                <div id="div_userLevelTip" class="jmp_yellow"
+                     style=" display:none; top:28px;left:100px;width:116px;">
+                    <b class="jmp_tl"></b>
+
+                    <div class="jmp_cn">数字代表<a target="_blank"
+                                               href="http://help.ctrip.com/questiondetail.aspx?questionId=334">基本积分</a>
+                    </div>
+                </div>
+                <div class="fl">会员等级：</div>
+                <div class="grade_box">
+                    <div class="process_bar">
+                        <a href="http://my.ctrip.com/adv/Loyalty/MyGrowup.aspx"
+                           id="ctl00_MainContentPlaceHolder_MyBasicInfo1_a_Grade_Now" target="_blank"
+                           class="pb_label">普通</a>
+
+                        <div id="ctl00_MainContentPlaceHolder_MyBasicInfo1_dv_Grade" class="pb_wrapper">
+                                <span id="ctl00_MainContentPlaceHolder_MyBasicInfo1_sp_Level_F"
+                                      style="text-align:center;" class="pb_text">0/2000</span>
+
+                            <div id="ctl00_MainContentPlaceHolder_MyBasicInfo1_dv_Level_P" class="pb_value"
+                                 style="width:0%;"></div>
                         </div>
+                        <a href="http://my.ctrip.com/adv/Loyalty/MyGrowup.aspx"
+                           id="ctl00_MainContentPlaceHolder_MyBasicInfo1_a_Grade_Next" target="_blank"
+                           class="pb_label">金牌</a>
+                        &nbsp;<a href="/adv/Loyalty/MyGrowup.aspx" target="_blank">我的成长</a>
                     </div>
-                </li>
-                <li>
-                    等级有效期：永不过期
-                    <a href="/adv/Loyalty/MyLevel.aspx" id="ctl00_MainContentPlaceHolder_MyBasicInfo1_a_LevelUp" class="ml10 sc01" target="_blank">如何升级？</a>
+                </div>
+            </li>
+            <li>
+                等级有效期：永不过期
+                <a href="/adv/Loyalty/MyLevel.aspx" id="ctl00_MainContentPlaceHolder_MyBasicInfo1_a_LevelUp"
+                   class="ml10 sc01" target="_blank">如何升级？</a>
 
-                </li>
-            </ul>
+            </li>
+        </ul>
 
-            <div class="links_list" id="li_OrderCount"><a href="/Home/Order/AllOrderList.aspx?orderstatus=4" class="mr20">未提交订单(<span>0</span>)</a><a href="/Home/Order/AllOrderList.aspx?orderstatus=3" class="mr20">未出行订单(<span>0</span>)</a><a href="/Home/Order/AllOrderList.aspx?orderstatus=15" class="mr20">待点评订单(<span>0</span>)</a><a href="Message/MessageList.aspx" class="mr20">消息提醒(<span>0</span>)</a></div>
+        <div class="links_list" id="li_OrderCount"><a href="/Home/Order/AllOrderList.aspx?orderstatus=4"
+                                                      class="mr20">未提交订单(<span>0</span>)</a><a
+                href="/Home/Order/AllOrderList.aspx?orderstatus=3" class="mr20">未出行订单(<span>0</span>)</a><a
+                href="/Home/Order/AllOrderList.aspx?orderstatus=15" class="mr20">待点评订单(<span>0</span>)</a><a
+                href="Message/MessageList.aspx" class="mr20">消息提醒(<span>0</span>)</a></div>
 
 
-            <script type="text/javascript">
-                var basicMileageObj="ctl00_MainContentPlaceHolder_MyBasicInfo1_dv_Grade";
-            </script>
+        <script type="text/javascript">
+            var basicMileageObj = "ctl00_MainContentPlaceHolder_MyBasicInfo1_dv_Grade";
+        </script>
 
-            <!--- 我的积分信息 --->
-            <div style=" display:block" class="mc_acount"><span class="tit">我的积分</span><div class="cn"><a href="https://sinfo.ctrip.com/MyInfo/AccountCenter/MyMileage.aspx"><span class="sc04">可兑换积分&nbsp;</span>1200</a><a class="mg04" href="http://jifen.ctrip.com/rewards/SearchPrize.aspx" target="_blank">兑换好礼</a></div></div>
-            <!--- 我的票券信息 --->
-            <div class="mc_acount bs04"><span class="tit">我的票券</span><div class="cn"><p><a href="https://sinfo.ctrip.com/Balance/zh-cn/CashAccount.aspx"><span class="sc04">返现账户</span>&nbsp;0</a></p><p><a href="https://sinfo.ctrip.com/Balance/zh-cn/TravelTicket.aspx"><span class="sc04">礼品卡</span>&nbsp;0</a></p><p class="wrap"> </p><p><a href="https://sinfo.ctrip.com/Balance/zh-cn/Coupon.aspx?type=tab"><span class="sc04">消费券</span>&nbsp;1300</a></p></div></div>
+        <!--- 我的积分信息 --->
+        <div style=" display:block" class="mc_acount"><span class="tit">我的积分</span>
 
+            <div class="cn"><a href="https://sinfo.ctrip.com/MyInfo/AccountCenter/MyMileage.aspx"><span
+                    class="sc04">可兑换积分&nbsp;</span>1200</a><a class="mg04"
+                                                              href="http://jifen.ctrip.com/rewards/SearchPrize.aspx"
+                                                              target="_blank">兑换好礼</a></div>
+        </div>
+        <!--- 我的票券信息 --->
+        <div class="mc_acount bs04"><span class="tit">我的票券</span>
+
+            <div class="cn"><p><a href="https://sinfo.ctrip.com/Balance/zh-cn/CashAccount.aspx"><span
+                    class="sc04">返现账户</span>&nbsp;0</a>
+            </p>
+
+                <p><a href="https://sinfo.ctrip.com/Balance/zh-cn/TravelTicket.aspx"><span class="sc04">礼品卡</span>&nbsp;0</a>
+                </p>
+
+                <p class="wrap"></p>
+
+                <p><a href="https://sinfo.ctrip.com/Balance/zh-cn/Coupon.aspx?type=tab"><span
+                        class="sc04">消费券</span>&nbsp;1300</a></p></div>
+        </div>
+
+    </div>
+</div>
+<div id="divMyJourneyLoading" style="display: none;" class="mb10 bs02">
+    <div class="pr pd02 bs03 pdr10">
+        <h3 class="tit_siller"><strong>我的行程</strong></h3>
+    </div>
+    <div class="timeline_noresult">
+        <div class="tac pd11">
+            <span class="loading_50"></span><span class="fwb fs14">行程数据加载中</span>
         </div>
     </div>
-    <div id="divMyJourneyLoading" style="display: none;" class="mb10 bs02">
-        <div class="pr pd02 bs03 pdr10">
-            <h3 class="tit_siller"><strong>我的行程</strong></h3>
-        </div>
-        <div class="timeline_noresult">
-            <div class="tac pd11">
-                <span class="loading_50"></span><span class="fwb fs14">行程数据加载中</span>
-            </div>
-        </div>
+</div>
+<iframe src="http://my.ctrip.com/Customer-API-Online/IframeMyJourney.aspx" id="IframeMyJourney" frameborder="0"
+        scrolling="no" width="100%" height="188px"></iframe>
+<!--- 商旅规则 --->
+
+
+<!--- 促销信息 --->
+
+<!--金牌贵宾特色服务-->
+<div class="mc_service bs02">
+    <div class="hd pd02 bs03">
+        <h3 class="ico_gold_medal">普通会员特色服务</h3>
+        <a href="/adv/Loyalty/MyPrivilege.aspx" class="link_more" target="_blank">查看全部&gt;&gt;</a>
     </div>
-    <iframe src="http://my.ctrip.com/Customer-API-Online/IframeMyJourney.aspx" id="IframeMyJourney" frameborder="0" scrolling="no" width="100%" height="188px"></iframe>
-    <!--- 商旅规则 --->
-
-
-    <!--- 促销信息 --->
-
-    <!--金牌贵宾特色服务-->
-    <div class="mc_service bs02">
-        <div class="hd pd02 bs03">
-            <h3 class="ico_gold_medal">普通会员特色服务</h3>
-            <a href="/adv/Loyalty/MyPrivilege.aspx" class="link_more" target="_blank">查看全部&gt;&gt;</a>
+    <div class="pd01 clearfix">
+        <div class="row32 fl">
+            <dl>
+                <dt>订海外旅游度假，享24小时中文热线</dt>
+                <dd>目前已开通夏威夷、普吉岛中文热线；为预订旅游度假并出行的会员提供咨询和紧急帮助服务。</dd>
+            </dl>
         </div>
-        <div class="pd01 clearfix">
-            <div class="row32 fl">
-                <dl>
-                    <dt>订海外旅游度假，享24小时中文热线</dt>
-                    <dd>目前已开通夏威夷、普吉岛中文热线；为预订旅游度假并出行的会员提供咨询和紧急帮助服务。</dd>
-                </dl></div>
-            <div class="row32 fl">
-                <dl>
-                    <dt>积分累加快</dt>
-                    <dd>预订成交享有积分奖励，无线预订，积分累加更多！参与有奖调查、抽奖等都也可获得积分！
-                    </dd>
-                </dl></div>
-            <div class="row_cell">
-                <dl>
-                    <dt>积分兑换丰富礼品</dt>
-                    <dd>参与积分活动，有机会获得旅游产品抵用券、携程刊物、海外度假游等奖品。</dd>
-                </dl></div>
-        </div>
-    </div>
-
-    <!--ad-->
-
-    <div class="adbox">
-        <div class="row62 fl">
-            <a href="news/SubScript.aspx"><img src="http://pic.c-ctrip.com/myctripv2/pic_ad_01.gif" width="510" height="76" alt=""></a>
+        <div class="row32 fl">
+            <dl>
+                <dt>积分累加快</dt>
+                <dd>预订成交享有积分奖励，无线预订，积分累加更多！参与有奖调查、抽奖等都也可获得积分！
+                </dd>
+            </dl>
         </div>
         <div class="row_cell">
-            <a href="news/SubScript.aspx"><img src="http://pic.c-ctrip.com/myctripv2/pic_ad_02.gif" width="266" height="76" alt=""></a>
-        </div>
-    </div>
-    <!--工具箱、会员互动、会员规则-->
-
-
-    <div class="fs14 clearfix mb10">
-        <div class="row32 fl bs02">
-            <dl class="mod_list01">
-                <dt class="bs03">机票工具箱</dt>
-                <dd>·<a href="http://flights.ctrip.com/domestic/MyToolBox/Option.aspx" target="_blank">低价订阅提醒</a></dd>
-                <dd>·<a href="http://flights.ctrip.com/Domestic/MyToolBox/Default.aspx" target="_blank">航班实时起降信息</a></dd>
-            </dl>
-        </div>
-        <div class="row32 fl bs02">
-            <dl class="mod_list01">
-                <dt class="bs03">会员互动</dt>
-                <dd>·<a href="http://www.ctrip.com/community/senate/activity_index.asp" target="_blank">携程贵宾俱乐部</a></dd>
-                <dd>·<a href="http://pages.ctrip.com/commerce/promote/201005/other/jfdhzq/index.htm" target="_blank">积分奖励活动专区</a></dd>
-            </dl>
-        </div>
-        <div class="row_cell bs02">
-            <dl class="mod_list01">
-                <dt class="bs03">会员规则</dt>
-                <dd>·<a href="http://my.ctrip.com/adv/Loyalty/MyLevel.aspx" target="_blank">会员升级标准</a></dd>
-                <dd>·<a href="http://pages.ctrip.com/commerce/promote/201405/other/jfsd/index.html" target="_blank">携程积分怎么玩</a></dd>
+            <dl>
+                <dt>积分兑换丰富礼品</dt>
+                <dd>参与积分活动，有机会获得旅游产品抵用券、携程刊物、海外度假游等奖品。</dd>
             </dl>
         </div>
     </div>
+</div>
 
-    <!--工具箱、会员互动、会员规则-->
+<!--ad-->
 
-
-    <div id="ctl00_MainContentPlaceHolder_divMyCtripSurveyLink" style=" display:none;" class="mt10 clearfix">
-        <a class="fr" target="_blank" href="http://www.ctrip.com/QSYS/Online/OnlineQsysQurveyLogin.asp?SurveyID=a6db18ce-6145-439f-ba31-54d291fdd079&amp;Review=">“我的携程”小调查&gt;&gt;</a>
+<div class="adbox">
+    <div class="row62 fl">
+        <a href="news/SubScript.aspx"><img src="http://pic.c-ctrip.com/myctripv2/pic_ad_01.gif" width="510"
+                                           height="76" alt=""></a>
     </div>
+    <div class="row_cell">
+        <a href="news/SubScript.aspx"><img src="http://pic.c-ctrip.com/myctripv2/pic_ad_02.gif" width="266"
+                                           height="76" alt=""></a>
+    </div>
+</div>
+<!--工具箱、会员互动、会员规则-->
 
-    <input name="ctl00$MainContentPlaceHolder$hd_messageCount" type="hidden" id="ctl00_MainContentPlaceHolder_hd_messageCount" value="0">
-    <input type="hidden" id="hd_smessageCount" value="0">
-    <input type="hidden" id="page_id" value="100021">
-    <input id="EncryptID" value="E120427298" type="hidden">
-    <input id="EncryptID_GUID_URL" type="hidden" value="https://cdid.c-ctrip.com/Payment-CardRisk-DeviceWebSite/DeviceGuid.aspx?EncryptID={$EncryptID}">
-    <input id="EncryptID_DeviceID_URL" type="hidden" value="https://cdid.c-ctrip.com/Payment-CardRisk-DeviceWebSite/EntryWay.aspx?Plugid=6&amp;EncryptID={$EncryptID}&amp;GUID={$GUID}&amp;DeviceID={$DeviceID}">
-    <script type="text/javascript" src="https://pages.c-ctrip.com/Cdid/deviceid.js" defer=""></script>
+
+<div class="fs14 clearfix mb10">
+    <div class="row32 fl bs02">
+        <dl class="mod_list01">
+            <dt class="bs03">机票工具箱</dt>
+            <dd>·<a href="http://flights.ctrip.com/domestic/MyToolBox/Option.aspx" target="_blank">低价订阅提醒</a></dd>
+            <dd>·<a href="http://flights.ctrip.com/Domestic/MyToolBox/Default.aspx" target="_blank">航班实时起降信息</a>
+            </dd>
+        </dl>
+    </div>
+    <div class="row32 fl bs02">
+        <dl class="mod_list01">
+            <dt class="bs03">会员互动</dt>
+            <dd>·<a href="http://www.ctrip.com/community/senate/activity_index.asp" target="_blank">携程贵宾俱乐部</a></dd>
+            <dd>·<a href="http://pages.ctrip.com/commerce/promote/201005/other/jfdhzq/index.htm" target="_blank">积分奖励活动专区</a>
+            </dd>
+        </dl>
+    </div>
+    <div class="row_cell bs02">
+        <dl class="mod_list01">
+            <dt class="bs03">会员规则</dt>
+            <dd>·<a href="http://my.ctrip.com/adv/Loyalty/MyLevel.aspx" target="_blank">会员升级标准</a></dd>
+            <dd>·<a href="http://pages.ctrip.com/commerce/promote/201405/other/jfsd/index.html"
+                    target="_blank">携程积分怎么玩</a>
+            </dd>
+        </dl>
+    </div>
+</div>
+
+<!--工具箱、会员互动、会员规则-->
+
+
+<div id="ctl00_MainContentPlaceHolder_divMyCtripSurveyLink" style=" display:none;" class="mt10 clearfix">
+    <a class="fr" target="_blank"
+       href="http://www.ctrip.com/QSYS/Online/OnlineQsysQurveyLogin.asp?SurveyID=a6db18ce-6145-439f-ba31-54d291fdd079&amp;Review=">“我的携程”小调查&gt;&gt;</a>
+</div>
+
+<input name="ctl00$MainContentPlaceHolder$hd_messageCount" type="hidden"
+       id="ctl00_MainContentPlaceHolder_hd_messageCount" value="0">
+<input type="hidden" id="hd_smessageCount" value="0">
+<input type="hidden" id="page_id" value="100021">
+<input id="EncryptID" value="E120427298" type="hidden">
+<input id="EncryptID_GUID_URL" type="hidden"
+       value="https://cdid.c-ctrip.com/Payment-CardRisk-DeviceWebSite/DeviceGuid.aspx?EncryptID={$EncryptID}">
+<input id="EncryptID_DeviceID_URL" type="hidden"
+       value="https://cdid.c-ctrip.com/Payment-CardRisk-DeviceWebSite/EntryWay.aspx?Plugid=6&amp;EncryptID={$EncryptID}&amp;GUID={$GUID}&amp;DeviceID={$DeviceID}">
+<script type="text/javascript" src="https://pages.c-ctrip.com/Cdid/deviceid.js" defer=""></script>
 </div>
 </li>
 <script type="text/javascript">

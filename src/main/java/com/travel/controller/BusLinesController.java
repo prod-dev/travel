@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.travel.model.LineInfo;
 import com.travel.model.SearchCondition;
+import com.travel.model.Station;
 import com.travel.service.ILineService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -31,9 +32,13 @@ public class BusLinesController {
 	public ModelAndView search(SearchCondition condition, HttpServletRequest request, HttpServletResponse response) {
 		Map<String, Object> models = new HashMap<String, Object>();
 		models.put("buslines", new Object());
+		System.out.println("=================");
+		System.out.println(request.getParameter("from"));
+		System.out.println(condition.getFrom());
+		
 		LOG.info("User search:" + condition.toString());
 		List<LineInfo> lines = lineService.getLines(condition);
-		List<String> stations = lineService.getDepartStations(condition.getFrom());
+		List<Station> stations = lineService.getDepartStations(condition.getFrom());
 		models.put("lines", lines);
 		models.put("stations", stations);
 		models.put("condition", condition);

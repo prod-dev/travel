@@ -1,5 +1,6 @@
 package com.travel.dao.util;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
 import java.util.List;
@@ -7,6 +8,7 @@ import java.util.List;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.CookieStore;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -23,14 +25,15 @@ public class Http {
 
 	private static final Logger LOG = Logger.getLogger(Http.class);
 
-	public static String requestGet(String uri, List<NameValuePair> paramList) throws Exception {
+	public static String requestGet(String uri, List<NameValuePair> paramList) {
 		String url = getURL(uri, paramList);
 		LOG.debug("GET: " + url);
 		HttpGet request = new HttpGet(url);
 		return getResponse(request);
 	}
 
-	public static String requestPost(String uri, List<NameValuePair> postList) throws Exception {
+	public static String requestPost(String uri, List<NameValuePair> postList)
+			throws Exception {
 		String url = getURL(uri, postList);
 		LOG.debug("POST: " + url);
 		HttpPost request = new HttpPost(uri);
@@ -40,30 +43,39 @@ public class Http {
 
 	private static String getURL(String uri, List<NameValuePair> paramList) {
 		StringBuilder urlBuilder = new StringBuilder(uri);
-		for (int i = 0; i < paramList.size(); i++) {
-			NameValuePair nvp = paramList.get(i);
-			if (i == 0) {
-				urlBuilder.append("?");
-			} else {
-				urlBuilder.append("&");
+		if (paramList != null) {
+			for (int i = 0; i < paramList.size(); i++) {
+				NameValuePair nvp = paramList.get(i);
+				if (i == 0) {
+					urlBuilder.append("?");
+				} else {
+					urlBuilder.append("&");
+				}
+				urlBuilder.append(nvp.getName());
+				urlBuilder.append("=");
+				urlBuilder.append(nvp.getValue());
 			}
-			urlBuilder.append(nvp.getName());
-			urlBuilder.append("=");
-			urlBuilder.append(nvp.getValue());
 		}
 		return urlBuilder.toString();
 	}
 
-	private static String getResponse(HttpRequestBase request) throws Exception {
+	private static String getResponse(HttpRequestBase request) {
 		CookieStore cookieStore = new BasicCookieStore();
 		HttpContext context = new BasicHttpContext();
 		context.setAttribute(HttpClientContext.COOKIE_STORE, cookieStore);
 		HttpClient client = HttpClientBuilder.create().build();
-		HttpResponse response = client.execute(request, context);
-		InputStream inputStream = response.getEntity().getContent();
-		StringWriter writer = new StringWriter();
-		IOUtils.copy(inputStream, writer, "utf-8");
-		String content = writer.toString();
+		HttpResponse response;
+		String content = "";
+		try {
+			response = client.execute(request, context);
+			InputStream inputStream = response.getEntity().getContent();
+			StringWriter writer = new StringWriter();
+			IOUtils.copy(inputStream, writer, "utf-8");
+			content = writer.toString();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 		return content;
 
 	}

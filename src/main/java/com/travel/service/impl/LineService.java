@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import com.travel.dao.ILineDao;
 import com.travel.model.LineInfo;
 import com.travel.model.SearchCondition;
+import com.travel.model.Station;
 import com.travel.service.ILineService;
 
 @Component
@@ -20,7 +21,7 @@ public class LineService implements ILineService {
 		return lineDao.getLines(condition);
 	}
 
-	public List<String> getDepartStations(String from) {
+	public List<Station> getDepartStations(String from) {
 		return lineDao.getDepartStations(from);
 	}
 

@@ -1,20 +1,45 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Bright Huang
-  Date: 10/7/14
-  Time: 10:27
-  To change this template use File | Settings | File Templates.
---%>
-<%@page language="java" contentType="text/html; charset=GB2312" pageEncoding="GB2312"%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div id="base_ft">
-    <p><a href="http://pages.ctrip.com/public/sitemap/sitemap.htm" target="_blank" title="ÍøÕ¾µ¼º½">ÍøÕ¾µ¼º½</a>&nbsp;|&nbsp;<a rel="nofollow" title="Ãâ·Ñ×¢²á" href="https://accounts.ctrip.com/member/emailregist.aspx">Ãâ·Ñ×¢²á
-    </a>&nbsp;|&nbsp;<a href="http://hotels.ctrip.com/jiudian/" target="_blank" title="±ö¹İË÷Òı">±ö¹İË÷Òı</a>&nbsp;|&nbsp;<a href="http://flights.ctrip.com/booking/hot-city-flights-sitemap.html " target="_blank" title="»úÆ±Ë÷Òı">»úÆ±Ë÷Òı</a>&nbsp;|&nbsp;<a href="http://pages.ctrip.com/public/sitemap/dj.html" title="ÂÃÓÎË÷Òı">ÂÃÓÎË÷Òı</a>&nbsp;|&nbsp;<a title="¹¥ÂÔË÷Òı" href="http://you.ctrip.com/sitemap/">¹¥ÂÔË÷Òı</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/ctripab/abctrip.htm" target="_blank" title="¹ØÓÚĞ¯³Ì">¹ØÓÚĞ¯³Ì</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/commerce/promote/201201/other/qygm/index.html" title="ÆóÒµ¹«Ãñ">ÆóÒµ¹«Ãñ</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" title="³ÏÆ¸Ó¢²Å" href="http://job.ctrip.com/">³ÏÆ¸Ó¢²Å
-    </a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://u.ctrip.com/" title="·ÖÏúÁªÃË">·ÖÏúÁªÃË</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/commerce/promote/201012/other/yp/index.html" title="ÆóÒµÀñÆ·¿¨²É¹º">ÆóÒµÀñÆ·¿¨²É¹º</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/dlhz.htm" title="´úÀíºÏ×÷">´úÀíºÏ×÷</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/ctripad/adyw.htm" title="¹ã¸æÒµÎñ">¹ã¸æÒµÎñ</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/contact.htm" title="ÁªÏµÎÒÃÇ">ÁªÏµÎÒÃÇ</a>&nbsp;|&nbsp;<a rel="nofollow" style="color: #0066CC;" target="_blank" title="ÎÒÒªÌá½¨Òé" href="http://my.ctrip.com/adv/uxp/Community/CommunityAdvice.aspx">ÎÒÒªÌá½¨Òé
-    </a></p>
-    <p><a rel="nofollow" href="http://hotels.ctrip.com/jiameng#ctm_ref=ctr_def_btm_hsu_n_1" target="_blank" title="¾Æµê¼ÓÃË">¾Æµê¼ÓÃË</a>&nbsp;|
-        <a rel="nofollow" href="http://pages.ctrip.com/commerce/promote/201406/destination/mdd/index.html">Ä¿µÄµØÓªÏúºÏ×÷</a>&nbsp;|&nbsp;
-        <a rel="nofollow" href="http://pages.ctrip.com/public/serve%20guideline.htm" target="_blank" title="·şÎñËµÃ÷">·şÎñËµÃ÷</a>&nbsp;|&nbsp;
-        <a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/diploma/company.htm">ÓªÒµÖ´ÕÕ</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/tour/ingroupline_pages.asp?folder=ingroup0904&amp;file=0177" title="ÂÃÓÎ¶È¼Ù×ÊÖÊ">ÂÃÓÎ¶È¼Ù×ÊÖÊ</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/Insurance/index.htm">±£ÏÕ´úÀí</a>&nbsp;|&nbsp;<a target="_blank" href="http://pages.ctrip.com/public/link/ctrip_link.html">ÓÑÇéÁ´½Ó</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/copyright.htm">Copyright?</a> 1999-2014, <a href="http://www.ctrip.com/"> ctrip.com</a>. All rights reserved.&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://www.miibeian.gov.cn/">ICPÖ¤£º»¦B2-20050130</a></p>
-    <p id="cui_lang_bottom"><a target="_blank" class="cui_lang_big5" rel="nofollow" href="http://www.ctrip.com.hk/">·±Ìå°æ</a><a target="_blank" class="cui_lang_en" rel="nofollow" href="http://english.ctrip.com/">English</a><a target="_blank" class="cui_lang_jap" rel="nofollow" href="http://jp.ctrip.com/">ÈÕÓï°æ</a><a target="_blank" class="cui_lang_korea" rel="nofollow" href="http://www.ctrip.co.kr/">º«Óï°æ</a><a target="_blank" href="http://fr.ctrip.com/" rel="nofollow" class="cui_lang_fr">Fran?ais</a><a target="_blank" class="cui_lang_de" rel="nofollow" href="http://de.ctrip.com/">Deutsch</a><a target="_blank" rel="nofollow" href="http://es.ctrip.com/" class="cui_lang_es">Espa?ol</a><a target="_blank" rel="nofollow" class="cui_lang_ru" href="http://ru.ctrip.com/">§²§å§ã§ã§Ü§Ú§Û</a><a target="_blank" rel="nofollow" class="cui_lang_vn" href="http://vn.ctrip.com/">Ti¨ºng Vi¨ºt</a></p>
-    <div class="honour_wrap"><a href="http://www.itrust.org.cn/yz/pjwx.asp?wm=163178864X" title="ÍøĞÅ±àÂë£º163178864X" class="honour1" target="_blank" rel="nofollow">ĞÅÓÃÆÀ¼¶</a><a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20110428175405415" title="¹¤ÉÌÁÁÕÕ±êÊ¶" class="honour2" target="_blank" rel="nofollow">ÉÏº£¹¤ÉÌ</a><a href="http://search.cxwz.org/cert/l/CX20111018000615000623" title="³ÏĞÅÈÏÖ¤Ê¾·¶ÆóÒµ" class="honour3" target="_blank" rel="nofollow">³ÏĞÅÍøÕ¾</a><a href="http://www.zx110.org/" class="honour4" target="_blank" rel="nofollow" title="Õ÷ĞÅÍø">ÍøÂçÉç»áÕ÷ĞÅÍø</a><a href="http://www.shjbzx.cn/" class="honour5" target="_blank" rel="nofollow" title="ÉÏº£ÊĞ»¥ÁªÍøÎ¥·¨ÓëÎ¥¹æĞÅÏ¢¾Ù±¨ÖĞĞÄ">ĞÅÏ¢¾Ù±¨ÖĞĞÄ</a><a href="https://ss.cnnic.cn/verifyseal.dll?sn=e12061531010025926306977" class="honour6" target="_blank" rel="nofollow" title="¿ÉĞÅÍøÕ¾">¿ÉĞÅÍøÕ¾</a></div>
-    <div style="display:inline;"><img height="0" width="0" style="border-style: none; display: none !important; visibility: hidden !important; opacity: 0 !important; background-position: 1px 1px;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1066331136/?value=0&amp;label=cG9hCIyRngMQgNi7_AM&amp;guid=ON&amp;script=0"></div></div>
+  <p>
+    <a href="http://pages.ctrip.com/public/sitemap/sitemap.htm" target="_blank" title="ç½‘ç«™å¯¼èˆª">ç½‘ç«™å¯¼èˆª</a>&nbsp;|&nbsp;<a rel="nofollow" title="å…è´¹æ³¨å†Œ"
+      href="https://accounts.ctrip.com/member/emailregist.aspx">å…è´¹æ³¨å†Œ </a>&nbsp;|&nbsp;<a href="http://hotels.ctrip.com/jiudian/" target="_blank" title="å®¾é¦†ç´¢å¼•">å®¾é¦†ç´¢å¼•</a>&nbsp;|&nbsp;<a
+      href="http://flights.ctrip.com/booking/hot-city-flights-sitemap.html " target="_blank" title="æœºç¥¨ç´¢å¼•">æœºç¥¨ç´¢å¼•</a>&nbsp;|&nbsp;<a
+      href="http://pages.ctrip.com/public/sitemap/dj.html" title="æ—…æ¸¸ç´¢å¼•">æ—…æ¸¸ç´¢å¼•</a>&nbsp;|&nbsp;<a title="æ”»ç•¥ç´¢å¼•" href="http://you.ctrip.com/sitemap/">æ”»ç•¥ç´¢å¼•</a>&nbsp;|&nbsp;<a
+      rel="nofollow" href="http://pages.ctrip.com/public/ctripab/abctrip.htm" target="_blank" title="å…³äºæºç¨‹">å…³äºæºç¨‹</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank"
+      href="http://pages.ctrip.com/commerce/promote/201201/other/qygm/index.html" title="ä¼ä¸šå…¬æ°‘">ä¼ä¸šå…¬æ°‘</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" title="è¯šè˜è‹±æ‰"
+      href="http://job.ctrip.com/">è¯šè˜è‹±æ‰ </a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://u.ctrip.com/" title="åˆ†é”€è”ç›Ÿ">åˆ†é”€è”ç›Ÿ</a>&nbsp;|&nbsp;<a rel="nofollow"
+      target="_blank" href="http://pages.ctrip.com/commerce/promote/201012/other/yp/index.html" title="ä¼ä¸šç¤¼å“å¡é‡‡è´­">ä¼ä¸šç¤¼å“å¡é‡‡è´­</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank"
+      href="http://pages.ctrip.com/public/dlhz.htm" title="ä»£ç†åˆä½œ">ä»£ç†åˆä½œ</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/ctripad/adyw.htm"
+      title="å¹¿å‘Šä¸šåŠ¡">å¹¿å‘Šä¸šåŠ¡</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/contact.htm" title="è”ç³»æˆ‘ä»¬">è”ç³»æˆ‘ä»¬</a>&nbsp;|&nbsp;<a rel="nofollow"
+      style="color: #0066CC;" target="_blank" title="æˆ‘è¦æå»ºè®®" href="http://my.ctrip.com/adv/uxp/Community/CommunityAdvice.aspx">æˆ‘è¦æå»ºè®® </a>
+  </p>
+  <p>
+    <a rel="nofollow" href="http://hotels.ctrip.com/jiameng#ctm_ref=ctr_def_btm_hsu_n_1" target="_blank" title="é…’åº—åŠ ç›Ÿ">é…’åº—åŠ ç›Ÿ</a>&nbsp;| <a rel="nofollow"
+      href="http://pages.ctrip.com/commerce/promote/201406/destination/mdd/index.html">ç›®çš„åœ°è¥é”€åˆä½œ</a>&nbsp;|&nbsp; <a rel="nofollow"
+      href="http://pages.ctrip.com/public/serve%20guideline.htm" target="_blank" title="æœåŠ¡è¯´æ˜">æœåŠ¡è¯´æ˜</a>&nbsp;|&nbsp; <a rel="nofollow" target="_blank"
+      href="http://pages.ctrip.com/public/diploma/company.htm">è¥ä¸šæ‰§ç…§</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank"
+      href="http://pages.ctrip.com/tour/ingroupline_pages.asp?folder=ingroup0904&amp;file=0177" title="æ—…æ¸¸åº¦å‡èµ„è´¨">æ—…æ¸¸åº¦å‡èµ„è´¨</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank"
+      href="http://pages.ctrip.com/public/Insurance/index.htm">ä¿é™©ä»£ç†</a>&nbsp;|&nbsp;<a target="_blank" href="http://pages.ctrip.com/public/link/ctrip_link.html">å‹æƒ…é“¾æ¥</a>&nbsp;|&nbsp;<a
+      rel="nofollow" href="http://pages.ctrip.com/public/copyright.htm">Copyright?</a> 1999-2014, <a href="http://www.ctrip.com/"> ctrip.com</a>. All rights reserved.&nbsp;|&nbsp;<a
+      rel="nofollow" target="_blank" href="http://www.miibeian.gov.cn/">ICPè¯ï¼šæ²ªB2-20050130</a>
+  </p>
+  <p id="cui_lang_bottom">
+    <a target="_blank" class="cui_lang_big5" rel="nofollow" href="http://www.ctrip.com.hk/">ç¹ä½“ç‰ˆ</a><a target="_blank" class="cui_lang_en" rel="nofollow"
+      href="http://english.ctrip.com/">English</a><a target="_blank" class="cui_lang_jap" rel="nofollow" href="http://jp.ctrip.com/">æ—¥è¯­ç‰ˆ</a><a target="_blank"
+      class="cui_lang_korea" rel="nofollow" href="http://www.ctrip.co.kr/">éŸ©è¯­ç‰ˆ</a><a target="_blank" href="http://fr.ctrip.com/" rel="nofollow" class="cui_lang_fr">Fran?ais</a><a
+      target="_blank" class="cui_lang_de" rel="nofollow" href="http://de.ctrip.com/">Deutsch</a><a target="_blank" rel="nofollow" href="http://es.ctrip.com/" class="cui_lang_es">Espa?ol</a><a
+      target="_blank" rel="nofollow" class="cui_lang_ru" href="http://ru.ctrip.com/">Ğ ÑƒÑÑĞºĞ¸Ğ¹</a><a target="_blank" rel="nofollow" class="cui_lang_vn" href="http://vn.ctrip.com/">TiÃªng
+      ViÃªt</a>
+  </p>
+  <div class="honour_wrap">
+    <a href="http://www.itrust.org.cn/yz/pjwx.asp?wm=163178864X" title="ç½‘ä¿¡ç¼–ç ï¼š163178864X" class="honour1" target="_blank" rel="nofollow">ä¿¡ç”¨è¯„çº§</a><a
+      href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20110428175405415" title="å·¥å•†äº®ç…§æ ‡è¯†" class="honour2" target="_blank" rel="nofollow">ä¸Šæµ·å·¥å•†</a><a
+      href="http://search.cxwz.org/cert/l/CX20111018000615000623" title="è¯šä¿¡è®¤è¯ç¤ºèŒƒä¼ä¸š" class="honour3" target="_blank" rel="nofollow">è¯šä¿¡ç½‘ç«™</a><a href="http://www.zx110.org/"
+      class="honour4" target="_blank" rel="nofollow" title="å¾ä¿¡ç½‘">ç½‘ç»œç¤¾ä¼šå¾ä¿¡ç½‘</a><a href="http://www.shjbzx.cn/" class="honour5" target="_blank" rel="nofollow" title="ä¸Šæµ·å¸‚äº’è”ç½‘è¿æ³•ä¸è¿è§„ä¿¡æ¯ä¸¾æŠ¥ä¸­å¿ƒ">ä¿¡æ¯ä¸¾æŠ¥ä¸­å¿ƒ</a><a
+      href="https://ss.cnnic.cn/verifyseal.dll?sn=e12061531010025926306977" class="honour6" target="_blank" rel="nofollow" title="å¯ä¿¡ç½‘ç«™">å¯ä¿¡ç½‘ç«™</a>
+  </div>
+  <div style="display: inline;">
+    <img height="0" width="0" style="border-style: none; display: none !important; visibility: hidden !important; opacity: 0 !important; background-position: 1px 1px;" alt=""
+      src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1066331136/?value=0&amp;label=cG9hCIyRngMQgNi7_AM&amp;guid=ON&amp;script=0">
+  </div>
+</div>

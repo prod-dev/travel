@@ -121,23 +121,23 @@
             <a id="canlenderleftbutton01" class="icon_cal_left disable" onclick="CanlenderLeftButtonClick01()"></a>
           </div>
           <ul class="cal_middle">
-            <li style="display:"><a href="/busList.html?from=深圳&amp;to=南宁&amp;date=2014-10-07">10-07<br>周二
+            <li style="display:"><a href="./buslines?from=${condition.from }&amp;to=${condition.to }&amp;date=2014-10-07">10-07<br>周二
             </a></li>
-            <li style="display:"><a href="/busList.html?from=深圳&amp;to=南宁&amp;date=2014-10-08" class="current">10-08<br>周三
+            <li style="display:"><a href="./buslines?from=${condition.from }&amp;to=${condition.to }&amp;date=2014-10-08" class="current">10-08<br>周三
             </a></li>
-            <li style="display:"><a href="/busList.html?from=深圳&amp;to=南宁&amp;date=2014-10-09">10-09<br>周四
+            <li style="display:"><a href="./buslines?from=${condition.from }&amp;to=${condition.to }&amp;date=2014-10-09">10-09<br>周四
             </a></li>
-            <li style="display:"><a href="/busList.html?from=深圳&amp;to=南宁&amp;date=2014-10-10">10-10<br>周五
+            <li style="display:"><a href="./buslines?from=${condition.from }&amp;to=${condition.to }&amp;date=2014-10-10">10-10<br>周五
             </a></li>
-            <li style="display:"><a href="/busList.html?from=深圳&amp;to=南宁&amp;date=2014-10-11">10-11<br>周六
+            <li style="display:"><a href="./buslines?from=${condition.from }&amp;to=南宁&amp;date=2014-10-11">10-11<br>周六
             </a></li>
-            <li style="display:"><a href="/busList.html?from=深圳&amp;to=南宁&amp;date=2014-10-12">10-12<br>周日
+            <li style="display:"><a href="./buslines?from=${condition.from }&amp;to=南宁&amp;date=2014-10-12">10-12<br>周日
             </a></li>
-            <li style="display: none"><a href="/busList.html?from=深圳&amp;to=南宁&amp;date=2014-10-13">10-13<br>周一
+            <li style="display: none"><a href="./buslines?from=${condition.from }&amp;to=南宁&amp;date=2014-10-13">10-13<br>周一
             </a></li>
-            <li style="display: none;"><a href="/busList.html?from=深圳&amp;to=南宁&amp;date=2014-10-14">10-14<br>周二
+            <li style="display: none;"><a href="/busList.html?from=${condition.from }&amp;to=${condition.to }&amp;date=2014-10-14">10-14<br>周二
             </a></li>
-            <li style="display: none;"><a href="/busList.html?from=深圳&amp;to=南宁&amp;date=2014-10-15">10-15<br>周三
+            <li style="display: none;"><a href="./buslines?from=${condition.from }&amp;to=${condition.to }&amp;date=2014-10-15">10-15<br>周三
             </a></li>
             </ul>
             <div class="cal_right">
@@ -161,7 +161,7 @@
               <span class="search_cate_type">出发车站</span> <a href="###" class="no_limit selected f_from_station" id="f_from_station" val="all">不限</a>
               <div class="search_cate_cont">
                 <c:forEach var="station" items="${stations}">
-                  <a href="###" class="f_from_station">${station }</a>
+                  <a href="###" class="f_from_station">${station.name }</a>
                 </c:forEach>
               </div>
             </div>

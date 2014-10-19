@@ -58,7 +58,7 @@ public class SearchCondition {
 	}
 
 	public String toString() {
-		return "{isSingle:" + isSingle + ", isReturn:" + isReturn + ", from:" + from + ", to:" + to + ", departDate:" + ", returnDate" + returnDate + "}";
+		return "{isSingle:" + isSingle + ", isReturn:" + isReturn + ", from:" + from + ", to:" + to + ", departDate:" + departDate + ", returnDate:" + returnDate + "}";
 
 	}
 }

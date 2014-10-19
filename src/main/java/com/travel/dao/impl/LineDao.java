@@ -7,23 +7,30 @@ import org.springframework.stereotype.Component;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.travel.dao.ILineDao;
+import com.travel.dao.util.Http;
 import com.travel.model.LineInfo;
 import com.travel.model.SearchCondition;
+import com.travel.model.Station;
 
 @Component
 public class LineDao implements ILineDao {
 
 	public List<LineInfo> getLines(SearchCondition condition) {
 		Gson gson = new Gson();
-		List<LineInfo> lines = gson.fromJson(getLine(), new TypeToken<List<LineInfo>>() {
-		}.getType());
+		List<LineInfo> lines = gson.fromJson(getLine(),
+				new TypeToken<List<LineInfo>>() {
+				}.getType());
 		return lines;
 	}
 
-	public List<String> getDepartStations(String from) {
+	public List<Station> getDepartStations(String from) {
 		Gson gson = new Gson();
-		List<String> stations = gson.fromJson(getStations(), new TypeToken<List<String>>() {
-		}.getType());
+		String content = Http.requestGet(
+				"http://54.68.153.144:9092/api/stationinfo?list", null);
+		System.out.println(content);
+		List<Station> stations = gson.fromJson(content,
+				new TypeToken<List<Station>>() {
+				}.getType());
 		return stations;
 	}
 
@@ -33,15 +40,10 @@ public class LineDao implements ILineDao {
 		return str;
 	}
 
-	private String getStations() {
-		String str = "['沙井中心客运站','龙华汽车客运站','深圳福田客运站','龙岗长途客运站','龙岗坪地客运站','宝安汽车客运站']";
-		return str;
-	}
-
 	public static void main(String[] args) {
 		LineDao dao = new LineDao();
-		for (String station : dao.getDepartStations("")) {
-			System.out.println("====" + station);
+		for (Station station : dao.getDepartStations("")) {
+			System.out.println(station.getId() + "====" + station.getName());
 		}
 
 	}
